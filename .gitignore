@@ -1,0 +1,8 @@
+.env/*
+.env
+data/*
+unmarked_data/*
+unmarked_data/
+denoised_spectra/*
+denoised_spectra/
+
