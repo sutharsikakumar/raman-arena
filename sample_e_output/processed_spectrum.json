@@ -1,0 +1,40 @@
+{
+  "spectrum_id": "27887d10082c1e87",
+  "processing": {
+    "denoise_method": "median_filter",
+    "parameters": {
+      "kernel_size": 3
+    },
+    "reason": "SNR is very high (314) indicating low noise, so aggressive smoothing is unnecessary. However, spike noise is detected (cosmic rays), which specifically calls for a median filter. A minimal kernel_size of 3 is chosen to effectively remove isolated spike artifacts while preserving the 307 sharp, densely packed peaks. The ultra-high spectral resolution (0.01 cm\u207b\u00b9) means even a small kernel covers only ~0.02 cm\u207b\u00b9, ensuring no meaningful spectral features are distorted. Savitzky-Golay would smooth but not effectively target spike noise; median filtering is the gold-standard for impulse/spike removal.",
+    "llm_diagnostics": {
+      "noise_level": "low",
+      "spike_noise": true,
+      "baseline_drift": false,
+      "peak_density": "high"
+    }
+  },
+  "num_peaks": 3,
+  "peaks": [
+    {
+      "index": 374,
+      "raman_shift_cm-1": 6.74,
+      "intensity": 9840.865592,
+      "prominence": 9455.3350659,
+      "fwhm_cm-1": 1.29
+    },
+    {
+      "index": 4067,
+      "raman_shift_cm-1": 43.67,
+      "intensity": 726.4357742,
+      "prominence": 555.066878,
+      "fwhm_cm-1": 0.490000000000002
+    },
+    {
+      "index": 1107,
+      "raman_shift_cm-1": 14.07,
+      "intensity": 715.2028424,
+      "prominence": 584.0531769,
+      "fwhm_cm-1": 2.0
+    }
+  ]
+}

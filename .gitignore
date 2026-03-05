@@ -1,8 +1,9 @@
 .env/*
 .env
 data/*
-unmarked_data/*
-unmarked_data/
+unmarked/*
+unmarked/
 denoised_spectra/*
 denoised_spectra/
-
+venv/*
+venv/

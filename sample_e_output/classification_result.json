@@ -1,0 +1,32 @@
+{
+  "spectrum_id": "27887d10082c1e87",
+  "model": "claude-opus-4-6",
+  "material_prediction": {
+    "material": "bismuth selenide (bi2se3)",
+    "phase": "crystalline",
+    "layer_number": "bulk",
+    "stacking_order": "rhombohedral",
+    "sample_purity": "pure"
+  },
+  "confidence": 0.62,
+  "reasoning": "All three detected peaks lie in the ultra-low frequency region (<50 cm\u207b\u00b9), which is characteristic of heavy-atom layered chalcogenides. The dominant peak at 6.74 cm\u207b\u00b9 with enormous intensity likely corresponds to a rigid-layer shear or breathing mode of a layered material with very heavy atoms. Bi2Se3 in its bulk rhombohedral phase exhibits low-frequency Raman-active modes: the E_g mode near 37 cm\u207b\u00b9 and A1g modes near 72 and 131 cm\u207b\u00b9 in standard measurements, but interlayer shear and breathing modes in the ultra-low-frequency regime (below ~40 cm\u207b\u00b9) are well documented. The peak at ~43.67 cm\u207b\u00b9 is consistent with shifting of the lowest E_g phonon mode, while the peaks at 6.74 and 14.07 cm\u207b\u00b9 could be interlayer rigid-layer modes. The narrow linewidths (FWHM ~0.5\u20132 cm\u207b\u00b9) and high SNR indicate a high-quality crystalline sample. However, the absence of the characteristic higher-frequency A1g peaks (~131 and 174 cm\u207b\u00b9) in the measured window (only 72 cm\u207b\u00b9 range) limits certainty. Alternative heavy-atom layered materials (Bi2Te3, MoS2 in ultra-low-frequency regime) are also possible but the specific peak positions best match Bi2Se3 interlayer modes.",
+  "top_candidates": [
+    {
+      "material": "bismuth selenide (bi2se3)",
+      "confidence": 0.62
+    },
+    {
+      "material": "bismuth telluride (bi2te3)",
+      "confidence": 0.22
+    },
+    {
+      "material": "antimony telluride (sb2te3)",
+      "confidence": 0.1
+    }
+  ],
+  "observed_peaks_cm-1": [
+    6.74,
+    14.07,
+    43.67
+  ]
+}

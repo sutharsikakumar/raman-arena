@@ -1,0 +1,22 @@
+{
+  "spectrum_id": "27887d10082c1e87",
+  "model": "claude-opus-4-6",
+  "analysis_steps": [
+    "Step 1: Noted all peaks are in ultra-low-frequency region (<50 cm\u207b\u00b9), ruling out most common materials (Si, graphene, MoS2 high-freq modes).",
+    "Step 2: The spectral window is only 72 cm\u207b\u00b9 wide, meaning only rigid-layer and low-energy phonon modes are captured.",
+    "Step 3: The dominant peak at 6.74 cm\u207b\u00b9 with very high intensity points to an interlayer shear/breathing mode of a layered material with heavy constituent atoms.",
+    "Step 4: The peak at 43.67 cm\u207b\u00b9 is consistent with the lowest optical phonon (E_g) of Bi2Se3 or related tetradymite-type materials.",
+    "Step 5: Compared peak positions with known ultra-low-frequency modes of Bi2Se3 (~7, ~14, ~37\u201340 cm\u207b\u00b9 interlayer modes), finding reasonable agreement.",
+    "Step 6: Bi2Te3 and Sb2Te3 considered as alternatives since they share the same crystal structure, but Bi2Se3 modes best match the observed shifts.",
+    "Step 7: Sharp linewidths and low noise confirm high crystalline quality consistent with bulk single-crystal characterization.",
+    "Step 8: Assigned bulk layer number since interlayer breathing/shear modes are well-resolved, indicating multiple quintuple layers."
+  ],
+  "decision_trace": [
+    "All peaks below 50 cm\u207b\u00b9 indicating ultra-low-frequency lattice modes of heavy-atom material",
+    "Spectral range covers only 72 cm\u207b\u00b9, so only interlayer/rigid-layer modes are captured",
+    "Dominant peak at 6.74 cm\u207b\u00b9 consistent with interlayer shear mode of layered chalcogenide",
+    "Peak at 43.67 cm\u207b\u00b9 near expected E_g mode of Bi2Se3 (~37 cm\u207b\u00b9, shifted)",
+    "Sharp peaks (FWHM ~0.5\u20132 cm\u207b\u00b9) indicate high crystalline quality",
+    "High peak density (307 rough peaks) suggests rich phonon structure typical of layered crystal"
+  ]
+}

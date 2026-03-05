@@ -1,0 +1,21 @@
+{
+  "spectrum_id": "62048ea1f0f75230",
+  "model": "claude-opus-4-6",
+  "analysis_steps": [
+    "Identified single dominant peak at 1369 cm\u207b\u00b9 as the primary spectral feature",
+    "Compared peak position against known Raman-active modes: hBN E\u2082g (~1366\u20131370 cm\u207b\u00b9) is the closest match",
+    "Considered graphite/carbon D-band (~1350 cm\u207b\u00b9), but absence of G-band (~1580 cm\u207b\u00b9) makes this unlikely for a pure carbon material",
+    "Evaluated FWHM of 29 cm\u207b\u00b9: consistent with well-crystallized hBN; amorphous BN would show much broader features",
+    "Assessed layer number from peak position: 1369 cm\u207b\u00b9 is typical for bulk hBN; monolayer hBN would show slight blue shift to ~1370\u20131374 cm\u207b\u00b9",
+    "Confirmed sample purity: no secondary peaks or baseline anomalies; single-phase crystalline hBN is the simplest explanation",
+    "Assigned AA' stacking order as the thermodynamically stable bulk hBN polytype"
+  ],
+  "decision_trace": [
+    "Single dominant peak at 1369 cm\u207b\u00b9 matches hBN E\u2082g phonon mode (literature: 1366\u20131370 cm\u207b\u00b9 for bulk)",
+    "No D (~1350 cm\u207b\u00b9) and G (~1580 cm\u207b\u00b9) pair rules out graphitic carbon",
+    "FWHM of 29 cm\u207b\u00b9 consistent with crystalline hBN",
+    "High prominence (0.97) and clean spectrum suggest pure single-phase material",
+    "Peak position not blue-shifted, consistent with bulk rather than mono/few-layer hBN",
+    "No additional peaks observed that would indicate contamination or mixed phases"
+  ]
+}

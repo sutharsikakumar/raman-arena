@@ -1,0 +1,23 @@
+{
+  "spectrum_id": "24ee83fc8aa7dc29",
+  "model": "claude-opus-4-6",
+  "analysis_steps": [
+    "Identified dominant peak at 517.27 cm\u207b\u00b9 as crystalline silicon first-order TO phonon, slightly downshifted from ideal 520.7 cm\u207b\u00b9",
+    "Confirmed silicon assignment with supporting peaks at 300.80 cm\u207b\u00b9 (2TA) and 969.37 cm\u207b\u00b9 (2TO second-order)",
+    "Identified 1579.94 cm\u207b\u00b9 peak as graphitic carbon G band, indicating sp2-bonded carbon presence",
+    "Identified 2670.19 cm\u207b\u00b9 peak as graphite/graphene 2D (2D') band, confirming graphitic carbon",
+    "Noted absence of D band (~1350 cm\u207b\u00b9) suggesting low-defect graphitic carbon, possibly graphene",
+    "Assessed 2D band intensity (11879) exceeds G band intensity (8887), with 2D/G ratio ~1.34, consistent with few-layer graphene",
+    "Concluded primary material is crystalline bulk silicon substrate with graphene/graphitic carbon contamination or intentional deposition",
+    "Assigned sample purity as contaminated since two distinct material signatures are present"
+  ],
+  "decision_trace": [
+    "Dominant peak at 517.27 cm\u207b\u00b9 matches crystalline Si first-order TO phonon (~520 cm\u207b\u00b9)",
+    "Peak at 300.80 cm\u207b\u00b9 matches Si 2TA overtone mode",
+    "Peak at 969.37 cm\u207b\u00b9 matches Si second-order 2TO mode (~960-970 cm\u207b\u00b9)",
+    "Peak at 1579.94 cm\u207b\u00b9 matches graphite/graphene G band (~1580 cm\u207b\u00b9)",
+    "Peak at 2670.19 cm\u207b\u00b9 matches graphite/graphene 2D band (~2700 cm\u207b\u00b9)",
+    "No D band (~1350 cm\u207b\u00b9) detected, suggesting well-ordered graphitic carbon",
+    "2D/G intensity ratio >1 suggests few-layer graphene on Si substrate"
+  ]
+}

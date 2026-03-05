@@ -1,0 +1,33 @@
+{
+  "spectrum_id": "235a421157b61600",
+  "processing": {
+    "denoise_method": "median_filter",
+    "parameters": {
+      "kernel_size": 5
+    },
+    "reason": "Spike noise is detected (cosmic rays/artifacts), which median filtering is uniquely effective at removing. Despite sharp peaks and high peak density favoring Savitzky-Golay, spike noise must be addressed first as it corrupts peak shape more severely than moderate Gaussian noise. A small kernel_size of 5 preserves sharp peak shapes and resolves closely spaced peaks while effectively eliminating isolated spike artifacts. The moderate noise level (SNR ~36) does not require aggressive smoothing, and the narrow median window minimally distorts the 22 detected sharp peaks. A subsequent Savitzky-Golay pass could follow if needed, but the median filter alone should suffice given the moderate noise.",
+    "llm_diagnostics": {
+      "noise_level": "moderate",
+      "spike_noise": true,
+      "baseline_drift": false,
+      "peak_density": "high"
+    }
+  },
+  "num_peaks": 2,
+  "peaks": [
+    {
+      "index": 140,
+      "raman_shift_cm-1": 380.0,
+      "intensity": 0.52775,
+      "prominence": 0.527098889,
+      "fwhm_cm-1": 8.0
+    },
+    {
+      "index": 153,
+      "raman_shift_cm-1": 406.0,
+      "intensity": 0.1778,
+      "prominence": 0.15346,
+      "fwhm_cm-1": 8.0
+    }
+  ]
+}

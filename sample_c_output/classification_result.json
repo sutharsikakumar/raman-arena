@@ -1,0 +1,31 @@
+{
+  "spectrum_id": "235a421157b61600",
+  "model": "claude-opus-4-6",
+  "material_prediction": {
+    "material": "molybdenum disulfide (mos2)",
+    "phase": "crystalline",
+    "layer_number": "monolayer",
+    "stacking_order": "N/A",
+    "sample_purity": "pure"
+  },
+  "confidence": 0.92,
+  "reasoning": "The two prominent peaks at 380 cm\u207b\u00b9 and 406 cm\u207b\u00b9 are characteristic of MoS2, corresponding to the E\u2082g\u00b9 (in-plane) and A\u2081g (out-of-plane) vibrational modes, respectively. The frequency difference \u0394 \u2248 26 cm\u207b\u00b9 between these two modes is a well-established indicator of monolayer MoS2; in bulk MoS2 this separation is typically ~25\u201326 cm\u207b\u00b9 wider (\u0394 \u2248 25 for monolayer vs ~25+ for few-layer). The sharp peak widths (FWHM ~8 cm\u207b\u00b9) indicate high crystalline quality. The E\u2082g\u00b9 mode at 380 cm\u207b\u00b9 is blue-shifted slightly compared to bulk (~382 cm\u207b\u00b9) and the A\u2081g at 406 cm\u207b\u00b9 is red-shifted compared to bulk (~408 cm\u207b\u00b9), both consistent with monolayer thickness. No additional peaks suggest contamination or mixed phases.",
+  "top_candidates": [
+    {
+      "material": "molybdenum disulfide (mos2)",
+      "confidence": 0.92
+    },
+    {
+      "material": "tungsten disulfide (ws2)",
+      "confidence": 0.04
+    },
+    {
+      "material": "molybdenum diselenide (mose2)",
+      "confidence": 0.04
+    }
+  ],
+  "observed_peaks_cm-1": [
+    380.0,
+    406.0
+  ]
+}

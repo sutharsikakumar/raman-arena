@@ -1,0 +1,61 @@
+{
+  "spectrum_id": "24ee83fc8aa7dc29",
+  "processing": {
+    "denoise_method": "median_filter",
+    "parameters": {
+      "kernel_size": 5
+    },
+    "reason": "Despite low overall noise (SNR ~158), spike noise is detected. A narrow median filter (kernel_size=5) effectively removes spike artifacts (cosmic rays) without distorting sharp peaks or broadening the medium-density peak structure. The low spike_noise_score (0.002) indicates sparse, isolated spikes, so a small kernel suffices. Since baseline drift is absent and noise level is low, aggressive smoothing is unnecessary\u2014median filtering targets only the spikes while preserving the true spectral shape.",
+    "llm_diagnostics": {
+      "noise_level": "low",
+      "spike_noise": true,
+      "baseline_drift": false,
+      "peak_density": "medium"
+    }
+  },
+  "num_peaks": 6,
+  "peaks": [
+    {
+      "index": 115,
+      "raman_shift_cm-1": 517.27419,
+      "intensity": 69268.10795,
+      "prominence": 66890.26745,
+      "fwhm_cm-1": 28.618820000000028
+    },
+    {
+      "index": 1080,
+      "raman_shift_cm-1": 2670.18942,
+      "intensity": 11879.09915,
+      "prominence": 11172.46219,
+      "fwhm_cm-1": 40.0639900000001
+    },
+    {
+      "index": 294,
+      "raman_shift_cm-1": 969.3729,
+      "intensity": 11597.10114,
+      "prominence": 7446.8318500000005,
+      "fwhm_cm-1": 61.333669999999984
+    },
+    {
+      "index": 33,
+      "raman_shift_cm-1": 300.79739,
+      "intensity": 9791.3665,
+      "prominence": 2330.71343,
+      "fwhm_cm-1": 29.456150000000036
+    },
+    {
+      "index": 554,
+      "raman_shift_cm-1": 1579.93547,
+      "intensity": 8887.28692,
+      "prominence": 7150.635810000001,
+      "fwhm_cm-1": 22.50086999999985
+    },
+    {
+      "index": 154,
+      "raman_shift_cm-1": 618.12105,
+      "intensity": 8728.77517,
+      "prominence": 1443.5097800000012,
+      "fwhm_cm-1": 15.412199999999984
+    }
+  ]
+}

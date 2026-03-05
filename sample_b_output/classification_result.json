@@ -1,0 +1,30 @@
+{
+  "spectrum_id": "62048ea1f0f75230",
+  "model": "claude-opus-4-6",
+  "material_prediction": {
+    "material": "hexagonal boron nitride",
+    "phase": "crystalline",
+    "layer_number": "bulk",
+    "stacking_order": "AA'",
+    "sample_purity": "pure"
+  },
+  "confidence": 0.92,
+  "reasoning": "The spectrum shows a single dominant peak at 1369 cm\u207b\u00b9 with high prominence (0.97) and a FWHM of 29 cm\u207b\u00b9. This is characteristic of the E\u2082g in-plane phonon mode of hexagonal boron nitride (hBN), which typically appears near 1366\u20131370 cm\u207b\u00b9 in bulk crystals. The absence of other significant peaks and the sharpness of this mode are consistent with high-quality crystalline hBN. The peak position at 1369 cm\u207b\u00b9 rather than a blue-shifted value (~1370\u20131374 cm\u207b\u00b9) suggests bulk rather than few-layer material. The moderate FWHM of 29 cm\u207b\u00b9 supports good crystallinity without being excessively broadened as would occur in amorphous BN.",
+  "top_candidates": [
+    {
+      "material": "hexagonal boron nitride",
+      "confidence": 0.92
+    },
+    {
+      "material": "disordered graphite (d-band only)",
+      "confidence": 0.05
+    },
+    {
+      "material": "unknown",
+      "confidence": 0.03
+    }
+  ],
+  "observed_peaks_cm-1": [
+    1369.0
+  ]
+}

@@ -1,0 +1,1 @@
+Only need to run complete_pipeline.py with a sample spectra from the unmarked folder. Example outputs for the five sample spectra are provided in the repository for reference. 
