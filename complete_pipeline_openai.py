@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-import anthropic
+import openai
 
 
 env_path = Path(__file__).parent / '.env'
@@ -21,13 +21,20 @@ if env_path.exists():
                 key, value = line.split('=', 1)
                 os.environ[key] = value
 
+# Configure OpenAI with API key from environment
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
+if not OPENAI_API_KEY:
+    raise EnvironmentError("OPENAI_API_KEY not found in environment or .env file.")
+client = openai.OpenAI(api_key=OPENAI_API_KEY)
+
 try:
     import pywt
     PYWT_AVAILABLE = True
 except ImportError:
     PYWT_AVAILABLE = False
 
-MODEL_NAME = "claude-opus-4-6"
+# Model name — change to preferred OpenAI model
+MODEL_NAME = os.environ.get('OPENAI_MODEL', 'gpt-4o')
 
 
 def load_spectrum(filepath: str) -> dict:
@@ -110,8 +117,6 @@ def compute_diagnostics(x: np.ndarray, y: np.ndarray) -> dict:
 
 
 def call_llm_for_denoising(diagnostics: dict) -> dict:
-    client = anthropic.Anthropic()
-
     prompt = f"""You are an expert in Raman spectroscopy signal processing.
 Analyze these spectrum diagnostics and decide the optimal denoising strategy.
 
@@ -146,13 +151,13 @@ Return ONLY valid JSON, no markdown:
   ]
 }}"""
 
-    message = client.messages.create(
+    response = client.chat.completions.create(
         model=MODEL_NAME,
-        max_tokens=1024,
-        messages=[{"role": "user", "content": prompt}]
+        messages=[{"role": "user", "content": prompt}],
+        max_completion_tokens=1024
     )
+    raw = response.choices[0].message.content.strip()
 
-    raw = message.content[0].text.strip()
     if raw.startswith('```'):
         lines = raw.split('\n')
         raw = '\n'.join(lines[1:-1])
@@ -338,8 +343,6 @@ def compute_fwhm(x: np.ndarray, y_denoised: np.ndarray,
 
 def call_llm_for_material_id(spectrum_id: str, processing_info: dict,
                               peaks_list: list, diagnostics: dict) -> dict:
-    client = anthropic.Anthropic()
-
     sorted_peaks = sorted(peaks_list, key=lambda p: p.get('raman_shift_cm-1', 0))
     peak_lines = []
     peak_shifts = [p.get('raman_shift_cm-1', 0) for p in sorted_peaks]
@@ -412,13 +415,13 @@ Return ONLY valid JSON, no markdown:
   ]
 }}"""
 
-    message = client.messages.create(
+    response = client.chat.completions.create(
         model=MODEL_NAME,
-        max_tokens=1500,
-        messages=[{"role": "user", "content": prompt}]
+        messages=[{"role": "user", "content": prompt}],
+        max_completion_tokens=1500
     )
+    raw = response.choices[0].message.content.strip()
 
-    raw = message.content[0].text.strip()
     if raw.startswith('```'):
         lines = raw.split('\n')
         raw = '\n'.join(lines[1:-1])
@@ -436,12 +439,13 @@ Return ONLY valid JSON, no markdown:
                 pass
 
     if parsed is None:
-        repair_msg = client.messages.create(
+        repair_prompt = f"Fix this JSON and return ONLY valid JSON:\n{raw[:3000]}"
+        repair_response = client.chat.completions.create(
             model=MODEL_NAME,
-            max_tokens=1500,
-            messages=[{"role": "user", "content": f"Fix this JSON and return ONLY valid JSON:\n{raw[:3000]}"}]
+            messages=[{"role": "user", "content": repair_prompt}],
+            max_completion_tokens=1500
         )
-        repair_raw = repair_msg.content[0].text.strip()
+        repair_raw = repair_response.choices[0].message.content.strip()
         if repair_raw.startswith('```'):
             lines = repair_raw.split('\n')
             repair_raw = '\n'.join(lines[1:-1])

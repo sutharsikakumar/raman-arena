@@ -7,3 +7,9 @@ denoised_spectra/*
 denoised_spectra/
 venv/*
 venv/
+openai_models/
+openai_models/*
+gemini_models/
+gemini_models/*
+claude_models/
+claude_models/*
