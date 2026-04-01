@@ -27,7 +27,7 @@ try:
 except ImportError:
     PYWT_AVAILABLE = False
 
-MODEL_NAME = "claude-haiku-4-5-20251001"
+MODEL_NAME = "claude-sonnet-4-6"
 
 
 def load_spectrum(filepath: str) -> dict:

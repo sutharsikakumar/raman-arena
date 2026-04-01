@@ -34,7 +34,7 @@ except ImportError:
     PYWT_AVAILABLE = False
 
 # Model name — change to preferred Gemini model (e.g. gemini-1.5-pro, gemini-2.0-flash, etc.)
-MODEL_NAME = os.environ.get('GEMINI_MODEL', 'gemini-3.1-pro')
+MODEL_NAME = os.environ.get('GEMINI_MODEL', 'gemini-3.1-pro-preview')
 
 
 def load_spectrum(filepath: str) -> dict:

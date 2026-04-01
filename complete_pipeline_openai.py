@@ -34,7 +34,7 @@ except ImportError:
     PYWT_AVAILABLE = False
 
 # Model name — change to preferred OpenAI model
-MODEL_NAME = os.environ.get('OPENAI_MODEL', 'gpt-4o')
+MODEL_NAME = os.environ.get('OPENAI_MODEL', 'gpt-5.2')
 
 
 def load_spectrum(filepath: str) -> dict:

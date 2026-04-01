@@ -1,5 +1,6 @@
 .env/*
 .env
+data/
 data/*
 unmarked/*
 unmarked/
@@ -13,3 +14,17 @@ gemini_models/
 gemini_models/*
 claude_models/
 claude_models/*
+/graphene_elo_results/
+/graphene_elo_results/*
+
+
+/hbn_elo_results/
+/hbn_elo_results/*
+ranking_sample_c/
+ranking_sample_c/*
+ranking_sample_d/
+ranking_sample_d/*
+ranking_sample_a/
+ranking_sample_a/*
+ranking_sample_b/
+ranking_sample_b/*
