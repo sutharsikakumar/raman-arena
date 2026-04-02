@@ -1,0 +1,30 @@
+{
+  "game_id": 31,
+  "model_a": "f",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "f",
+  "confidence": 0.85,
+  "justification": "A correctly identified WSe\u2082 and relevant modes plus calibration offset while B completely missed the material; although A erred on layer number, it is substantially closer to GT expectations than B's total misclassification.",
+  "step1": {
+    "A": "Partially correct (material right, layer wrong; missed 2LA and B\u00b9\u2082g-absence rule)",
+    "B": "Incorrect (identified as Si; ignored all TMD modes)"
+  },
+  "step2": {
+    "A": "Methodical but flawed (good mode assignment and calibration handling, yet missed monolayer diagnostics and 2LA enhancement)",
+    "B": "Poor (no WSe\u2082 physics, circular Si-only focus, ignored confounds)"
+  },
+  "step3": {
+    "A": "Good structure and confidence but incomplete (wrong layer, omitted 2LA, FWHM, oxidation)",
+    "B": "Inadequate (wrong material, minimal evidence)"
+  },
+  "thinking": "Candidate A correctly identified the material as WSe\u2082, recognized the ~250 cm\u207b\u00b9 peak as merged E\u00b9\u2082g/A\u2081g, applied Si-substrate calibration correction, and noted the ~308 cm\u207b\u00b9 feature, showing solid Raman physics knowledge. However it missed the key strong 2LA(M) at ~260 cm\u207b\u00b9, incorrectly used B\u00b9\u2082g presence to label the sample 'few-layer' (GT requires its absence for monolayer), and did not address FWHM or oxidation. Candidate B entirely ignored all TMD peaks and misclassified the spectrum as bulk crystalline silicon based only on the Si substrate line, demonstrating no engagement with the expected WSe\u2082 signatures.",
+  "elo_before": {
+    "f": 79.58,
+    "g": 19.14
+  },
+  "elo_after": {
+    "f": 86.2,
+    "g": 12.67
+  }
+}

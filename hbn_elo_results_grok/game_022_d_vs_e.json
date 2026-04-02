@@ -1,0 +1,30 @@
+{
+  "game_id": 22,
+  "model_a": "d",
+  "model_b": "e",
+  "winner": "A",
+  "winner_name": "d",
+  "confidence": 0.75,
+  "justification": "A matches GT on bulk classification, avoids B's layer-number hallucination, and provides stronger alternative-material elimination. B's monolayer claim directly contradicts the supplied ground-truth sample type despite similar confidence.",
+  "step1": {
+    "A": "Correct material, E2g assignment, bulk label; minor FWHM broadening noted accurately",
+    "B": "Correct material/E2g but wrongly assigns monolayer from small shift; conflicts with GT bulk target"
+  },
+  "step2": {
+    "A": "Methodical, correctly rules out carbon/diamond, grounded in h-BN physics without unsupported claims",
+    "B": "Logical structure but hallucinates precise position-to-layer mapping not emphasized in GT"
+  },
+  "step3": {
+    "A": "Clear material/phase/layer/purity, confidence, key evidence (peak, FWHM, absences); concise",
+    "B": "Clear but propagates incorrect monolayer classification and less relevant stacking field"
+  },
+  "thinking": "Both models correctly identify h-BN and the dominant E2g mode near 1369 cm\u207b\u00b9 while ruling out carbon (no G-band). Candidate A aligns with GT on bulk layer_number and treats the ~30 cm\u207b\u00b9 FWHM as indicating polycrystallinity (consistent with GT's 7-15 cm\u207b\u00b9 for high-quality bulk), whereas B incorrectly asserts the 3 cm\u207b\u00b9 blue-shift and 28 cm\u207b\u00b9 FWHM prove monolayer h-BN, contradicting the GT sample label and its note that position is not a strong layer diagnostic. A's chain-of-thought is more methodical and avoids this hallucination.",
+  "elo_before": {
+    "d": 72.93,
+    "e": 57.13
+  },
+  "elo_after": {
+    "d": 80.57,
+    "e": 49.67
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game_id": 30,
+  "model_a": "e",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "e",
+  "confidence": 0.88,
+  "justification": "A correctly identifies WSe\u2082 and its characteristic overlapping E\u2082g/A\u2081g mode plus substrate Si peak, using appropriate TMDC Raman knowledge; B's sulfur assignment is a complete misclassification unrelated to the ground-truth monolayer WSe\u2082. Although A errs on layer number, its overall accuracy, reasoning depth, and relevance vastly outperform B.",
+  "step1": {
+    "A": "Partially correct: right material & merged ~250 cm\u207b\u00b9 modes, but no 2LA(M) mention, treats 306 cm\u207b\u00b9 as few-layer indicator (should be absent for mono)",
+    "B": "Incorrect: wrong material (S8), no TMDC modes recognized, confuses 249/305/392 cm\u207b\u00b9 with sulfur bands"
+  },
+  "step2": {
+    "A": "Strong: methodical TMDC physics, handles E/A\u2081g degeneracy, uses B\u00b9\u2082g for layer deduction, considers substrate; only misses 2LA and oxidation check",
+    "B": "Poor: sulfur hallucination, no WSe\u2082/MoSe\u2082/WS\u2082 comparison, ignores layer-dependent TMDC signatures and substrate Si peak meaning"
+  },
+  "step3": {
+    "A": "Good: states WSe\u2082 + layer + key peaks + high confidence (0.95); omits 2LA, FWHM, oxidation, but concise and evidence-based",
+    "B": "Weak: complete for wrong material, lower confidence (0.62), attributes many peaks to artifacts but still claims S8"
+  },
+  "thinking": "Ground truth specifies monolayer WSe\u2082 with merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9, strong 2LA(M) ~260 cm\u207b\u00b9, and absent/weak B\u00b9\u2082g ~308 cm\u207b\u00b9. Candidate A correctly identifies material as WSe\u2082, recognizes the merged ~247.6 cm\u207b\u00b9 E\u2082g+A\u2081g peak and Si substrate, but wrongly interprets the 306 cm\u207b\u00b9 peak as B\u00b9\u2082g implying few-layer (missing 2LA enhancement). Candidate B completely misidentifies all peaks as crystalline S\u2088 modes, ignoring TMDC literature. A's TMDC-specific reasoning, mode assignments, and classification are far closer to ground truth despite the layer error.",
+  "elo_before": {
+    "e": 93.76,
+    "i": 41.76
+  },
+  "elo_after": {
+    "e": 100.0,
+    "i": 35.08
+  }
+}

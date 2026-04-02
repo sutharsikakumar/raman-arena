@@ -1,0 +1,30 @@
+{
+  "game_id": 6,
+  "model_a": "a",
+  "model_b": "g",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.85,
+  "justification": "Neither candidate recognized the material as h-BN or the peak as the E\u2082g band; both exhibit fundamental scientific errors and lack any correct h-BN reasoning. The outputs are equally poor across all evaluated dimensions.",
+  "step1": {
+    "A": "Major failure: misclassified as graphite, called peak D-band of sp\u00b2 carbon, ignored E\u2082g",
+    "B": "Major failure: misclassified as graphene, called peak D mode, ignored E\u2082g"
+  },
+  "step2": {
+    "A": "Structured but flawed/hallucinated; confuses h-BN with defective graphite, circular logic",
+    "B": "Very shallow, no Raman physics or h-BN differentiation, pure hallucination"
+  },
+  "step3": {
+    "A": "Clear but wrong output; omits all h-BN indicators, inappropriate bulk/AB assignment",
+    "B": "Incomplete, no FWHM/quality metrics or h-BN evidence, wrong monolayer claim"
+  },
+  "thinking": "Both candidates failed Step 1 by not identifying h-BN at all, instead labeling the spectrum as graphite (A) or graphene (B) and misassigning the ~1369 cm\u207b\u00b9 peak to a carbon D-band rather than the E\u2082g mode. Their chain-of-thought shows no h-BN-specific physics, no mention of FWHM expectations (7-15 cm\u207b\u00b9 bulk), and no distinction from graphene signatures, violating Steps 2 and 3. A is more verbose yet internally inconsistent (claiming a dominant D-band for 'bulk graphite' without a G-band), while B is terse and hallucinates monolayer status; the errors are equally severe.",
+  "elo_before": {
+    "a": 11.8,
+    "g": 50.0
+  },
+  "elo_after": {
+    "a": 12.67,
+    "g": 49.14
+  }
+}

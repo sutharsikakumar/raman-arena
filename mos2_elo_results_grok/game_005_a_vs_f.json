@@ -1,0 +1,30 @@
+{
+  "game_id": 5,
+  "model_a": "a",
+  "model_b": "f",
+  "winner": "A",
+  "winner_name": "a",
+  "confidence": 0.62,
+  "justification": "Both fail the critical monolayer classification and \u0394 target per GT, but A is superior overall for thoroughness, secondary-peak analysis matching GT expectations (e.g. ~450 cm\u207b\u00b9), explicit TMD exclusion, and more realistic confidence. B's knowledge of standard values is cleaner yet its minimalism and overconfidence on an incorrect bulk call weigh against it.",
+  "step1": {
+    "A": "Material correct but wrong layer (few-layer vs mono), off-peak positions, incorrect bulk \u0394 (>32)",
+    "B": "Material correct but wrong layer (bulk vs mono), off-peak positions but standard \u0394 values accurate"
+  },
+  "step2": {
+    "A": "Methodical and uses \u0394 but includes factual error on bulk separation and some circularity",
+    "B": "Methodical, correctly relies on \u0394 as primary diagnostic, no hallucinations"
+  },
+  "step3": {
+    "A": "More complete (extra peaks, FWHM, purity, top candidates) but misses GT monolayer",
+    "B": "Concise with key evidence and confidence but omits secondary bands/confounds"
+  },
+  "thinking": "Both candidates correctly ID MoS2 and assign E\u00b9\u2082g/A\u2081g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9), yielding few-layer/bulk calls instead of the GT monolayer (expected \u0394 18-20 cm\u207b\u00b9, peaks ~383-385/402-404). This indicates peak-location error or mismatch with the provided spectrum. A includes extra peaks (e.g. 452 cm\u207b\u00b9 matching GT 2LA), rules out other TMDs, but states incorrect bulk \u0394 (>32 cm\u207b\u00b9). B uses standard \u0394 values accurately but is minimalistic and overconfident (0.98) on the wrong layer.",
+  "elo_before": {
+    "a": 35.09,
+    "f": 50.0
+  },
+  "elo_after": {
+    "a": 43.43,
+    "f": 41.85
+  }
+}

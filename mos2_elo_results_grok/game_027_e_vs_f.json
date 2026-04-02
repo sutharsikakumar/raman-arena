@@ -1,0 +1,30 @@
+{
+  "game_id": 27,
+  "model_a": "e",
+  "model_b": "f",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.75,
+  "justification": "Both candidates share identical fundamental scientific errors on layer number and peak values versus GT, with near-identical reasoning and outputs. B adds minor FWHM detail but this does not outweigh the shared mistakes on the critical \u0394 diagnostic and monolayer classification.",
+  "step1": {
+    "A": "Incorrect: right material/modes but wrong positions, \u0394, and layer (bulk not mono)",
+    "B": "Incorrect: same errors on positions, \u0394, and layer call as A"
+  },
+  "step2": {
+    "A": "Methodical, uses \u0394 correctly as diagnostic but no confounds, no defects check, leads to wrong conclusion",
+    "B": "Similar to A but slightly better with FWHM mention; still misses confounds and full GT alignment"
+  },
+  "step3": {
+    "A": "Incomplete: states bulk not mono, misses FWHM/oxidation/absence of defects, confidence ok but evidence mismatched",
+    "B": "Incomplete: same core gaps as A despite extra FWHM note; lacks full key indicators"
+  },
+  "thinking": "Both A and B correctly identify MoS2 material and modes but assign wrong peak positions (380/406 cm^-1) versus GT monolayer expectations (~383-384/402-403). Both compute \u0394=26 cm^-1 and wrongly conclude bulk instead of monolayer (GT \u0394 18-20). Reasoning is methodical and uses \u0394 as diagnostic but ignores confounds/substrate/oxidation; B adds minor FWHM detail. Classification outputs are nearly identical, miss required monolayer label and quality metrics, making them equally flawed.",
+  "elo_before": {
+    "e": 27.59,
+    "f": 43.03
+  },
+  "elo_after": {
+    "e": 27.95,
+    "f": 42.68
+  }
+}

@@ -1,0 +1,1082 @@
+[
+  {
+    "game_id": 1,
+    "model_a": "a",
+    "model_b": "b",
+    "winner": "B",
+    "winner_name": "b",
+    "confidence": 0.82,
+    "justification": "B matches ground-truth \u0394 values and quality indicators exactly while A introduces a clear error on bulk separation (>32 cm\u207b\u00b9). Although both classified as few-layer instead of the GT monolayer target, B's chain-of-thought is more accurate, methodical, and free of hallucinations, making it superior overall.",
+    "step1": {
+      "A": "Material/modes correct but wrong bulk \u0394 (>32), wrong layer call, positions slightly offset from GT mono values",
+      "B": "Material/modes correct, exact GT \u0394 values used (18-20/25-26), layer call consistent with observed \u0394=26, good TMD exclusion"
+    },
+    "step2": {
+      "A": "Methodical but flawed by incorrect bulk reference value and circular peak assignments; misses some confounds",
+      "B": "Strong, grounded in GT Raman physics; correctly prioritizes \u0394 for layer count, considers FWHM/purity, no hallucinations"
+    },
+    "step3": {
+      "A": "States material/phase/layer/purity but lower confidence (0.78), includes erroneous bulk value, less concise",
+      "B": "Clear statement of MoS\u2082, few-layer, 2H, purity; cites key evidence (\u0394, FWHM, no contaminants); confidence (0.92) reasonable"
+    },
+    "thinking": "Both models correctly identified MoS\u2082 and assigned the observed peaks to E\u00b9\u2082g (~380 cm\u207b\u00b9) and A\u2081g (~406 cm\u207b\u00b9) with \u0394=26 cm\u207b\u00b9. Candidate A erroneously stated bulk \u0394 >32 cm\u207b\u00b9 (GT reference is 25\u201326 cm\u207b\u00b9) and listed extra peaks, while B used the exact GT layer-dependent \u0394 values (mono 18\u201320, bulk 25\u201326), correctly ruled out WS\u2082/MoSe\u2082, and reported FWHM=8 cm\u207b\u00b9 matching GT quality metrics. Both missed the GT monolayer target but B's physics, use of \u0394 as primary diagnostic, and absence of hallucinations are superior.",
+    "elo_before": {
+      "a": 50.0,
+      "b": 50.0
+    },
+    "elo_after": {
+      "a": 42.0,
+      "b": 57.82
+    }
+  },
+  {
+    "game_id": 2,
+    "model_a": "a",
+    "model_b": "c",
+    "winner": "B",
+    "winner_name": "c",
+    "confidence": 0.65,
+    "justification": "B is superior overall due to accurate \u0394 literature values, absence of the >32 cm\u207b\u00b9 hallucination present in A, and more rigorous step-by-step elimination of alternatives. Both fail the monolayer classification required by GT, but B's reasoning and output are cleaner and better grounded in MoS\u2082 Raman physics.",
+    "step1": {
+      "A": "Material correct but layer number wrong (few-layer vs GT monolayer); bulk \u0394 value hallucinated (>32); peaks slightly shifted.",
+      "B": "Material correct but layer number wrong (few-layer vs GT monolayer); peak positions and \u0394 usage closer to literature though still not monolayer."
+    },
+    "step2": {
+      "A": "Methodical yet contains circular elements and clear error on bulk separation; does not deeply address confounds like doping/oxidation.",
+      "B": "More structured, correctly prioritizes \u0394 as diagnostic, includes FWHM/phase checks and explicit rule-outs; no major hallucinations."
+    },
+    "step3": {
+      "A": "States material/phase/layer/purity but misses GT-required evidence (FWHM range, oxidation absence, intensity ratio); confidence reasonable.",
+      "B": "Similar omissions but more concise on key evidence (FWHM=8, boundary discussion) and slightly higher confidence; still not fully GT-aligned."
+    },
+    "thinking": "Both candidates correctly identified the material as 2H-MoS2 and located the main E\u00b9\u2082g (~380) and A\u2081g (~406) peaks while ruling out WS\u2082/MoSe\u2082, but both incorrectly classified the layer number as few-layer based on \u0394=26 cm\u207b\u00b9 instead of the GT monolayer target (\u0394\u224818\u201320 cm\u207b\u00b9); peak positions are also slightly shifted from GT expectations (383\u2013385/402\u2013404). Candidate A introduces a clear factual error by stating bulk \u0394>32 cm\u207b\u00b9 (actual ~25\u201326), while B uses accurate literature values for layer diagnostics and provides more methodical steps with FWHM and phase considerations. On completeness both outputs omit key GT items (oxidation check at 820 cm\u207b\u00b9, I(A\u2081g)/I(E\u00b9\u2082g) ratio, exact monolayer evidence) yet B's result is marginally clearer and better quantified.",
+    "elo_before": {
+      "a": 42.0,
+      "c": 50.0
+    },
+    "elo_after": {
+      "a": 34.18,
+      "c": 57.64
+    }
+  },
+  {
+    "game_id": 3,
+    "model_a": "a",
+    "model_b": "d",
+    "winner": "B",
+    "winner_name": "d",
+    "confidence": 0.6,
+    "justification": "B aligns better with Raman physics and GT's own \u0394 values (25\u201326 cm\u207b\u00b9 = bulk) without A's erroneous >32 cm\u207b\u00b9 claim. Although both miss the monolayer label, B's chain-of-thought is more accurate and free of hallucinations; its higher confidence is a minor drawback given the spectrum data provided.",
+    "step1": {
+      "A": "Material correct but wrong layer (few-layer not mono), inaccurate bulk \u0394 (>32), peaks slightly off GT",
+      "B": "Material correct but wrong layer (bulk not mono), \u0394 usage matches GT bulk value, peaks slightly off"
+    },
+    "step2": {
+      "A": "Methodical, rules out confounds/other TMDs but includes wrong bulk \u0394 fact and circular on layer",
+      "B": "Strong, correctly prioritizes \u0394 as layer diagnostic, no factual errors, considers sharpness/purity"
+    },
+    "step3": {
+      "A": "States key outputs but omits FWHM/oxidation check, lower confidence acknowledges ambiguity",
+      "B": "Clear on evidence/peaks/confidence but omits quality metrics (FWHM, defects) and overstates certainty"
+    },
+    "thinking": "Both candidates correctly identified MoS\u2082 and the E\u00b9\u2082g/A\u2081g modes but reported peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) leading to non-monolayer calls, conflicting with GT's monolayer target (\u0394\u224818\u201320 cm\u207b\u00b9, peaks ~384/403). A introduces a clear factual error (bulk \u0394>32 cm\u207b\u00b9, never true for MoS\u2082), calls it few-layer, and shows moderate confidence with some ambiguity. B correctly links \u0394=26 to bulk per GT and standard literature, has cleaner physics, no hallucinations, but over-confident and calls phase polycrystalline. B is stronger on correctness and reasoning despite the shared layer mismatch.",
+    "elo_before": {
+      "a": 34.18,
+      "d": 50.0
+    },
+    "elo_after": {
+      "a": 26.55,
+      "d": 57.46
+    }
+  },
+  {
+    "game_id": 4,
+    "model_a": "a",
+    "model_b": "e",
+    "winner": "A",
+    "winner_name": "a",
+    "confidence": 0.62,
+    "justification": "Both misclassified layer number and used incorrect peak positions versus GT monolayer values, yet A is superior overall due to more complete Raman analysis, inclusion of GT-relevant features (e.g. 452 cm\u207b\u00b9), explicit quality/purity checks, and avoidance of extreme over-confidence. B's reasoning is too narrow despite better bulk-\u0394 numbers.",
+    "step1": {
+      "A": "Material & modes correct; layer count wrong (few-layer), bulk \u0394 threshold hallucinated (>32), positions off",
+      "B": "Material & modes correct; layer count wrong (bulk), \u0394 thresholds reasonable, positions off"
+    },
+    "step2": {
+      "A": "Methodical and physics-grounded with secondary features and quality metrics, but contains inaccurate bulk value",
+      "B": "Focused on \u0394 diagnostic but minimal steps, ignores other peaks/confounds"
+    },
+    "step3": {
+      "A": "Detailed output with multiple peaks, top candidates, purity assessment; balanced confidence",
+      "B": "Clear but incomplete (only 2 peaks, no FWHM/oxidation checks), overconfident (0.98)"
+    },
+    "thinking": "Both A and B correctly identified MoS\u2082 and assigned the two main peaks to E\u00b9\u2082g (~380) and A\u2081g (~406), but both reported \u0394=26 cm\u207b\u00b9 and therefore misclassified the layer count (few-layer or bulk) versus the GT monolayer expectation of \u0394\u224818\u201320 cm\u207b\u00b9; peak positions are also 3\u20134 cm\u207b\u00b9 off from GT monolayer values. A supplied a more thorough chain-of-thought that evaluated secondary peaks (including the GT-mentioned ~450 cm\u207b\u00b9 band), sharpness/FWHM, polymorph, and ruled out WS\u2082/MoSe\u2082, but introduced a clear error by claiming bulk \u0394>32 cm\u207b\u00b9. B was concise, used a roughly accurate \u0394 threshold (>24 cm\u207b\u00b9 for bulk), yet was overly minimal, listed only two peaks, and showed no consideration of quality indicators or confounds.",
+    "elo_before": {
+      "a": 26.55,
+      "e": 50.0
+    },
+    "elo_after": {
+      "a": 35.09,
+      "e": 41.66
+    }
+  },
+  {
+    "game_id": 5,
+    "model_a": "a",
+    "model_b": "f",
+    "winner": "A",
+    "winner_name": "a",
+    "confidence": 0.62,
+    "justification": "Both fail the critical monolayer classification and \u0394 target per GT, but A is superior overall for thoroughness, secondary-peak analysis matching GT expectations (e.g. ~450 cm\u207b\u00b9), explicit TMD exclusion, and more realistic confidence. B's knowledge of standard values is cleaner yet its minimalism and overconfidence on an incorrect bulk call weigh against it.",
+    "step1": {
+      "A": "Material correct but wrong layer (few-layer vs mono), off-peak positions, incorrect bulk \u0394 (>32)",
+      "B": "Material correct but wrong layer (bulk vs mono), off-peak positions but standard \u0394 values accurate"
+    },
+    "step2": {
+      "A": "Methodical and uses \u0394 but includes factual error on bulk separation and some circularity",
+      "B": "Methodical, correctly relies on \u0394 as primary diagnostic, no hallucinations"
+    },
+    "step3": {
+      "A": "More complete (extra peaks, FWHM, purity, top candidates) but misses GT monolayer",
+      "B": "Concise with key evidence and confidence but omits secondary bands/confounds"
+    },
+    "thinking": "Both candidates correctly ID MoS2 and assign E\u00b9\u2082g/A\u2081g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9), yielding few-layer/bulk calls instead of the GT monolayer (expected \u0394 18-20 cm\u207b\u00b9, peaks ~383-385/402-404). This indicates peak-location error or mismatch with the provided spectrum. A includes extra peaks (e.g. 452 cm\u207b\u00b9 matching GT 2LA), rules out other TMDs, but states incorrect bulk \u0394 (>32 cm\u207b\u00b9). B uses standard \u0394 values accurately but is minimalistic and overconfident (0.98) on the wrong layer.",
+    "elo_before": {
+      "a": 35.09,
+      "f": 50.0
+    },
+    "elo_after": {
+      "a": 43.43,
+      "f": 41.85
+    }
+  },
+  {
+    "game_id": 6,
+    "model_a": "a",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "a",
+    "confidence": 0.92,
+    "justification": "A is the only candidate that recognizes the MoS2 Raman signature and applies correct diagnostic criteria even if the final layer label is off; B's silicon assignment is a total failure with invented spectral features.",
+    "step1": {
+      "A": "Mostly correct material & peaks but wrong layer (few-layer vs mono) and \u0394 interpretation",
+      "B": "Completely incorrect; misidentified as silicon, ignored MoS2 modes"
+    },
+    "step2": {
+      "A": "Methodical, physics-grounded, uses \u0394 for layer count and considers confounds/other TMDs",
+      "B": "Flawed, hallucinatory, ignores MoS2 Raman physics entirely"
+    },
+    "step3": {
+      "A": "Clear on material, peaks, confidence and evidence; layer call mismatches GT",
+      "B": "Missing all required MoS2 evidence, states wrong material and fabricated peak"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS2, locates the E12g and A1g modes, computes their separation as a layer diagnostic, rules out other TMDs, and assesses crystallinity/purity, though it errs on layer count (few-layer instead of monolayer) and quotes inaccurate bulk \u0394 values. Candidate B completely fails by classifying the spectrum as silicon, hallucinating a 520 cm\u207b\u00b9 peak that is absent from the data, and ignoring all MoS2 signatures. On reasoning quality and completeness A is strong but imperfect; B is fundamentally wrong on every dimension.",
+    "elo_before": {
+      "a": 43.43,
+      "g": 50.0
+    },
+    "elo_after": {
+      "a": 51.58,
+      "g": 42.04
+    }
+  },
+  {
+    "game_id": 7,
+    "model_a": "a",
+    "model_b": "h",
+    "winner": "B",
+    "winner_name": "h",
+    "confidence": 0.72,
+    "justification": "B is superior overall: it avoids A's factual error on bulk \u0394 (>32 cm\u207b\u00b9), maintains cleaner reasoning grounded in MoS\u2082 physics, and provides a marginally more precise and confident output. Both fail the monolayer classification required by ground truth, but B is closer to accurate Raman analysis.",
+    "step1": {
+      "A": "Material correct but layer wrong (few-layer vs mono); incorrect bulk \u0394 (>32); peaks slightly off",
+      "B": "Material correct but layer wrong (few-layer vs mono); no major numerical errors; peaks slightly off"
+    },
+    "step2": {
+      "A": "Methodical but includes hallucinated bulk separation value and minor circularity",
+      "B": "Methodical, correctly centers \u0394 as diagnostic, no hallucinations, considers crystallinity/purity"
+    },
+    "step3": {
+      "A": "States material/phase/layer/purity with peak list and SNR but misses expected mono \u0394/FWHM/oxidation checks",
+      "B": "Similar coverage with slightly higher confidence and clearer mode notation; still misses mono-specific evidence"
+    },
+    "thinking": "Both candidates correctly identified the material as MoS2 with 2H crystalline phase and good purity, and both used the observed peaks (~380 and ~406 cm\u207b\u00b9) plus \u0394\u224826 cm\u207b\u00b9 to classify layer number. However, the ground truth specifies a monolayer sample with expected E\u00b9\u2082g \u2248383\u2013385 cm\u207b\u00b9, A\u2081g \u2248402\u2013404 cm\u207b\u00b9 and \u0394\u224818\u201320 cm\u207b\u00b9, so both erred on layer count and peak positions. Candidate A additionally hallucinated an incorrect bulk \u0394 value (>32 cm\u207b\u00b9) while B avoided major factual errors and gave cleaner layer-number reasoning tied to literature trends.",
+    "elo_before": {
+      "a": 51.58,
+      "h": 50.0
+    },
+    "elo_after": {
+      "a": 43.55,
+      "h": 57.85
+    }
+  },
+  {
+    "game_id": 8,
+    "model_a": "a",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "a",
+    "confidence": 0.92,
+    "justification": "A is scientifically correct on material identification and applies proper Raman analysis for MoS2; B fails at the most basic step of material recognition. The layer-count discrepancy in A is minor compared with B's total mismatch.",
+    "step1": {
+      "A": "Material correct (MoS2); peaks and \u0394 correctly used but layer call is few-layer instead of monolayer; minor position/expected-bulk errors",
+      "B": "Material incorrect (TiO2); no recognition of E12g/A1g or MoS2; peak assignments wrong"
+    },
+    "step2": {
+      "A": "Methodical, TMD-focused, uses \u0394 as diagnostic, rules out confounds and other materials; minor hallucinated bulk \u0394 (>32)",
+      "B": "Non-methodical for this sample; entirely misguided oxide-lattice reasoning; ignores TMD literature and key diagnostics"
+    },
+    "step3": {
+      "A": "Clear material, phase, layer, confidence, observed peaks and evidence; omits explicit FWHM or oxidation check but still thorough",
+      "B": "States wrong material/phase/purity; reasoning irrelevant to actual sample; incomplete for MoS2"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS2, assigns the dominant peaks to E12g (~380) and A1g (~406), computes their separation as a layer indicator, rules out other TMDs, and notes crystalline quality. Candidate B completely misidentifies the spectrum as TiO2 (or related oxides), misassigns the same peaks to unrelated oxide phonons, and never mentions MoS2 or TMD physics. Although A reports \u0394=26 cm\u207b\u00b9 (few-layer) while GT expects monolayer \u0394\u224818\u201320, this is a minor layer-count error; B's fundamental material error is far worse.",
+    "elo_before": {
+      "a": 43.55,
+      "i": 50.0
+    },
+    "elo_after": {
+      "a": 51.69,
+      "i": 42.04
+    }
+  },
+  {
+    "game_id": 9,
+    "model_a": "b",
+    "model_b": "c",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.7,
+    "justification": "Candidates are essentially equal: identical material call, same \u0394-based error on layer number, comparable reasoning depth and output structure. Neither matches the monolayer ground truth, so declared draw.",
+    "step1": {
+      "A": "Material/modes correct but wrong layer (few-layer vs mono), wrong \u0394 (26 vs 18-20), peaks mildly mismatch GT",
+      "B": "Material/modes correct but wrong layer (few-layer vs mono), wrong \u0394 (26 vs 18-20), peaks mildly mismatch GT"
+    },
+    "step2": {
+      "A": "Methodical, correctly relies on \u0394 for thickness, rules out confounds/alternatives; no substrate/oxidation discussion",
+      "B": "More granular numbered steps, correctly relies on \u0394, rules out 1T phase too; still misses substrate/doping"
+    },
+    "step3": {
+      "A": "States material/phase/purity but wrong layer count, gives \u0394/peaks/FWHM yet omits GT-expected mono values",
+      "B": "States material/phase/purity but wrong layer count, gives \u0394/peaks/FWHM yet omits GT-expected mono values"
+    },
+    "thinking": "Both candidates correctly ID MoS2, assign the observed peaks to E\u00b9\u2082g and A\u2081g modes, rule out WS2/MoSe2, note FWHM=8 cm\u207b\u00b9 for good crystallinity, and use \u0394 as layer indicator. However both report peaks at 380/406 cm\u207b\u00b9 giving \u0394=26 cm\u207b\u00b9 and conclude few-layer (instead of GT monolayer with \u0394\u224818-20 cm\u207b\u00b9); positions also deviate from GT-expected 383-385/402-403 cm\u207b\u00b9. Chain-of-thought in both is structured and physics-based but neither addresses substrate/doping explicitly. Classification outputs are comparably complete yet both miss the required monolayer label, confidence values, and key GT metrics.",
+    "elo_before": {
+      "b": 57.82,
+      "c": 57.64
+    },
+    "elo_after": {
+      "b": 57.81,
+      "c": 57.64
+    }
+  },
+  {
+    "game_id": 10,
+    "model_a": "b",
+    "model_b": "d",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.68,
+    "justification": "Both misclassify layer number and report non-matching peak positions versus GT monolayer expectations. A is superior overall due to better phase assignment, explicit rule-outs, FWHM evaluation, and higher-quality chain-of-thought; B's polycrystalline label and higher confidence on an incorrect conclusion are drawbacks.",
+    "step1": {
+      "A": "Material correct but layer wrong (few-layer vs mono), peaks/\u0394 mismatch GT",
+      "B": "Material correct but layer wrong (bulk vs mono), peaks/\u0394 mismatch GT"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 correctly as diagnostic, assesses FWHM/purity/other TMDs",
+      "B": "Methodical on \u0394 and second-order modes but phase 'polycrystalline' is inappropriate"
+    },
+    "step3": {
+      "A": "Misses monolayer label and full GT evidence (correct \u0394/FWHM range/oxidation check)",
+      "B": "Misses monolayer label, omits FWHM/quality metrics, less concise"
+    },
+    "thinking": "Both A and B correctly ID MoS\u2082 and assign E\u00b9\u2082g/A\u2081g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and conclude few-layer/bulk, contradicting GT's monolayer target with expected \u0394\u224818\u201320 cm\u207b\u00b9 and positions ~383\u2013384/402\u2013403 cm\u207b\u00b9. Both therefore fail on core layer-count diagnostic. A is stronger on FWHM, explicit TMD rule-outs, crystalline 2H phase, and quality indicators; B adds extra peaks but uses questionable 'polycrystalline' label and omits FWHM. Overall A is better but neither matches GT.",
+    "elo_before": {
+      "b": 57.81,
+      "d": 57.46
+    },
+    "elo_after": {
+      "b": 65.8,
+      "d": 49.65
+    }
+  },
+  {
+    "game_id": 11,
+    "model_a": "b",
+    "model_b": "e",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.68,
+    "justification": "A is better overall: its chain-of-thought is more complete and exactly mirrors GT layer-\u0394 values, adds FWHM and explicit rule-outs, while both share the same core layer-count error. B is shorter and less precise on literature thresholds.",
+    "step1": {
+      "A": "Correct material/modes/\u0394 usage but wrong layer (few-layer vs mono), positions mildly offset from GT",
+      "B": "Correct material/modes/\u0394 usage but wrong layer (bulk vs mono), \u0394 thresholds slightly mismatch GT"
+    },
+    "step2": {
+      "A": "Methodical, grounds in MoS\u2082 physics, uses \u0394 primarily, assesses FWHM/quality and rules out WS\u2082/MoSe\u2082",
+      "B": "Methodical but brief, omits FWHM, quality metrics and explicit confounds/other-TMD checks"
+    },
+    "step3": {
+      "A": "Thorough on evidence (FWHM, purity, no extra peaks) and top candidates; omits monolayer label and some GT markers (e.g. no MoO\u2083)",
+      "B": "Concise but misses FWHM, quality indicators, defect bands and detailed evidence beyond \u0394"
+    },
+    "thinking": "Both candidates correctly identified MoS\u2082 and assigned the observed peaks to E\u00b9\u2082g and A\u2081g modes while using \u0394 as the layer diagnostic, matching the GT emphasis on Raman physics. However both reported peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and concluded non-monolayer (few-layer or bulk), conflicting with the GT monolayer target (\u0394\u224818\u201320 cm\u207b\u00b9, expected positions ~383\u2013385 and ~402\u2013404). Candidate A matches the GT's exact \u0394 thresholds, provides more steps including FWHM, purity assessment and explicit TMD rule-outs; B is shorter with slightly inaccurate \u0394 cutoffs (>24 cm\u207b\u00b9 for bulk).",
+    "elo_before": {
+      "b": 65.8,
+      "e": 41.66
+    },
+    "elo_after": {
+      "b": 73.25,
+      "e": 34.38
+    }
+  },
+  {
+    "game_id": 12,
+    "model_a": "b",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.65,
+    "justification": "B aligns better with GT's own \u0394-to-layer mapping (26 cm\u207b\u00b9 = bulk) and has higher confidence with cleaner reasoning. A hedges on layer count and is less consistent. Both miss the monolayer target, but given the observed peaks, B is scientifically superior overall.",
+    "step1": {
+      "A": "Material/modes correct but failed monolayer call; \u0394=26 wrongly mapped to few-layer (peaks also offset from GT mono values)",
+      "B": "Material/modes correct, \u0394=26 properly mapped to bulk per GT values, though still mismatches stated monolayer target"
+    },
+    "step2": {
+      "A": "Methodical and physics-grounded but internally inconsistent (trace says 'few-to-bulk', result says 'few-layer'); no confound discussion",
+      "B": "Clean, step-wise use of \u0394 as primary diagnostic; directly ties 26 cm\u207b\u00b9 to bulk; slightly less exhaustive"
+    },
+    "step3": {
+      "A": "Clear on evidence and top candidates but wrong layer and lower confidence (0.92)",
+      "B": "Concise, states key evidence (peaks, \u0394, FWHM), appropriate high confidence (0.98), though omits some GT indicators"
+    },
+    "thinking": "Both candidates correctly identified MoS\u2082, assigned the observed peaks (380/406 cm\u207b\u00b9) to E\u00b9\u2082g and A\u2081g modes, computed \u0394=26 cm\u207b\u00b9, noted sharp FWHM=8 cm\u207b\u00b9 for good crystallinity, and ruled out other TMDs. However, GT explicitly states this sample is monolayer (expected \u0394\u224818\u201320 cm\u207b\u00b9 with peaks ~383\u2013385 and ~402\u2013403 cm\u207b\u00b9), while both models reported \u0394=26 and concluded non-monolayer. Per GT's own layer diagnostics (bulk \u0394\u224825\u201326), B's 'bulk' call is more consistent than A's 'few-layer'; both omitted substrate/doping/oxidation discussion but were otherwise methodical.",
+    "elo_before": {
+      "b": 73.25,
+      "f": 41.85
+    },
+    "elo_after": {
+      "b": 64.53,
+      "f": 50.37
+    }
+  },
+  {
+    "game_id": 13,
+    "model_a": "b",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.88,
+    "justification": "A correctly recognizes the MoS\u2082 signature, applies the standard \u0394 layer-count rule, and supplies clean, physics-grounded reasoning; B misclassifies the spectrum as silicon with fabricated evidence. Despite A's layer-count mismatch with GT, it is vastly superior on every evaluation dimension.",
+    "step1": {
+      "A": "Partially correct (right material/modes/\u0394 usage but concluded few-layer instead of monolayer; positions close but not exact to GT)",
+      "B": "Incorrect (wrong material, no recognition of MoS\u2082 peaks or \u0394 diagnostic)"
+    },
+    "step2": {
+      "A": "Strong: methodical, uses \u0394 as key diagnostic, rules out other TMDs, assesses FWHM and purity",
+      "B": "Weak: hallucinates Si peak, relies on missing 520 cm\u207b\u00b9 and preprocessing excuses, ignores TMD features"
+    },
+    "step3": {
+      "A": "Good: states material, phase, layer, confidence, key peaks and evidence; misses explicit monolayer label and oxidation check",
+      "B": "Poor: wrong material, fabricated 520 cm\u207b\u00b9 reference, lacks TMD-specific metrics"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS\u2082 and assigns the observed peaks (380 cm\u207b\u00b9 E\u00b9\u2082g, 406 cm\u207b\u00b9 A\u2081g) to the proper vibrational modes, computing \u0394 = 26 cm\u207b\u00b9 to support a few-layer assignment; this matches standard Raman physics even though it deviates from the GT monolayer label. Candidate B completely fails by classifying the spectrum as silicon, hallucinating a 520 cm\u207b\u00b9 peak that is absent and invoking undefined preprocessing artifacts. A's chain-of-thought is methodical and TMD-specific while B's is circular and non-physical; A's classification output is far more complete and evidence-based.",
+    "elo_before": {
+      "b": 64.53,
+      "g": 42.04
+    },
+    "elo_after": {
+      "b": 72.01,
+      "g": 34.72
+    }
+  },
+  {
+    "game_id": 14,
+    "model_a": "b",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.65,
+    "justification": "Both misclassify layer number relative to GT, but A demonstrates tighter alignment with literature values, explicit TMD exclusion, higher confidence, and comparable reasoning quality without extraneous elements. B's extra peaks add minor completeness but do not outweigh the shared core error.",
+    "step1": {
+      "A": "Material & modes correct but wrong layer (few-layer vs mono); \u0394=26 mismatches GT 18-20",
+      "B": "Material & modes correct but wrong layer (few-layer vs mono); \u0394=26 mismatches GT 18-20"
+    },
+    "step2": {
+      "A": "Methodical, correctly uses \u0394 as diagnostic and rules out WS2/MoSe2; no hallucination but ignores GT mono label",
+      "B": "Methodical and uses \u0394, notes secondary bands; slightly less explicit on alternatives or literature refs"
+    },
+    "step3": {
+      "A": "States material/phase/layer/confidence clearly but incorrect on monolayer; concise evidence summary",
+      "B": "States predictions clearly but incorrect on layer; more peaks listed yet lower confidence"
+    },
+    "thinking": "Both candidates correctly ID MoS2 and assign the observed peaks to E\u00b9\u2082g and A\u2081g modes with \u0394\u224826 cm\u207b\u00b9, but this directly contradicts GT expectations for a monolayer sample (\u0394\u224818-20 cm\u207b\u00b9, peaks ~383/402 cm\u207b\u00b9). Their layer-count conclusion is therefore incorrect per the reference standard, though the reasoning follows standard Raman literature for bulk/few-layer MoS2. A provides clearer literature comparisons, rules out other TMDs explicitly, and reports higher confidence; B detects more secondary peaks (some consistent with MoS2) but is otherwise similar. A is marginally superior overall.",
+    "elo_before": {
+      "b": 72.01,
+      "h": 57.85
+    },
+    "elo_after": {
+      "b": 79.68,
+      "h": 50.35
+    }
+  },
+  {
+    "game_id": 15,
+    "model_a": "b",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.88,
+    "justification": "A is scientifically accurate on material, peak assignment and Raman analysis principles; its layer-count error is minor compared with B's total misidentification of the spectrum as TiO\u2082. B fails every dimension of the evaluation.",
+    "step1": {
+      "A": "MoS\u2082 and modes correctly identified; \u0394 computed but layer count wrong (few-layer vs GT monolayer)",
+      "B": "Completely wrong material (TiO\u2082); no correct MoS\u2082 peak assignment or \u0394 usage"
+    },
+    "step2": {
+      "A": "Methodical, TMD-specific, correctly employs \u0394 as primary diagnostic and rules out confounders",
+      "B": "Ungrounded in MoS\u2082 physics; fabricates oxide-mode matches and ignores TMD literature"
+    },
+    "step3": {
+      "A": "Clear MoS\u2082 result with \u0394, FWHM, confidence and top-candidate list; only layer label mismatches GT",
+      "B": "Structured output but for incorrect material and irrelevant evidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS\u2082, assigns the two primary peaks to E\u00b9\u2082g and A\u2081g modes, explicitly uses the \u0394=26 cm\u207b\u00b9 separation as a layer-thickness diagnostic, rules out WS\u2082/MoSe\u2082, and reports sensible FWHM/purity metrics; its only clear error is labeling the sample 'few-layer' instead of the GT monolayer target. Candidate B wholly misidentifies the spectrum as TiO\u2082 (invoking unrelated 592 cm\u207b\u00b9 and 454 cm\u207b\u00b9 bands), never mentions MoS\u2082 or TMD physics, and shows no use of the \u0394 metric or TMD literature values. Consequently A outperforms B on scientific correctness, reasoning grounded in Raman physics, and completeness of the MoS\u2082-specific classification.",
+    "elo_before": {
+      "b": 79.68,
+      "i": 42.04
+    },
+    "elo_after": {
+      "b": 86.82,
+      "i": 35.06
+    }
+  },
+  {
+    "game_id": 16,
+    "model_a": "c",
+    "model_b": "d",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.65,
+    "justification": "Both fail on monolayer classification per GT (wrong \u0394/layer), but A is better overall due to more rigorous chain-of-thought, explicit alternative exclusion, crystallinity assessment, and balanced confidence. B overconfident with questionable polycrystalline label.",
+    "step1": {
+      "A": "Material/modes correct but wrong peak positions, \u0394=26 (not 18-20), layer (few-layer not mono); flags other TMDs well",
+      "B": "Material/modes correct but wrong positions/\u0394/layer (bulk not mono); phase 'polycrystalline' mismatches GT crystalline"
+    },
+    "step2": {
+      "A": "Methodical, grounds in Raman physics, correctly prioritizes \u0394 for layers, rules out confounds/alternatives, assesses quality/FWHM",
+      "B": "Uses \u0394 as diagnostic but less detailed, omits alternatives/doping/oxidation, some circularity on purity"
+    },
+    "step3": {
+      "A": "Clear on material/phase/purity/confidence but misses explicit monolayer target and oxidation check; good evidence list",
+      "B": "States key peaks/\u0394/reasoning and confidence but omits FWHM, intensity ratio, defect absence; less thorough"
+    },
+    "thinking": "Both A and B correctly ID MoS2 and assign E2g/A1g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9), inconsistent with GT monolayer values (E\u2248383\u2013384, A\u2248402\u2013403, \u0394\u224818\u201320). This leads both to wrong layer calls (A: few-layer near bulk; B: bulk). A shows superior reasoning by ruling out WS2/MoSe2/1T phase, using FWHM, intensity ratios, and more steps; B is briefer, labels phase 'polycrystalline' (questionable), and lists extra peaks. A is more complete and closer to GT quality metrics despite shared layer error.",
+    "elo_before": {
+      "c": 57.64,
+      "d": 49.65
+    },
+    "elo_after": {
+      "c": 65.46,
+      "d": 42.02
+    }
+  },
+  {
+    "game_id": 17,
+    "model_a": "c",
+    "model_b": "e",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.68,
+    "justification": "A outperforms on reasoning quality and completeness with thorough analysis, alternative exclusion, and FWHM mention aligned to GT indicators. Both err on layer number, but A's balanced confidence and methodical approach make it superior overall; B is overly simplistic and confident in bulk assignment.",
+    "step1": {
+      "A": "Material/peaks ID correct but layer wrong (few-layer, \u0394=26 vs GT 18-20); positions slightly mismatched",
+      "B": "Material/peaks ID correct but layer wrong (bulk, \u0394=26); same position mismatch, no FWHM check"
+    },
+    "step2": {
+      "A": "Strong: methodical steps, uses \u0394 as diagnostic, rules out confounds/alternatives, cites FWHM/quality",
+      "B": "Adequate but shallow: minimal steps, no alternatives or quality discussion, misses potential confounds"
+    },
+    "step3": {
+      "A": "Good detail on modes/\u0394/quality/FWHM but omits monolayer call and exact GT peak matches; confidence reasonable",
+      "B": "Concise but incomplete: no FWHM, quality, or alternatives; overconfident on wrong layer"
+    },
+    "thinking": "Both A and B correctly ID MoS2 material, 2H phase, and peaks as E2g/A1g but report 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) inconsistent with GT monolayer expectations (383\u2013385/402\u2013404 cm\u207b\u00b9, \u0394\u224818\u201320 cm\u207b\u00b9); both wrongly assign few-layer/bulk instead of monolayer. A is more methodical (rules out WS2/MoSe2/1T phase, cites FWHM=8 cm\u207b\u00b9 matching GT, intensity ratio, quality), while B is terse and overconfident (0.98). A better on reasoning depth and completeness despite shared layer-count error.",
+    "elo_before": {
+      "c": 65.46,
+      "e": 34.38
+    },
+    "elo_after": {
+      "c": 72.74,
+      "e": 27.26
+    }
+  },
+  {
+    "game_id": 18,
+    "model_a": "c",
+    "model_b": "f",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.65,
+    "justification": "A is superior due to richer chain-of-thought, explicit alternative rejection, and lower confidence on an imperfect layer call. Both fail the monolayer classification required by GT, but A better follows Raman-physics reasoning process.",
+    "step1": {
+      "A": "Material/modes correct but layer count wrong (few-layer vs monolayer); \u0394 and positions mismatch GT",
+      "B": "Material/modes correct but layer count wrong (bulk vs monolayer); same \u0394/position errors"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 diagnostically, rules out WS2/MoSe2/1T phase; still misses GT monolayer expectation",
+      "B": "Shorter, direct but less complete; no confounds or alternatives considered"
+    },
+    "step3": {
+      "A": "Detailed but omits monolayer label, FWHM quality metrics incomplete vs GT; confidence reasonable",
+      "B": "Concise yet misses key GT indicators (\u0394 target, defect absence); overconfident on incorrect layer"
+    },
+    "thinking": "Both candidates correctly ID MoS2 and assign E2g/A1g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and classify as few-layer/bulk, contradicting GT monolayer requirement (E\u2248383\u2013385, A\u2248402\u2013404, \u0394=18\u201320 cm\u207b\u00b9). A provides more thorough alternative-material checks, literature cross-references, and phase-purity discussion; B is terse and over-confident (0.98) in a bulk call. Neither mentions substrate, oxidation, or 2LA(M) bands.",
+    "elo_before": {
+      "c": 72.74,
+      "f": 50.37
+    },
+    "elo_after": {
+      "c": 80.23,
+      "f": 43.06
+    }
+  },
+  {
+    "game_id": 19,
+    "model_a": "c",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.92,
+    "justification": "A is the only candidate that recognizes MoS2 Raman signatures and applies correct physical diagnostics. B's silicon assignment is a fundamental error showing no domain knowledge. The layer-count discrepancy in A is a partial flaw but does not outweigh B's total failure across all evaluation dimensions.",
+    "step1": {
+      "A": "Material and modes correct; \u0394 computed accurately but layer called 'few-layer' (should be monolayer per GT)",
+      "B": "Completely wrong material (silicon instead of MoS2); no recognition of characteristic peaks"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 as diagnostic, rules out confounds/alternatives, grounded in Raman physics",
+      "B": "Illogical, hallucinates silicon link, ignores MoS2 literature, no proper diagnostic steps"
+    },
+    "step3": {
+      "A": "Clear material/phase/purity output, confidence given, key evidence (peaks, \u0394, FWHM) reported; layer error present",
+      "B": "Wrong classification, incoherent reasoning, omits all MoS2-relevant metrics"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS2, recognizes the E2g (~380) and A1g (~406) modes, calculates \u0394 correctly as 26 cm\u207b\u00b9, rules out WS2/MoSe2, and assesses crystallinity/FWHM. However it errs on layer number (calls few-layer/bulk instead of monolayer). Candidate B entirely misidentifies the spectrum as silicon, ignores clear MoS2 signatures, fabricates preprocessing excuses, and shows no understanding of TMD Raman physics. A is therefore superior on correctness, reasoning quality, and completeness despite the layer-count mistake.",
+    "elo_before": {
+      "c": 80.23,
+      "g": 34.72
+    },
+    "elo_after": {
+      "c": 87.19,
+      "g": 27.92
+    }
+  },
+  {
+    "game_id": 20,
+    "model_a": "c",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.68,
+    "justification": "Both wrongly call few-layer instead of monolayer per GT, but A is superior overall: more detailed CoT with explicit database cross-references, alternative exclusion, FWHM/intensity analysis, and quality assessment. B is comparable yet less comprehensive on reasoning steps and confounds.",
+    "step1": {
+      "A": "MoS2 and modes correct but wrong positions, \u0394=26, and layer (few-layer vs mono)",
+      "B": "Same errors on positions/\u0394/layer; extra peaks partly align with GT but still misclassifies"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 correctly, rules out WS2/MoSe2/1T with literature values, no major hallucinations",
+      "B": "Solid but briefer, fewer explicit confounds or alternative checks, slightly less grounded"
+    },
+    "step3": {
+      "A": "Clear on evidence and confidence but omits monolayer, oxidation check, and full GT metrics",
+      "B": "Similar gaps; lists more peaks but still misses key GT expectations (mono, FWHM, no MoO3)"
+    },
+    "thinking": "Both candidates correctly ID MoS2, assign 2H phase, note the E2g (~380) and A1g (~406) modes, and use \u0394=26 cm\u207b\u00b9 as layer diagnostic, but both conclude few-layer instead of the GT monolayer (expected \u0394 18-20 cm\u207b\u00b9 with peaks ~383-385 / 402-404). Their peak positions deviate from GT, indicating either peak-finding error or mismatch with the mono reference. A provides more explicit cross-referencing, alternative-material exclusion (WS2/MoSe2), FWHM, and intensity-ratio details; B detects more secondary peaks (including ~452 2LA) but is less thorough on confounds.",
+    "elo_before": {
+      "c": 87.19,
+      "h": 50.35
+    },
+    "elo_after": {
+      "c": 94.34,
+      "h": 43.36
+    }
+  },
+  {
+    "game_id": 21,
+    "model_a": "c",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.92,
+    "justification": "A demonstrates expert-level TMD Raman knowledge and correctly extracts the primary MoS2 signatures, outweighing its layer-number error. B fails at the most basic step of material identification. A is clearly the better overall output.",
+    "step1": {
+      "A": "Material and modes correct but layer count wrong (few-layer vs monolayer); peak positions slightly offset",
+      "B": "Completely incorrect material (TiO2 instead of MoS2); ignores TMD modes"
+    },
+    "step2": {
+      "A": "Methodical, grounded in MoS2 physics, correctly uses \u0394 diagnostic and rules out confounds/alternatives",
+      "B": "Poor; applies irrelevant oxide phonon logic, hallucinates TiO2 matches, no TMD consideration"
+    },
+    "step3": {
+      "A": "Clear on material/phase/peaks/confidence; omits exact monolayer \u0394 and defect checks",
+      "B": "Inadequate; wrong material, low confidence, irrelevant evidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as 2H-MoS2 using the characteristic E2g (~380 cm\u207b\u00b9) and A1g (~406 cm\u207b\u00b9) modes, applies the \u0394 separation as a layer diagnostic, and rules out WS2/MoSe2 alternatives with appropriate Raman physics. However, it errs by reporting \u0394=26 cm\u207b\u00b9 as few-layer/bulk (ground truth requires monolayer with \u0394\u224818\u201320 cm\u207b\u00b9 and peaks near 383\u2013385/402\u2013404 cm\u207b\u00b9). Candidate B entirely misidentifies the spectrum as TiO2 (citing unrelated oxide modes near 592/454 cm\u207b\u00b9), showing no grasp of TMD signatures. A is therefore superior on correctness, reasoning, and completeness despite the layer-count mistake.",
+    "elo_before": {
+      "c": 94.34,
+      "i": 35.06
+    },
+    "elo_after": {
+      "c": 100.0,
+      "i": 28.54
+    }
+  },
+  {
+    "game_id": 22,
+    "model_a": "d",
+    "model_b": "e",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.75,
+    "justification": "A and B commit identical core errors on layer count and peak values versus GT, with nearly identical reasoning quality and completeness gaps. Minor differences (A's extra peaks vs B's crystalline label) do not outweigh the shared scientific inaccuracies.",
+    "step1": {
+      "A": "Material correct but peak positions, \u0394, and layer (bulk) all mismatch GT monolayer",
+      "B": "Material correct but peak positions, \u0394, and layer (bulk) all mismatch GT monolayer"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 properly as diagnostic; no hallucinations but ignores substrate/doping",
+      "B": "Methodical, uses \u0394 properly as diagnostic; slightly briefer but same strengths/weaknesses"
+    },
+    "step3": {
+      "A": "States material/layer/confidence but omits FWHM, defect checks, correct \u0394; extra peaks listed",
+      "B": "States material/layer/confidence but omits FWHM, defect checks, correct \u0394; too few peaks listed"
+    },
+    "thinking": "Both A and B correctly ID MoS\u2082 and assign E\u00b9\u2082g/A\u2081g modes but use wrong peak positions (380/406 cm\u207b\u00b9) and \u0394=26 cm\u207b\u00b9 to call bulk instead of the GT monolayer (expected ~383/402 cm\u207b\u00b9, \u0394\u224819 cm\u207b\u00b9). Their chain-of-thought is methodical and correctly treats \u0394 as the key diagnostic, yet both apply it to erroneous inputs without addressing confounds or GT-expected features (FWHM, no MoO\u2083, symmetric lineshapes). Classification outputs are similar in confidence and omissions, making them equally flawed overall.",
+    "elo_before": {
+      "d": 42.02,
+      "e": 27.26
+    },
+    "elo_after": {
+      "d": 41.68,
+      "e": 27.59
+    }
+  },
+  {
+    "game_id": 23,
+    "model_a": "d",
+    "model_b": "f",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.8,
+    "justification": "Both models commit the identical scientific error on layer number and peak positions relative to the provided GT, with nearly indistinguishable reasoning quality and completeness. Minor variations (extra peaks in A, FWHM mention in B) do not alter the overall equivalence.",
+    "step1": {
+      "A": "Material correct but layer wrong (bulk vs mono), peaks slightly shifted, \u0394 misused",
+      "B": "Material correct but layer wrong (bulk vs mono), peaks slightly shifted, \u0394 misused"
+    },
+    "step2": {
+      "A": "Logical steps but fails to match GT monolayer expectation; no confounds considered",
+      "B": "Logical steps but fails to match GT monolayer expectation; no confounds considered"
+    },
+    "step3": {
+      "A": "States material/layer/confidence but misses defect/oxidation checks and exact GT metrics",
+      "B": "States material/layer/confidence but misses defect/oxidation checks and exact GT metrics"
+    },
+    "thinking": "Both candidates correctly ID MoS2 and assign E\u00b9\u2082g/A\u2081g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and classify as bulk, directly contradicting GT monolayer values (E\u2248384, A\u2248403, \u0394=18-20 cm\u207b\u00b9). Reasoning in both is methodical and uses \u0394 as diagnostic yet reaches the wrong layer conclusion without addressing confounds or expected monolayer shifts. Completeness is comparable: high confidence stated but key GT elements (FWHM range, no oxidation, symmetric lineshape) omitted; minor differences in observed peaks and phase label do not meaningfully distinguish them.",
+    "elo_before": {
+      "d": 41.68,
+      "f": 43.06
+    },
+    "elo_after": {
+      "d": 41.71,
+      "f": 43.03
+    }
+  },
+  {
+    "game_id": 24,
+    "model_a": "d",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.92,
+    "justification": "A correctly recognizes the MoS\u2082 Raman signature, assigns the right vibrational modes, and employs the standard \u0394 diagnostic even though it reaches the wrong layer conclusion. B shows fundamental misunderstanding of both the spectrum and Raman physics of 2-D materials. A is therefore superior on every evaluation axis.",
+    "step1": {
+      "A": "Mostly correct material & mode assignment; wrong layer count (bulk instead of monolayer)",
+      "B": "Completely incorrect; misidentified as silicon with no 520 cm\u207b\u00b9 peak"
+    },
+    "step2": {
+      "A": "Methodical, correctly applies \u0394 as layer-count diagnostic and considers second-order modes",
+      "B": "Poor; hallucinates silicon features, ignores MoS\u2082 signatures, circular and non-physical"
+    },
+    "step3": {
+      "A": "Clear material/mode/\u0394 statement and high confidence; omits explicit monolayer call and defect checks",
+      "B": "Inadequate; wrong material, fabricated peak, no relevant evidence or uncertainty quantification"
+    },
+    "thinking": "Ground truth specifies monolayer MoS\u2082 with E\u00b9\u2082g \u2248383\u2013385 cm\u207b\u00b9, A\u2081g \u2248402\u2013404 cm\u207b\u00b9 and \u0394\u224818\u201320 cm\u207b\u00b9. Candidate A correctly identifies MoS\u2082, assigns the two main peaks to E\u00b9\u2082g and A\u2081g modes, and uses the \u0394=26 cm\u207b\u00b9 diagnostic, but errs by calling the sample bulk. Candidate B entirely misclassifies the spectrum as silicon, fabricates a 520 cm\u207b\u00b9 peak that is absent, and shows no engagement with MoS\u2082 physics or the observed 380/406 cm\u207b\u00b9 doublet.",
+    "elo_before": {
+      "d": 41.71,
+      "g": 27.92
+    },
+    "elo_after": {
+      "d": 49.39,
+      "g": 20.42
+    }
+  },
+  {
+    "game_id": 25,
+    "model_a": "d",
+    "model_b": "h",
+    "winner": "B",
+    "winner_name": "h",
+    "confidence": 0.65,
+    "justification": "Both fail on the critical monolayer classification and \u0394 diagnostic relative to GT, but B is superior overall: more nuanced layer assignment, lower/non-overconfident score, crystalline (vs polycrystalline) label, and richer CoT covering crystallinity and secondary bands. A is overconfident on an incorrect bulk call.",
+    "step1": {
+      "A": "Incorrect: right material/modes but wrong positions, \u0394=26 (bulk), layer=b_bulk, polycrystalline phase",
+      "B": "Incorrect: right material/modes but wrong positions, \u0394=26, layer=few-layer (still wrong for monolayer GT)"
+    },
+    "step2": {
+      "A": "Methodical and uses \u0394 correctly in principle, but flawed by bad peak IDs; no confounds considered",
+      "B": "Stronger: more steps on FWHM/crystallinity/purity/stacking, conservative layer call, still misses confounds"
+    },
+    "step3": {
+      "A": "States material/layer/confidence/peaks but omits FWHM, oxidation check, and gives wrong monolayer answer",
+      "B": "Similar but lower appropriate confidence, slightly more thorough on secondary modes and phase"
+    },
+    "thinking": "Both A and B correctly ID MoS\u2082 and assign E\u00b9\u2082g/A\u2081g modes but report wrong peak positions (380/406 cm\u207b\u00b9, \u0394=26 cm\u207b\u00b9) versus GT monolayer values (~384/403 cm\u207b\u00b9, \u0394\u224819 cm\u207b\u00b9), leading to incorrect layer calls (bulk/few-layer instead of monolayer). Their CoT is methodical and correctly emphasizes \u0394 as the key diagnostic, yet both start from erroneous peaks and omit substrate/doping/oxidation checks. Completeness is similar but neither outputs the GT monolayer label or correct \u0394; A is overconfident (0.98) on the wrong layer while B is more conservative.",
+    "elo_before": {
+      "d": 49.39,
+      "h": 43.36
+    },
+    "elo_after": {
+      "d": 41.25,
+      "h": 51.31
+    }
+  },
+  {
+    "game_id": 26,
+    "model_a": "d",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.82,
+    "justification": "A correctly recognizes MoS\u2082, assigns the right vibrational modes, and properly uses the \u0394 diagnostic, making it far closer to ground truth than B's total misclassification as TiO\u2082. Although A errs on layer number given the provided peaks, its overall scientific approach and completeness are superior. B shows no valid understanding of the spectrum.",
+    "step1": {
+      "A": "Material and modes correct but wrong layer (bulk not mono); \u0394=26 cm\u207b\u00b9 contradicts monolayer expectation",
+      "B": "Completely incorrect material (TiO\u2082 instead of MoS\u2082); no recognition of E\u00b9\u2082g/A\u2081g or \u0394 diagnostic"
+    },
+    "step2": {
+      "A": "Methodical, correctly applies layer-dependent \u0394 as key diagnostic and considers second-order bands; minor position offset not addressed",
+      "B": "Poor, non-grounded in MoS\u2082 physics; incorrectly forces TiO\u2082 polymorph matches and ignores TMD literature"
+    },
+    "step3": {
+      "A": "Clear on material/modes/\u0394/confidence but misses monolayer call and defect checks; high confidence appropriate for its (incorrect) conclusion",
+      "B": "Lacks MoS\u2082 info, states wrong material/phase with low confidence; omits key evidence like \u0394"
+    },
+    "thinking": "Ground truth specifies monolayer MoS\u2082 with E\u00b9\u2082g ~383\u2013385, A\u2081g ~402\u2013404 and \u0394\u224818\u201320 cm\u207b\u00b9. Candidate A correctly identified the material and modes but reported peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and classified it as bulk, which is inconsistent with the monolayer target. Candidate B completely misidentified the spectrum as TiO\u2082 (or mixed oxides), ignoring all MoS\u2082 signatures and forcing unrelated oxide bands. A's chain-of-thought is methodical and uses the \u0394 diagnostic properly for the observed peaks, while B's reasoning is hallucinated and non-physical for TMDs.",
+    "elo_before": {
+      "d": 41.25,
+      "i": 28.54
+    },
+    "elo_after": {
+      "d": 48.96,
+      "i": 21.01
+    }
+  },
+  {
+    "game_id": 27,
+    "model_a": "e",
+    "model_b": "f",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.75,
+    "justification": "Both candidates share identical fundamental scientific errors on layer number and peak values versus GT, with near-identical reasoning and outputs. B adds minor FWHM detail but this does not outweigh the shared mistakes on the critical \u0394 diagnostic and monolayer classification.",
+    "step1": {
+      "A": "Incorrect: right material/modes but wrong positions, \u0394, and layer (bulk not mono)",
+      "B": "Incorrect: same errors on positions, \u0394, and layer call as A"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 correctly as diagnostic but no confounds, no defects check, leads to wrong conclusion",
+      "B": "Similar to A but slightly better with FWHM mention; still misses confounds and full GT alignment"
+    },
+    "step3": {
+      "A": "Incomplete: states bulk not mono, misses FWHM/oxidation/absence of defects, confidence ok but evidence mismatched",
+      "B": "Incomplete: same core gaps as A despite extra FWHM note; lacks full key indicators"
+    },
+    "thinking": "Both A and B correctly identify MoS2 material and modes but assign wrong peak positions (380/406 cm^-1) versus GT monolayer expectations (~383-384/402-403). Both compute \u0394=26 cm^-1 and wrongly conclude bulk instead of monolayer (GT \u0394 18-20). Reasoning is methodical and uses \u0394 as diagnostic but ignores confounds/substrate/oxidation; B adds minor FWHM detail. Classification outputs are nearly identical, miss required monolayer label and quality metrics, making them equally flawed.",
+    "elo_before": {
+      "e": 27.59,
+      "f": 43.03
+    },
+    "elo_after": {
+      "e": 27.95,
+      "f": 42.68
+    }
+  },
+  {
+    "game_id": 28,
+    "model_a": "e",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.92,
+    "justification": "A is grounded in actual MoS2 Raman physics and correctly extracts/assigns the diagnostic peaks even if layer assignment differs from ground truth. B shows fundamental misunderstanding by outputting silicon and fabricating supporting reasoning. A wins decisively on all evaluation criteria.",
+    "step1": {
+      "A": "MoS2 identified correctly; peaks assigned but positions slightly off and layer called bulk (not monolayer)",
+      "B": "Wrong material (silicon); ignores clear MoS2 E2g/A1g/2LA peaks"
+    },
+    "step2": {
+      "A": "Methodical, correctly relies on \u0394 as primary diagnostic and MoS2 vibrational modes",
+      "B": "Flawed/hallucinated; claims Si peaks after noting 520 cm^-1 is absent, circular logic"
+    },
+    "step3": {
+      "A": "Clear MoS2 result with observed peaks, confidence, and \u0394-based reasoning (only layer wrong)",
+      "B": "Incorrect material, no mention of TMD modes or \u0394, incoherent explanation"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS2 and properly uses the E2g/A1g peak separation (\u0394=26 cm^-1) as the key diagnostic for layer count, though it reaches a bulk conclusion instead of the ground-truth monolayer. Candidate B completely fails by classifying the spectrum as silicon despite listing the exact MoS2 peaks (380, 406, 452 cm^-1), showing hallucinated reasoning about a missing 520 cm^-1 Si peak. A is therefore superior on scientific correctness, reasoning grounded in TMD physics, and completeness of the classification output.",
+    "elo_before": {
+      "e": 27.95,
+      "g": 20.42
+    },
+    "elo_after": {
+      "e": 35.78,
+      "g": 12.77
+    }
+  },
+  {
+    "game_id": 29,
+    "model_a": "e",
+    "model_b": "h",
+    "winner": "B",
+    "winner_name": "h",
+    "confidence": 0.72,
+    "justification": "Both err on layer count vs monolayer GT, but B is superior overall due to higher completeness, more detailed chain-of-thought incorporating secondary modes and purity, and appropriately lower confidence. A is overly brief and confidently wrong on bulk assignment.",
+    "step1": {
+      "A": "Material correct but wrong layer (bulk vs mono), peaks/\u0394 mismatch GT expected positions",
+      "B": "Material correct but wrong layer (few-layer vs mono), better peak list including second-order modes"
+    },
+    "step2": {
+      "A": "Uses \u0394 correctly as diagnostic but short, no confounds or extra features addressed",
+      "B": "More grounded in physics, methodical steps on modes/separation/crystallinity, considers secondary bands"
+    },
+    "step3": {
+      "A": "States key peaks/\u0394/reasoning but omits FWHM, defects, oxidation check, intensity ratio",
+      "B": "More thorough with extra peaks, SNR/crystallinity notes, explains consistency with MoS2"
+    },
+    "thinking": "Both A and B correctly ID MoS2 and assign E2g/A1g modes but report peaks at 380/406 cm^-1 (\u0394=26 cm^-1), leading to wrong layer calls (bulk/few-layer vs GT monolayer with expected \u0394 18-20 cm^-1 and peaks ~383-385/402-404). A is concise but overconfident with minimal steps; B is more complete, notes secondary bands consistent with MoS2 (e.g. ~452 cm^-1), assesses crystallinity/purity, and uses lower confidence. Neither considers substrate/doping/oxidation explicitly.",
+    "elo_before": {
+      "e": 35.78,
+      "h": 51.31
+    },
+    "elo_after": {
+      "e": 28.13,
+      "h": 58.78
+    }
+  },
+  {
+    "game_id": 30,
+    "model_a": "e",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "A is the only candidate that recognizes the spectrum as MoS\u2082 and correctly applies the layer-number diagnostic \u0394, even though it reaches the wrong layer conclusion from inaccurate peak positions. B is fundamentally incorrect on material identity and reasoning domain. Therefore A is clearly superior overall.",
+    "step1": {
+      "A": "Material correct (MoS\u2082), peaks assigned to E\u00b9\u2082g/A\u2081g but positions and \u0394 wrong \u2192 bulk instead of monolayer",
+      "B": "Material wrong (TiO\u2082), peaks and modes completely misassigned, no TMD features recognized"
+    },
+    "step2": {
+      "A": "Methodical, correctly treats \u0394 as primary diagnostic and follows MoS\u2082 Raman literature; minor hallucinated positions but no major confounds ignored",
+      "B": "Reasoning is coherent for oxides but irrelevant and hallucinatory for this MoS\u2082 spectrum; no TMD knowledge applied"
+    },
+    "step3": {
+      "A": "Clear MoS\u2082 classification, states key peaks and \u0394, high confidence; omits FWHM, defect checks and exact monolayer evidence",
+      "B": "Structured output but for incorrect material, lower confidence, lists extra peaks that are not present in GT MoS\u2082 signature"
+    },
+    "thinking": "Ground truth specifies monolayer MoS\u2082 with E\u00b9\u2082g ~383\u2013385 cm\u207b\u00b9, A\u2081g ~402\u2013403 cm\u207b\u00b9 and \u0394 \u2248 18\u201320 cm\u207b\u00b9. Candidate A correctly identifies the material as MoS\u2082, assigns the two main peaks to E\u00b9\u2082g and A\u2081g, and uses \u0394 as the layer diagnostic, but reports erroneous positions (380/406 cm\u207b\u00b9) yielding \u0394 = 26 cm\u207b\u00b9 and therefore misclassifies as bulk. Candidate B entirely misidentifies the spectrum as mixed-phase TiO\u2082, hallucinates additional peaks (358, 454, 592, 754 cm\u207b\u00b9) and never engages with MoS\u2082 physics or the \u0394 metric.",
+    "elo_before": {
+      "e": 28.13,
+      "i": 21.01
+    },
+    "elo_after": {
+      "e": 35.97,
+      "i": 13.36
+    }
+  },
+  {
+    "game_id": 31,
+    "model_a": "f",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.88,
+    "justification": "A accurately recognizes and interprets the characteristic MoS2 Raman modes and applies the correct layer-count diagnostic, while B fails at the most basic step of material identification with nonsensical silicon reasoning. The layer mismatch in A is the only flaw, but it is far outweighed by B's total misunderstanding of the spectrum.",
+    "step1": {
+      "A": "MoS2 identified but layer wrong (bulk instead of mono); peaks/\u0394 mostly consistent with MoS2 physics though offset from GT mono values",
+      "B": "Completely incorrect; misidentified as silicon, ignored MoS2 modes"
+    },
+    "step2": {
+      "A": "Methodical and physically grounded; correctly uses \u0394 as layer diagnostic, notes FWHM for crystallinity",
+      "B": "Illogical and hallucinatory; fabricates Si features, no MoS2 physics"
+    },
+    "step3": {
+      "A": "Clear statement of material/phase/layer/confidence/peaks; concise and evidence-based though layer mismatches GT",
+      "B": "Structured but entirely wrong material and flawed evidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS2, assigns the observed peaks to the proper E\u00b9\u2082g and A\u2081g modes, and applies the standard \u0394 diagnostic (26 cm\u207b\u00b9 \u2192 bulk), which is scientifically sound even though it conflicts with the GT monolayer label; peak positions are close but not exact to GT mono values. Candidate B completely fails by misclassifying the spectrum as silicon, hallucinating a 520 cm\u207b\u00b9 peak that is absent, and offering incoherent reasoning that ignores clear TMD signatures while listing MoS2-typical peaks (e.g., 452 cm\u207b\u00b9 2LA). A is therefore superior on correctness, reasoning grounded in Raman physics, and completeness despite the layer-count discrepancy.",
+    "elo_before": {
+      "f": 42.68,
+      "g": 12.77
+    },
+    "elo_after": {
+      "f": 49.99,
+      "g": 5.62
+    }
+  },
+  {
+    "game_id": 32,
+    "model_a": "f",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.65,
+    "justification": "A is better overall: its layer assignment and \u0394 interpretation match the GT's numerical diagnostics exactly, it reports appropriate FWHM, and maintains higher confidence without over-claiming extra peaks. B is close but less accurate on the bulk vs few-layer distinction for \u0394=26 cm\u207b\u00b9. Both fail the monolayer target, but A follows the supplied GT physics more rigorously.",
+    "step1": {
+      "A": "Material and modes correct but peak positions/\u0394/layer (bulk) mismatch GT monolayer",
+      "B": "Material and modes correct but peak positions/\u0394/layer (few-layer) mismatch GT monolayer; more peaks noted"
+    },
+    "step2": {
+      "A": "Methodical, uses \u0394 as primary diagnostic per GT standards, no hallucinations",
+      "B": "Methodical and uses \u0394 but chooses conservative 'few-layer' not matching GT's bulk value for 26 cm\u207b\u00b9"
+    },
+    "step3": {
+      "A": "Clear statement of material/phase/layer/confidence/evidence; concise but omits extra peaks",
+      "B": "Clear with confidence and reasoning, more complete observed peak list but wrong layer call"
+    },
+    "thinking": "Both A and B correctly identify MoS2 and assign the main peaks to E\u00b9\u2082g (~380) and A\u2081g (~406) modes, computing \u0394=26 cm\u207b\u00b9. Per GT this indicates bulk (25-26 cm\u207b\u00b9), not the stated monolayer target (\u0394 18-20 cm\u207b\u00b9 with peaks ~383-385/402-404); both therefore err on layer number and reported peak positions. A precisely labels it bulk matching GT's own diagnostic, cites FWHM=8 cm\u207b\u00b9 (within GT 4-8 range), and shows higher confidence. B labels it few-layer (less accurate for exactly 26 cm\u207b\u00b9), but lists more peaks including the GT-mentioned ~450 cm\u207b\u00b9 2LA band. Reasoning is methodical in both and centers \u0394 correctly; neither discusses substrate/doping/oxidation confounds.",
+    "elo_before": {
+      "f": 49.99,
+      "h": 58.78
+    },
+    "elo_after": {
+      "f": 58.19,
+      "h": 50.77
+    }
+  },
+  {
+    "game_id": 33,
+    "model_a": "f",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.88,
+    "justification": "A correctly recognized the MoS\u2082 Raman fingerprint and used the standard \u0394 diagnostic, while B produced an entirely erroneous TiO\u2082 classification. The layer-count discrepancy in A is notable but still far closer to truth than B's output.",
+    "step1": {
+      "A": "Material and mode assignment correct but layer wrong (bulk vs mono) and peak positions off from GT",
+      "B": "Completely incorrect; misidentified as TiO\u2082, ignored MoS\u2082 signature"
+    },
+    "step2": {
+      "A": "Methodical, correctly employed \u0394 for layer count and noted crystallinity; minor hallucination on exact positions",
+      "B": "Poor, misguided oxide-matching logic, no TMD physics, ignored key confounds"
+    },
+    "step3": {
+      "A": "Clear statement of material/phase/layer/confidence/observed peaks; layer error hurts completeness",
+      "B": "Inappropriate material and extra peaks listed; low relevance and confidence"
+    },
+    "thinking": "Ground truth specifies monolayer MoS\u2082 with E\u00b9\u2082g \u2248383\u2013384 cm\u207b\u00b9, A\u2081g \u2248402\u2013403 cm\u207b\u00b9 and \u0394\u224818\u201320 cm\u207b\u00b9. Candidate A correctly identified MoS\u2082, assigned the two main modes properly, and used \u0394 as the primary layer diagnostic (though it reported 380/406 cm\u207b\u00b9 giving \u0394=26 cm\u207b\u00b9 and thus called bulk). Candidate B completely failed, misassigning the spectrum to TiO\u2082 on the basis of extraneous peaks (592, 454 cm\u207b\u00b9 etc.) and never considering TMDs. A is therefore superior on correctness, reasoning grounded in MoS\u2082 physics, and completeness despite the layer-number mismatch.",
+    "elo_before": {
+      "f": 58.19,
+      "i": 13.36
+    },
+    "elo_after": {
+      "f": 65.17,
+      "i": 6.54
+    }
+  },
+  {
+    "game_id": 34,
+    "model_a": "g",
+    "model_b": "h",
+    "winner": "B",
+    "winner_name": "h",
+    "confidence": 0.85,
+    "justification": "B is clearly superior overall: it correctly identifies MoS\u2082 and applies proper Raman diagnostics (modes + \u0394), while A completely misses the material. The layer-number mismatch with GT is minor compared to A's total failure and hallucination of a silicon peak. B's chain-of-thought is grounded in actual 2D materials physics.",
+    "step1": {
+      "A": "Failed: wrong material (silicon), no MoS\u2082 peak identification or \u0394 usage",
+      "B": "Mostly correct: right material and modes, accurate \u0394=26 cm\u207b\u00b9 but layer called 'few-layer' instead of monolayer"
+    },
+    "step2": {
+      "A": "Poor: circular silicon assumption, ignores MoS\u2082 literature, hallucinates missing peak",
+      "B": "Strong: methodical use of MoS\u2082 fingerprints, \u0394 as layer diagnostic, considers crystallinity and contaminants"
+    },
+    "step3": {
+      "A": "Inadequate: wrong classification, no MoS\u2082 metrics or confidence justification",
+      "B": "Good: reports material/phase/layer/stacking/purity, cites key peaks and \u0394, appropriate confidence"
+    },
+    "thinking": "Candidate A fundamentally misidentifies the material as silicon despite the listed peaks at 380 and 406 cm\u207b\u00b9 that match MoS\u2082 modes, and hallucinates a 520 cm\u207b\u00b9 peak that is absent, showing poor Raman knowledge. Candidate B correctly recognizes the E\u00b2g (380 cm\u207b\u00b9) and A\u2081g (406 cm\u207b\u00b9) modes of 2H-MoS\u2082, uses the \u0394\u224826 cm\u207b\u00b9 separation as the key diagnostic for layer number, and appropriately assesses crystallinity/purity. Although B calls it 'few-layer' rather than the GT monolayer label, its physics-based reasoning and peak assignment are far more accurate than A's; the observed peak positions actually align better with few-layer/bulk than the GT's ideal monolayer values.",
+    "elo_before": {
+      "g": 5.62,
+      "h": 50.77
+    },
+    "elo_after": {
+      "g": 0.0,
+      "h": 57.61
+    }
+  },
+  {
+    "game_id": 35,
+    "model_a": "g",
+    "model_b": "i",
+    "winner": "B",
+    "winner_name": "i",
+    "confidence": 0.65,
+    "justification": "Both outputs are scientifically invalid and miss every aspect of the ground-truth MoS\u2082 monolayer analysis. B is better overall due to lower misplaced confidence, more systematic (if erroneous) reasoning steps, and explicit acknowledgment of spectral inconsistencies, whereas A is overconfident in a physically implausible silicon assignment.",
+    "step1": {
+      "A": "Completely incorrect; no MoS\u2082 identification, no E\u00b9\u2082g/A\u2081g assignment, no \u0394 usage",
+      "B": "Completely incorrect; no MoS\u2082 identification, no E\u00b9\u2082g/A\u2081g assignment, no \u0394 usage"
+    },
+    "step2": {
+      "A": "Poor; hallucinates Si consistency, circular, ignores missing 520 cm\u207b\u00b9 peak entirely",
+      "B": "Moderately structured but misguided; focuses on wrong oxide class, no TMD context or confounds considered"
+    },
+    "step3": {
+      "A": "States wrong material/confidence but omits all MoS\u2082-specific evidence; overconfident (0.95)",
+      "B": "States wrong material with moderate confidence (0.56) and some uncertainty notes, still misses all key MoS\u2082 metrics"
+    },
+    "thinking": "Both candidates completely failed to identify the material as MoS\u2082 despite peaks at ~380 cm\u207b\u00b9 and ~406 cm\u207b\u00b9 directly corresponding to the E\u00b9\u2082g and A\u2081g modes (with 2LA(M) at ~452 cm\u207b\u00b9 also present). Neither assigned the characteristic peaks, computed \u0394 (~26 cm\u207b\u00b9 here, consistent with few-layer/bulk but GT specifies monolayer), nor referenced TMD Raman physics. Candidate A shows worse scientific errors by forcing a silicon assignment despite the total absence of the 520 cm\u207b\u00b9 peak and no supporting modes. Candidate B is only marginally better with lower confidence, more methodical peak-matching steps, and explicit uncertainty notes, though still entirely misguided.",
+    "elo_before": {
+      "g": 0.0,
+      "i": 6.54
+    },
+    "elo_after": {
+      "g": 0.0,
+      "i": 14.39
+    }
+  },
+  {
+    "game_id": 36,
+    "model_a": "h",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "h",
+    "confidence": 0.88,
+    "justification": "A is scientifically far superior: it recognizes the correct material and modes, applies proper Raman analysis for layer number and purity, and only has a minor discrepancy on exact layer label. B misclassifies the entire spectrum as TiO\u2082 with inconsistent reasoning. A wins decisively on all three evaluation dimensions.",
+    "step1": {
+      "A": "Mostly correct (MoS\u2082 + E/A modes identified; \u0394 used but layer called few-layer not mono)",
+      "B": "Incorrect (wrong material TiO\u2082; no E/A mode recognition; ignores MoS\u2082 signatures)"
+    },
+    "step2": {
+      "A": "Strong (methodical, uses \u0394 as key diagnostic, assesses crystallinity/purity, no major hallucinations)",
+      "B": "Poor (wrong oxide matching, misses MoS\u2082 physics, circular peak assignments to TiO\u2082)"
+    },
+    "step3": {
+      "A": "Good (clear material/phase/layer output, lists peaks, explains separation and secondary bands, reasonable confidence)",
+      "B": "Weak (wrong material, vague on evidence, low relevance to ground-truth MoS\u2082 expectations)"
+    },
+    "thinking": "Candidate A correctly identifies the material as MoS\u2082, assigns the observed peaks at 380 cm\u207b\u00b9 and 406 cm\u207b\u00b9 to the E\u00b9\u2082g and A\u2081g modes, computes \u0394\u224826 cm\u207b\u00b9, and appropriately interprets it as few-layer (consistent with standard MoS\u2082 Raman physics even if ground truth expects monolayer). Candidate B entirely fails by misassigning the same peaks to TiO\u2082 phonon modes, ignoring characteristic MoS\u2082 features and second-order bands near 450 cm\u207b\u00b9. A's chain-of-thought is methodical and grounded in TMD layer-count diagnostics while B's is hallucinated and non-physical for the given spectrum.",
+    "elo_before": {
+      "h": 57.61,
+      "i": 14.39
+    },
+    "elo_after": {
+      "h": 64.62,
+      "i": 7.54
+    }
+  }
+]

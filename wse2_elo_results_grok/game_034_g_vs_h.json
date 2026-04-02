@@ -1,0 +1,30 @@
+{
+  "game_id": 34,
+  "model_a": "g",
+  "model_b": "h",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.85,
+  "justification": "Both candidates are equally poor: zero scientific correctness on WSe\u2082 identification, no use of monolayer Raman markers, and conclusions unrelated to ground truth. A at least stayed in the proper spectral window but still missed the material; B is more bizarre. Clear draw on all evaluation dimensions.",
+  "step1": {
+    "A": "Completely incorrect; misidentified as bulk Si, ignored all WSe\u2082 signatures",
+    "B": "Completely incorrect; assigned to water ice with irrelevant high-wavenumber focus"
+  },
+  "step2": {
+    "A": "Methodical for Si but irrelevant to TMD physics; no handling of near-degenerate modes or monolayer indicators",
+    "B": "Unrelated to Raman of 2D materials; misinterprets artifacts as OH stretches, no TMD reasoning"
+  },
+  "step3": {
+    "A": "States wrong material/phase with high confidence; omits all key WSe\u2082 evidence",
+    "B": "Provides wrong classification with irrelevant details; no WSe\u2082, layer, or peak-ratio info"
+  },
+  "thinking": "Both A and B completely failed to identify the spectrum as monolayer WSe\u2082 on SiO\u2082/Si. A focused only on the ~517 cm\u207b\u00b9 Si substrate peak and concluded crystalline silicon, ignoring all TMD-relevant features around 245\u2013260 cm\u207b\u00b9. B hallucinated crystalline water ice from high-wavenumber noise/artifact bands, disregarding the low-frequency phonon region entirely. Neither mentioned E\u00b9\u2082g/A\u2081g merger, 2LA(M) enhancement, B\u00b9\u2082g absence, or any monolayer diagnostics, making both scientifically invalid.",
+  "elo_before": {
+    "g": 12.67,
+    "h": 20.96
+  },
+  "elo_after": {
+    "g": 12.86,
+    "h": 20.77
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game_id": 27,
+  "model_a": "e",
+  "model_b": "f",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.75,
+  "justification": "Candidates are essentially duplicates in classification (both incorrectly output few-layer WSe2), observed peaks, and reasoning, making identical core mistakes relative to GT monolayer expectations and 2LA(M)/B\u00b9\u2082g rules. Neither outperforms the other on correctness, reasoning quality, or completeness.",
+  "step1": {
+    "A": "Material correct but layer wrong (few-layer vs mono); misses 2LA(M), B absence, and key mono ratios",
+    "B": "Material correct but layer wrong (few-layer vs mono); misses 2LA(M), B absence, and key mono ratios"
+  },
+  "step2": {
+    "A": "Methodical on modes and substrate but ignores GT monolayer diagnostics, near-degeneracy details, and potential mis-ID confounds",
+    "B": "Methodical on modes/substrate/calibration but ignores GT monolayer diagnostics, near-degeneracy details, and potential mis-ID confounds"
+  },
+  "step3": {
+    "A": "States wrong layer number; omits 2LA(M), B absence, FWHM, oxidation check; confidence overstated",
+    "B": "States wrong layer number; omits 2LA(M), B absence, FWHM, oxidation check; confidence overstated"
+  },
+  "thinking": "Both candidates correctly ID WSe2 via the ~248 cm\u207b\u00b9 merged E2g/A1g peak and Si substrate at 518 cm\u207b\u00b9, plus minor modes like E1g. However both wrongly classify as few-layer based on a 306 cm\u207b\u00b9 peak they assign to B2g\u00b9 (which GT states should be absent for monolayer) and completely omit the key 2LA(M) ~260 cm\u207b\u00b9 monolayer indicator. Their CoT and outputs are nearly identical in structure, peaks list, confidence, and errors, with only minor differences in calibration discussion.",
+  "elo_before": {
+    "e": 80.23,
+    "f": 79.56
+  },
+  "elo_after": {
+    "e": 80.21,
+    "f": 79.58
+  }
+}

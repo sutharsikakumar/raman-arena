@@ -1,0 +1,30 @@
+{
+  "game_id": 23,
+  "model_a": "d",
+  "model_b": "f",
+  "winner": "B",
+  "winner_name": "f",
+  "confidence": 0.82,
+  "justification": "B correctly identifies WSe\u2082, handles substrate/calibration, and uses appropriate mode assignments, while A entirely misses the material and treats the main WSe\u2082 peak as an anomaly. Although B errs on layer number, its overall scientific grounding and completeness far exceed A's total misclassification.",
+  "step1": {
+    "A": "Completely incorrect material (silicon); missed all WSe\u2082 peaks, 2LA(M), B\u00b9\u2082g absence, and monolayer indicators",
+    "B": "Correct material (WSe\u2082) and ~250 cm\u207b\u00b9 assignment but wrong layer (few-layer instead of monolayer); no mention of strong 2LA(M) or its intensity ratio"
+  },
+  "step2": {
+    "A": "Not grounded in WSe\u2082 physics; circular Si-focused reasoning that dismisses key TMD peak as anomaly, no confounds or TMD comparisons considered",
+    "B": "Methodical and physics-based (substrate correction, mode assignments, layer diagnostic via B\u00b9\u2082g); handles calibration but misses near-degeneracy nuance, 2LA(M) enhancement, and oxidation check"
+  },
+  "step3": {
+    "A": "States wrong material/layer/purity; no key evidence for WSe\u2082, no confidence in TMD context, lists irrelevant high-wavenumber peaks",
+    "B": "Clear on material, phase, and evidence (modes, calibration); states layer and confidence but incorrectly; omits 2LA(M), FWHM, and oxidation check"
+  },
+  "thinking": "Candidate A completely fails by identifying the spectrum as silicon based on the substrate peak at 518 cm\u207b\u00b9, treating the strong ~249 cm\u207b\u00b9 WSe\u2082 feature as an anomaly and ignoring all TMD signatures. Candidate B correctly recognizes the material as WSe\u2082, accounts for the Si substrate and calibration offset, assigns the merged ~250 cm\u207b\u00b9 peak to E\u00b9\u2082g/A\u2081g and notes other modes, but incorrectly classifies it as few-layer due to the ~308 cm\u207b\u00b9 peak (which GT states should be absent in monolayer). B's reasoning is grounded in TMD Raman physics while A's is not; B is therefore superior overall despite the layer-number error.",
+  "elo_before": {
+    "d": 49.99,
+    "f": 72.24
+  },
+  "elo_after": {
+    "d": 42.5,
+    "f": 79.56
+  }
+}

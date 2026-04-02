@@ -1,0 +1,30 @@
+{
+  "game_id": 32,
+  "model_a": "f",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "f",
+  "confidence": 0.82,
+  "justification": "A is superior overall by correctly recognizing h-BN and the E2g mode with sound Raman reasoning, while B fails at the most basic step of material identification. The layer-number discrepancy in A is minor compared to B's complete misclassification as amorphous carbon. This aligns with ground-truth expectations on material and primary peak.",
+  "step1": {
+    "A": "Mostly correct (h-BN + E2g identified; minor layer error)",
+    "B": "Incorrect (misidentified as DLC, wrong band assignment)"
+  },
+  "step2": {
+    "A": "Strong: logical exclusions, correct E2g physics, distinguishes from graphene",
+    "B": "Poor: confuses with carbon D-band, ignores h-BN literature, circular"
+  },
+  "step3": {
+    "A": "Good: clear h-BN classification, confidence, key evidence; layer mismatch",
+    "B": "Inadequate: wrong material, lower confidence, misses h-BN indicators"
+  },
+  "thinking": "Candidate A correctly identifies the material as h-BN and the dominant peak as the E2g mode at 1369 cm^-1, properly ruling out diamond and graphitic carbon (no G-band), though it incorrectly assigns monolayer instead of bulk. Candidate B entirely misassigns the spectrum to amorphous diamond-like carbon based on a D-band analogy, citing inappropriate breadth (29 cm^-1) and ignoring h-BN Raman physics. A's reasoning is methodical and grounded in 2D-material Raman signatures while B's contains clear material confusion and hallucinations relative to ground truth.",
+  "elo_before": {
+    "f": 57.0,
+    "h": 20.43
+  },
+  "elo_after": {
+    "f": 64.16,
+    "h": 13.43
+  }
+}

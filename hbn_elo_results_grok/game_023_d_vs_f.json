@@ -1,0 +1,30 @@
+{
+  "game_id": 23,
+  "model_a": "d",
+  "model_b": "f",
+  "winner": "A",
+  "winner_name": "d",
+  "confidence": 0.75,
+  "justification": "A is superior overall: accurate bulk assignment, no hallucinations on peak-shift layer dependence, and better alignment with GT's emphasis on FWHM and single E2g peak. B's monolayer error is a clear scientific mistake for the provided bulk h-BN reference spectrum.",
+  "step1": {
+    "A": "Mostly correct (h-BN bulk, E2g, rules out carbon; FWHM implies lower quality)",
+    "B": "Partially incorrect (h-BN ok but monolayer assignment and shift rationale contradict GT)"
+  },
+  "step2": {
+    "A": "Methodical, physics-based, correctly distinguishes from graphene/carbon",
+    "B": "Structured but hallucinates monolayer position shift not supported by GT"
+  },
+  "step3": {
+    "A": "Clear on material/bulk/purity/FWHM evidence, confidence well quantified",
+    "B": "Clear but propagates wrong monolayer conclusion and omits FWHM"
+  },
+  "thinking": "Both correctly ID h-BN and the dominant E2g mode at ~1369 cm\u207b\u00b9 (within GT \u00b15 cm\u207b\u00b9 tolerance) while properly ruling out carbon/diamond via absent G-band. A correctly assigns bulk layer number and uses FWHM=30 cm\u207b\u00b9 to infer polycrystallinity/defects (consistent with GT's 7-15 cm\u207b\u00b9 high-quality bulk range); B hallucinates a monolayer-specific 3 cm\u207b\u00b9 blue-shift (GT distinguishes by FWHM not position) and wrongly labels it monolayer. A's CoT is more grounded and avoids layer-count myths from graphene; B's is structured but contains this factual error.",
+  "elo_before": {
+    "d": 80.57,
+    "f": 56.97
+  },
+  "elo_after": {
+    "d": 88.02,
+    "f": 49.69
+  }
+}

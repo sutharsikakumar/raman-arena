@@ -1,0 +1,30 @@
+{
+  "game_id": 32,
+  "model_a": "f",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "f",
+  "confidence": 0.65,
+  "justification": "A is better overall: its layer assignment and \u0394 interpretation match the GT's numerical diagnostics exactly, it reports appropriate FWHM, and maintains higher confidence without over-claiming extra peaks. B is close but less accurate on the bulk vs few-layer distinction for \u0394=26 cm\u207b\u00b9. Both fail the monolayer target, but A follows the supplied GT physics more rigorously.",
+  "step1": {
+    "A": "Material and modes correct but peak positions/\u0394/layer (bulk) mismatch GT monolayer",
+    "B": "Material and modes correct but peak positions/\u0394/layer (few-layer) mismatch GT monolayer; more peaks noted"
+  },
+  "step2": {
+    "A": "Methodical, uses \u0394 as primary diagnostic per GT standards, no hallucinations",
+    "B": "Methodical and uses \u0394 but chooses conservative 'few-layer' not matching GT's bulk value for 26 cm\u207b\u00b9"
+  },
+  "step3": {
+    "A": "Clear statement of material/phase/layer/confidence/evidence; concise but omits extra peaks",
+    "B": "Clear with confidence and reasoning, more complete observed peak list but wrong layer call"
+  },
+  "thinking": "Both A and B correctly identify MoS2 and assign the main peaks to E\u00b9\u2082g (~380) and A\u2081g (~406) modes, computing \u0394=26 cm\u207b\u00b9. Per GT this indicates bulk (25-26 cm\u207b\u00b9), not the stated monolayer target (\u0394 18-20 cm\u207b\u00b9 with peaks ~383-385/402-404); both therefore err on layer number and reported peak positions. A precisely labels it bulk matching GT's own diagnostic, cites FWHM=8 cm\u207b\u00b9 (within GT 4-8 range), and shows higher confidence. B labels it few-layer (less accurate for exactly 26 cm\u207b\u00b9), but lists more peaks including the GT-mentioned ~450 cm\u207b\u00b9 2LA band. Reasoning is methodical in both and centers \u0394 correctly; neither discusses substrate/doping/oxidation confounds.",
+  "elo_before": {
+    "f": 49.99,
+    "h": 58.78
+  },
+  "elo_after": {
+    "f": 58.19,
+    "h": 50.77
+  }
+}

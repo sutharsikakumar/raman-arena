@@ -1,0 +1,30 @@
+{
+  "game_id": 26,
+  "model_a": "d",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "d",
+  "confidence": 0.92,
+  "justification": "A is clearly superior: it matches ground truth on material, peak assignment, and differentiation from carbon, while B fails at the most basic identification step. A's reasoning is grounded in h-BN Raman signatures and its confidence is appropriately high.",
+  "step1": {
+    "A": "Correct h-BN ID, E2g assignment, position, and carbon distinction; FWHM interpretation reasonable",
+    "B": "Incorrect; confuses E2g with carbon D-band, no h-BN consideration"
+  },
+  "step2": {
+    "A": "Methodical, logically rules out alternatives with proper Raman distinctions",
+    "B": "Flawed assumptions, no h-BN physics, circular carbon bias"
+  },
+  "step3": {
+    "A": "Clear h-BN/bulk classification, high confidence, key evidence well summarized",
+    "B": "Structured but wrong material and incomplete Raman context"
+  },
+  "thinking": "Candidate A correctly identifies the material as h-BN with the dominant E2g peak at 1369 cm\u207b\u00b9 (close to the expected 1366), correctly rules out carbon due to missing G-band, and notes the broader FWHM=30 cm\u207b\u00b9 as indicating polycrystalline character, which is consistent with ground truth expectations for bulk h-BN. Candidate B entirely misclassifies the spectrum as graphitic carbon's D-band, fails to consider h-BN at all, and shows flawed Raman physics reasoning. A provides higher confidence, clearer h-BN-specific explanations, and a more complete classification aligned with the reference.",
+  "elo_before": {
+    "d": 100.0,
+    "i": 34.44
+  },
+  "elo_after": {
+    "d": 100.0,
+    "i": 27.93
+  }
+}

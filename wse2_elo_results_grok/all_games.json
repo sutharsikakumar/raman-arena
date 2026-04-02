@@ -1,0 +1,1082 @@
+[
+  {
+    "game_id": 1,
+    "model_a": "a",
+    "model_b": "b",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Both models are equally incorrect on material identification, key peak assignment, monolayer diagnostics, and overall reasoning grounded in WSe\u2082 physics. Their structured outputs are comparable in format but neither engages with the ground-truth spectrum characteristics.",
+    "step1": {
+      "A": "Complete failure: no WSe\u2082 identification, no TMD bands or monolayer indicators, confused with graphite D/G + spurious C-H overtones",
+      "B": "Complete failure: no WSe\u2082 identification, misread 248 cm\u207b\u00b9 as S\u2088 mode, ignored 2LA(M) and B\u00b9\u2082g criteria"
+    },
+    "step2": {
+      "A": "Methodical but for graphite physics only; hallucinations of shear/C-H modes, no TMD degeneracy or monolayer diagnostics",
+      "B": "Methodical but for sulfur modes; correctly notes dominant ~248 cm\u207b\u00b9 yet attributes wrongly, misses all WSe\u2082-specific reasoning"
+    },
+    "step3": {
+      "A": "Full output for wrong material (high confidence, peak list, top candidates); omits all required WSe\u2082/monolayer evidence",
+      "B": "Full output for wrong material (moderate confidence, peak list); omits all required WSe\u2082/monolayer evidence"
+    },
+    "thinking": "Both A and B completely failed to identify the spectrum as monolayer WSe\u2082, instead predicting bulk graphite (A) and crystalline sulfur (B). Neither referenced the merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9 feature, the diagnostic strong 2LA(M) ~260 cm\u207b\u00b9 band, B\u00b9\u2082g absence at ~308 cm\u207b\u00b9, or any monolayer quality indicators; their peak lists overlap on the ~250 and ~518 cm\u207b\u00b9 (Si) features but interpret them wrongly. Chain-of-thought in both is methodical yet entirely misdirected to incorrect materials, showing no engagement with TMD Raman physics or confounds like substrate Si peak.",
+    "elo_before": {
+      "a": 50.0,
+      "b": 50.0
+    },
+    "elo_after": {
+      "a": 50.0,
+      "b": 50.0
+    }
+  },
+  {
+    "game_id": 2,
+    "model_a": "a",
+    "model_b": "c",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.95,
+    "justification": "Both models are equally poor: zero overlap with ground-truth WSe\u2082 features, no use of 2LA(M) enhancement or B\u00b9\u2082g suppression, and confident misidentification of unrelated materials. Neither is closer to correct than the other.",
+    "step1": {
+      "A": "Completely incorrect; no WSe\u2082 identification, wrong material and band assignments",
+      "B": "Completely incorrect; no WSe\u2082 identification, wrong material and band assignments"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; hallucinations about graphite shear mode and overtones",
+      "B": "Not grounded in WSe\u2082 physics; focuses on HgS/Si and PL instead of TMD features"
+    },
+    "step3": {
+      "A": "No mention of WSe\u2082, monolayer indicators, or key evidence; irrelevant classification",
+      "B": "No mention of WSe\u2082, monolayer indicators, or key evidence; irrelevant classification"
+    },
+    "thinking": "Both candidates completely failed to identify the spectrum as monolayer WSe\u2082. A misclassified it as bulk AB graphite (incorrectly labeling the ~249 cm\u207b\u00b9 peak as a shear mode and relying on D/G bands that are absent in clean WSe\u2082), while B misclassified it as cinnabar (HgS) plus Si (reasonable for the ~250/518 cm\u207b\u00b9 peaks but still wrong). Neither referenced E\u00b9\u2082g/A\u2081g degeneracy, enhanced 2LA(M) at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence, or any TMD-specific diagnostics; their reasoning and outputs ignore all ground-truth criteria.",
+    "elo_before": {
+      "a": 50.0,
+      "c": 50.0
+    },
+    "elo_after": {
+      "a": 50.0,
+      "c": 50.0
+    }
+  },
+  {
+    "game_id": 3,
+    "model_a": "a",
+    "model_b": "d",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.95,
+    "justification": "Neither candidate shows any scientific correctness, reasoning grounded in WSe\u2082 Raman signatures, or completeness on the required classification elements. They are equally erroneous overall, with A hallucinating graphite features and B latching onto the substrate Si peak while both ignore the ~250-260 cm\u207b\u00b9 region that defines monolayer WSe\u2082.",
+    "step1": {
+      "A": "Completely incorrect; no WSe\u2082 identification or use of any expected peaks/ratios",
+      "B": "Completely incorrect; no WSe\u2082 identification or use of any expected peaks/ratios"
+    },
+    "step2": {
+      "A": "Poor; no TMD physics, misattributes 249 cm\u207b\u00b9 as graphite shear mode with irrelevant carbon overtone focus",
+      "B": "Poor; no TMD physics, focuses on Si substrate but notes anomalies without linking to WSe\u2082"
+    },
+    "step3": {
+      "A": "Absent; states graphite bulk AB instead of WSe\u2082 monolayer with no key evidence or confidence in ground-truth terms",
+      "B": "Absent; states silicon instead of WSe\u2082 monolayer with no key evidence or confidence in ground-truth terms"
+    },
+    "thinking": "Both A and B completely failed to identify the material as monolayer WSe\u2082 per ground truth, instead labeling it graphite (A) or silicon (B). They ignored the merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9 feature, enhanced 2LA(M) ~260 cm\u207b\u00b9, B\u00b9\u2082g absence at ~308 cm\u207b\u00b9, and all monolayer diagnostics, while hallucinating carbon D/G bands or over-focusing on the Si substrate peak at 518 cm\u207b\u00b9. Reasoning in both is ungrounded in TMD physics and does not address near-degeneracy, oxidation, or TMD confounds; classification outputs lack any required WSe\u2082 evidence.",
+    "elo_before": {
+      "a": 50.0,
+      "d": 50.0
+    },
+    "elo_after": {
+      "a": 50.0,
+      "d": 50.0
+    }
+  },
+  {
+    "game_id": 4,
+    "model_a": "a",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.88,
+    "justification": "A fails at the most basic step by assigning the wrong material class; B correctly identifies WSe\u2082 and several of its characteristic modes even though the layer number is off. B is therefore the better overall output by a wide margin.",
+    "step1": {
+      "A": "wholly incorrect material (graphite instead of WSe\u2082); ignores all TMD signatures",
+      "B": "correct material (WSe\u2082) and merged ~248 cm\u207b\u00b9 mode, but wrong layer assignment and misses 2LA(M)"
+    },
+    "step2": {
+      "A": "reasoning is methodical for graphite but irrelevant and hallucinatory for this WSe\u2082 sample",
+      "B": "grounded in WSe\u2082 mode assignments and layer diagnostics; correctly notes near-degeneracy but over-weights B\u00b9\u2082g presence"
+    },
+    "step3": {
+      "A": "clear but entirely wrong classification with high confidence in graphite",
+      "B": "states material, layer (incorrect), confidence and key peaks; omits 2LA(M) and monolayer criteria"
+    },
+    "thinking": "Candidate A completely misidentifies the spectrum as bulk AB-stacked graphite citing D/G bands (1345/1591 cm\u207b\u00b9) and high-frequency C-H overtones; none of these features align with WSe\u2082 Raman physics or the ground-truth description. Candidate B correctly recognizes WSe\u2082, the merged E\u00b9\u2082g/A\u2081g peak near 248 cm\u207b\u00b9, the Si substrate peak at 518 cm\u207b\u00b9, and the significance of the ~306 cm\u207b\u00b9 band, but errs by labeling the sample few-layer instead of monolayer and omits the key 2LA(M) enhancement at ~260 cm\u207b\u00b9. B's reasoning is grounded in TMD vibrational modes while A's is wholly irrelevant, making B superior on all evaluation dimensions despite the layer-number mistake.",
+    "elo_before": {
+      "a": 50.0,
+      "e": 50.0
+    },
+    "elo_after": {
+      "a": 42.0,
+      "e": 57.82
+    }
+  },
+  {
+    "game_id": 5,
+    "model_a": "a",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.88,
+    "justification": "B is the only candidate that recognizes the material as WSe\u2082 and correctly assigns the primary low-frequency modes; A is a complete misclassification. Although B errs on layer number, it is vastly superior in scientific relevance, reasoning, and completeness relative to the WSe\u2082 ground truth.",
+    "step1": {
+      "A": "wholly incorrect (graphite instead of WSe\u2082; no TMD modes or 2LA(M) used)",
+      "B": "partially correct (right material and ~250/308 cm\u207b\u00b9 modes but wrong layer; missed 2LA(M) and monolayer criteria)"
+    },
+    "step2": {
+      "A": "entirely off-topic graphite reasoning with circular carbon-mode claims; no TMD physics",
+      "B": "methodical and grounded in WSe\u2082 modes and substrate correction, but missed near-degeneracy nuance, 2LA(M) diagnostic, and B\u00b9\u2082g absence rule for monolayer"
+    },
+    "step3": {
+      "A": "clear but wholly wrong classification with high confidence on incorrect material",
+      "B": "clear on material/modes/confidence but incomplete (no 2LA(M), wrong layer, no oxidation check)"
+    },
+    "thinking": "Candidate A completely misidentified the spectrum as bulk AB-stacked graphite based on D/G bands at ~1345/1591 cm\u207b\u00b9 and high-frequency overtones, ignoring all TMD-relevant low-frequency modes and the Si substrate peak; this is a total hallucination inconsistent with the WSe\u2082 ground truth. Candidate B correctly identified WSe\u2082, recognized the Si substrate calibration offset, assigned the merged ~250 cm\u207b\u00b9 feature and the ~308 cm\u207b\u00b9 B\u00b9\u2082g mode, and used the latter for layer assessment, although it erred on calling the sample few-layer instead of monolayer and omitted the key 2LA(M) ~260 cm\u207b\u00b9 enhancement diagnostic. Overall B is far closer to the ground-truth material, peak assignments, and Raman physics of WSe\u2082 despite the layer-number mistake.",
+    "elo_before": {
+      "a": 42.0,
+      "f": 50.0
+    },
+    "elo_after": {
+      "a": 34.18,
+      "f": 57.64
+    }
+  },
+  {
+    "game_id": 6,
+    "model_a": "a",
+    "model_b": "g",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Both are equally wrong on material, layer number, and all key Raman signatures of monolayer WSe\u2082. Their chains of thought show no engagement with TMD Raman physics or the provided ground-truth features, making them indistinguishable in failure.",
+    "step1": {
+      "A": "Completely incorrect; no WSe\u2082 identification or key peaks/ratios",
+      "B": "Completely incorrect; no WSe\u2082 identification or key peaks/ratios"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; hallucinations about carbon overtones and shear modes",
+      "B": "Not grounded in WSe\u2082 physics; only considers Si peak, ignores TMD modes and near-degeneracy"
+    },
+    "step3": {
+      "A": "Detailed but for wrong material; omits all WSe\u2082 evidence and confidence in correct context",
+      "B": "Very brief and incomplete; no key evidence, ratios, or monolayer indicators listed"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082 on SiO\u2082/Si. Candidate A misclassified the entire spectrum as bulk AB-stacked graphite based on nonexistent D/G bands and misassigned the ~249 cm\u207b\u00b9 peak as a graphite shear mode (incorrect even for graphite). Candidate B misclassified it as bulk crystalline silicon using the substrate Si peak at ~517 cm\u207b\u00b9 while ignoring all low-wavenumber TMD features. Neither referenced the merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9, enhanced 2LA(M) ~260 cm\u207b\u00b9, absent B\u00b9\u2082g ~308 cm\u207b\u00b9, or any monolayer diagnostics.",
+    "elo_before": {
+      "a": 34.18,
+      "g": 50.0
+    },
+    "elo_after": {
+      "a": 34.55,
+      "g": 49.64
+    }
+  },
+  {
+    "game_id": 7,
+    "model_a": "a",
+    "model_b": "h",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Both candidates are equally invalid with zero overlap to ground-truth WSe\u2082 monolayer signatures. A and B hallucinate unrelated materials and peak interpretations, failing all three evaluation dimensions identically.",
+    "step1": {
+      "A": "Completely wrong: no WSe\u2082 identification, no TMD mode analysis",
+      "B": "Completely wrong: no WSe\u2082 identification, no TMD mode analysis"
+    },
+    "step2": {
+      "A": "Methodical for graphite but irrelevant/hallucinated for WSe\u2082; ignores all key diagnostics",
+      "B": "Methodical for ice but irrelevant/hallucinated for WSe\u2082; ignores all key diagnostics"
+    },
+    "step3": {
+      "A": "Clear but entirely incorrect output; no required WSe\u2082 evidence or monolayer indicators",
+      "B": "Clear but entirely incorrect output; no required WSe\u2082 evidence or monolayer indicators"
+    },
+    "thinking": "Both A and B failed entirely on scientific correctness by not identifying the spectrum as monolayer WSe\u2082 at all. A misassigned it to bulk graphite (misinterpreting the ~249 cm\u207b\u00b9 peak as a shear mode and citing D/G bands absent in WSe\u2082), while B assigned it to crystalline water ice (hallucinating dominant OH-stretch bands in 3000-4100 cm\u207b\u00b9 irrelevant to TMDs). Their chain-of-thought and final outputs contain no reference to E\u00b9\u2082g/A\u2081g degeneracy, 2LA(M) enhancement, or B\u00b9\u2082g absence, making reasoning quality and completeness equally poor.",
+    "elo_before": {
+      "a": 34.55,
+      "h": 50.0
+    },
+    "elo_after": {
+      "a": 34.9,
+      "h": 49.65
+    }
+  },
+  {
+    "game_id": 8,
+    "model_a": "a",
+    "model_b": "i",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Both models failed every evaluation dimension by misclassifying the spectrum as unrelated materials and showing zero engagement with WSe\u2082 Raman signatures or monolayer diagnostics. They are equally poor in scientific correctness, reasoning quality, and completeness relative to the provided ground truth.",
+    "step1": {
+      "A": "Fully incorrect - no WSe\u2082 identification, no TMD peaks or monolayer criteria used",
+      "B": "Fully incorrect - no WSe\u2082 identification, no TMD peaks or monolayer criteria used"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082; carbon-mode reasoning with hallucinations about 249 cm\u207b\u00b9 shear mode",
+      "B": "Not grounded in WSe\u2082; considered some TMDs but defaulted to sulfur without using 2LA enhancement or B\u00b9\u2082g absence"
+    },
+    "step3": {
+      "A": "No WSe\u2082 material/layer statement, no key evidence or confidence tied to ground truth",
+      "B": "No WSe\u2082 material/layer statement, no key evidence or confidence tied to ground truth"
+    },
+    "thinking": "Neither candidate identified the material as monolayer WSe\u2082 or referenced any of its diagnostic Raman features (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, strong 2LA(M) at ~260 cm\u207b\u00b9, absent B\u00b9\u2082g at ~308 cm\u207b\u00b9). Candidate A interpreted the spectrum as bulk graphite using D/G bands and high-wavenumber overtones that are absent in the ground-truth WSe\u2082 description. Candidate B attributed the low-wavenumber peaks to orthorhombic sulfur while dismissing the same carbon-like bands as artifacts; both completely ignored TMD-specific physics, monolayer indicators, substrate Si peak, and possible confounds.",
+    "elo_before": {
+      "a": 34.9,
+      "i": 50.0
+    },
+    "elo_after": {
+      "a": 35.25,
+      "i": 49.66
+    }
+  },
+  {
+    "game_id": 9,
+    "model_a": "b",
+    "model_b": "c",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Neither model identified WSe\u2082 or used any of its Raman signatures/monolayer diagnostics from the ground truth. Their errors in material assignment, peak interpretation, and omission of all relevant TMD criteria are equivalent, justifying a draw.",
+    "step1": {
+      "A": "Completely failed; no WSe\u2082 identification, wrong sulfur assignment, ignored all monolayer indicators",
+      "B": "Completely failed; no WSe\u2082 identification, wrong HgS+Si assignment, ignored all monolayer indicators"
+    },
+    "step2": {
+      "A": "Methodical but irrelevant to WSe\u2082/TMDs; hallucinated S\u2088 modes, no degeneracy or 2LA(M) discussion",
+      "B": "Methodical but irrelevant to WSe\u2082/TMDs; hallucinated HgS modes, partial Si note but no TMD physics"
+    },
+    "step3": {
+      "A": "Clear but entirely wrong output; no WSe\u2082, monolayer, or key evidence stated",
+      "B": "Clear but entirely wrong output; no WSe\u2082, monolayer, or key evidence stated"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, instead assigning the dominant ~248 cm\u207b\u00b9 peak to sulfur (A) or cinnabar HgS (B) and misinterpreting the ~306 cm\u207b\u00b9 and ~518 cm\u207b\u00b9 (Si substrate) features. Neither referenced the merged E\u00b9\u2082g/A\u2081g mode, enhanced 2LA(M) at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence for monolayer confirmation, or any TMD-specific diagnostics, rendering all three evaluation steps poor for both. Their methodical but hallucinated reasoning on unrelated materials makes them comparably bad, with no meaningful edge in correctness, reasoning on WSe\u2082 physics, or completeness of the required classification.",
+    "elo_before": {
+      "b": 50.0,
+      "c": 50.0
+    },
+    "elo_after": {
+      "b": 50.0,
+      "c": 50.0
+    }
+  },
+  {
+    "game_id": 10,
+    "model_a": "b",
+    "model_b": "d",
+    "winner": "B",
+    "winner_name": "d",
+    "confidence": 0.75,
+    "justification": "B is superior overall for correctly identifying the Si substrate peak at ~518 cm\u207b\u00b9 and recognizing the ~249 cm\u207b\u00b9 peak as atypical, which aligns with the dominant WSe\u2082 monolayer feature, whereas A hallucinates an elemental sulfur spectrum. Neither candidate references the merged E\u00b9\u2082g/A\u2081g, strong 2LA(M), B\u00b9\u2082g absence, or monolayer criteria, but B's partial substrate awareness makes it less erroneous.",
+    "step1": {
+      "A": "Completely wrong - misidentified as sulfur; no WSe\u2082, no merged ~250 cm\u207b\u00b9 or 2LA(M) recognition",
+      "B": "Partially wrong - identified Si substrate correctly but missed WSe\u2082 layer and all monolayer diagnostics"
+    },
+    "step2": {
+      "A": "Poor; no TMD physics, confuses with S\u2088 modes, ignores substrate and possible oxidation/confounds",
+      "B": "Moderately better; uses Si phonon assignments and flags anomalies but lacks any WSe\u2082-specific reasoning or monolayer tests"
+    },
+    "step3": {
+      "A": "Incomplete and incorrect; wrong material, no layer info, no key evidence or confidence rationale tied to WSe\u2082",
+      "B": "Incomplete; correctly notes Si peak but fails to state WSe\u2082/monolayer or list expected signatures"
+    },
+    "thinking": "Both candidates failed to identify the material as monolayer WSe\u2082. A incorrectly assigned the spectrum to crystalline sulfur (\u03b1-S\u2088) based on the ~248 cm\u207b\u00b9 peak and secondary low-frequency modes, while ignoring the Si substrate peak and all TMD-specific indicators. B correctly recognized the 518 cm\u207b\u00b9 peak as the Si first-order mode and noted the strong ~249 cm\u207b\u00b9 feature as anomalous (which is actually the merged E\u00b9\u2082g/A\u2081g of WSe\u2082), but still misclassified the sample as silicon and did not invoke any WSe\u2082 physics, 2LA(M) enhancement, or B\u00b9\u2082g absence. Thus B is closer to truth by handling the substrate correctly and flagging the key TMD peak.",
+    "elo_before": {
+      "b": 50.0,
+      "d": 50.0
+    },
+    "elo_after": {
+      "b": 42.0,
+      "d": 57.82
+    }
+  },
+  {
+    "game_id": 11,
+    "model_a": "b",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "B is superior on every dimension: it identifies the correct material, recognizes the characteristic merged E\u00b2g/A\u2081g mode and substrate Si peak, and offers physically grounded layer reasoning, whereas A hallucinates an unrelated sulfur spectrum. The layer-number mismatch in B is a flaw but far less severe than A's total misidentification.",
+    "step1": {
+      "A": "wholly incorrect material (sulfur, not WSe\u2082); ignores all TMD indicators and monolayer diagnostics",
+      "B": "correct material and merged ~250 cm\u207b\u00b9 mode but wrong layer (few-layer vs monolayer); uses B\u00b9\u2082g presence instead of absence"
+    },
+    "step2": {
+      "A": "methodical but built on false sulfur premise; hallucinates S\u2088 modes and ignores substrate/confounds",
+      "B": "grounded in WSe\u2082 phonon physics, correctly notes mode degeneracy and substrate; misses 2LA(M) enhancement and oxidation check"
+    },
+    "step3": {
+      "A": "clear but entirely wrong classification and evidence",
+      "B": "states material/layer/confidence with key peaks and evidence; confidence high but layer assignment mismatches GT"
+    },
+    "thinking": "Candidate A completely misidentifies the spectrum as orthorhombic sulfur based on the ~248 cm\u207b\u00b9 peak and secondary features, ignoring the Si substrate peak at 518 cm\u207b\u00b9 and showing no awareness of TMD Raman signatures. Candidate B correctly assigns the material as WSe\u2082, recognizes the merged E\u00b2g/A\u2081g mode at 247.57 cm\u207b\u00b9, the Si substrate, and uses the ~306 cm\u207b\u00b9 peak to infer layer number, though it contradicts the ground-truth monolayer label by calling it few-layer. Neither candidate notes the expected strong 2LA(M) at ~260 cm\u207b\u00b9 (absent from listed peaks) or checks for oxidation; B's reasoning is grounded in actual WSe\u2082 physics while A's is entirely erroneous.",
+    "elo_before": {
+      "b": 42.0,
+      "e": 57.82
+    },
+    "elo_after": {
+      "b": 34.36,
+      "e": 65.28
+    }
+  },
+  {
+    "game_id": 12,
+    "model_a": "b",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.85,
+    "justification": "A hallucinates an unrelated material (sulfur) with zero overlap to the GT WSe\u2082 monolayer signature. B correctly identifies WSe\u2082, accounts for instrumental offset, and uses the correct Raman modes for analysis, only erring on layer number. This makes B far superior overall despite the layer discrepancy.",
+    "step1": {
+      "A": "Complete failure: wrong material (sulfur), no TMD modes or monolayer indicators recognized",
+      "B": "Material correct (WSe\u2082); merged ~250 cm\u207b\u00b9 feature identified but 2LA(M) omitted and B\u00b9\u2082g used to infer few-layer instead of confirming monolayer absence"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; sulfur S\u2088 ring modes and artifacts misapplied, no discussion of degeneracy or layer diagnostics",
+      "B": "Methodical WSe\u2082 reasoning with calibration correction and correct mode assignments; handles near-degeneracy implicitly but misses 2LA(M) enhancement and confounds like oxidation"
+    },
+    "step3": {
+      "A": "Clear but entirely incorrect classification; confidence given but evidence irrelevant to GT",
+      "B": "States material, layer (few-layer), confidence (0.95) and key modes; misses explicit 2LA(M), FWHM, and oxidation checks but still concise and evidence-based"
+    },
+    "thinking": "Candidate A entirely misidentifies the spectrum as orthorhombic \u03b1-sulfur based on the ~248 cm\u207b\u00b9 peak and secondary modes, ignoring all TMD literature and the Si substrate peak; this is a fundamental material error. Candidate B correctly recognizes WSe\u2082, uses the Si 518 cm\u207b\u00b9 peak to diagnose and correct a ~2 cm\u207b\u00b9 calibration offset, assigns the merged ~250 cm\u207b\u00b9 feature and the 308 cm\u207b\u00b9 peak, and applies the B\u00b9\u2082g mode as a layer indicator\u2014aligning with Raman physics even though it concludes 'few-layer' instead of the GT monolayer. B's chain-of-thought is methodical and grounded in WSe\u2082 mode assignments while A is wholly off-topic; therefore B is superior on correctness, reasoning, and completeness.",
+    "elo_before": {
+      "b": 34.36,
+      "f": 57.64
+    },
+    "elo_after": {
+      "b": 26.9,
+      "f": 64.93
+    }
+  },
+  {
+    "game_id": 13,
+    "model_a": "b",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.7,
+    "justification": "Neither output is scientifically correct on material or monolayer identification. A is better overall due to more thorough, less contradictory reasoning that engages the actual dominant ~248 cm\u207b\u00b9 peak and evaluates alternatives, whereas B's analysis is superficial, inconsistent with peak prominence, and ignores most spectral features.",
+    "step1": {
+      "A": "Failed to identify WSe\u2082; misassigned ~248 cm\u207b\u00b9 and ~306 cm\u207b\u00b9 to sulfur modes, no mention of 2LA(M) or monolayer indicators",
+      "B": "Failed to identify WSe\u2082; focused only on Si peak, ignored dominant ~248 cm\u207b\u00b9 and other TMD-relevant features"
+    },
+    "step2": {
+      "A": "Methodical peak-by-peak analysis with alternatives considered but entirely off-target (no WSe\u2082 degeneracy or 2LA enhancement discussion)",
+      "B": "Very shallow chain-of-thought; no handling of near-degenerate modes, monolayer diagnostics, or confounds like substrate Si peak"
+    },
+    "step3": {
+      "A": "Detailed but incorrect material/phase output; lists many peaks and top candidates yet omits all GT monolayer evidence and confidence is only moderate",
+      "B": "Minimal explanation, no layer count rationale, no FWHM or intensity ratios, and overstates 521 cm\u207b\u00b9 dominance"
+    },
+    "thinking": "Both candidates failed to identify the spectrum as monolayer WSe\u2082 per the ground truth, missing the merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9, enhanced 2LA(M) ~260 cm\u207b\u00b9, B\u00b9\u2082g absence at ~308 cm\u207b\u00b9, and substrate considerations. Candidate A systematically analyzed the dominant ~248 cm\u207b\u00b9 peak and secondary modes but wrongly attributed them to \u03b1-sulfur, while also noting the ~518 cm\u207b\u00b9 feature; it considered MoS\u2082 as an alternative. Candidate B focused narrowly on the ~517 cm\u207b\u00b9 peak as Si, inaccurately calling it dominant despite A's prominence data showing ~248 cm\u207b\u00b9 as strongest, with minimal chain-of-thought and no TMD physics.",
+    "elo_before": {
+      "b": 26.9,
+      "g": 49.64
+    },
+    "elo_after": {
+      "b": 35.42,
+      "g": 41.32
+    }
+  },
+  {
+    "game_id": 14,
+    "model_a": "b",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.85,
+    "justification": "Neither output is scientifically correct for WSe\u2082, but A is clearly superior: it examines the correct spectral window, dismisses noise properly, and considers related materials. B's ice assignment is wholly disconnected from the problem domain and ground truth.",
+    "step1": {
+      "A": "Failed; misidentified as sulfur, no recognition of WSe\u2082 modes or monolayer indicators",
+      "B": "Failed; misidentified as water ice, ignored TMD region entirely"
+    },
+    "step2": {
+      "A": "Methodical but wrong material; low-freq focus and artifact flagging are partial strengths, yet no WSe\u2082 physics",
+      "B": "Very poor; hallucinates ice from noise, no TMD reasoning or confound handling"
+    },
+    "step3": {
+      "A": "Structured output but irrelevant; lists peaks and confidence without any WSe\u2082 evidence",
+      "B": "Structured but irrelevant; focuses on inapplicable high-wavenumber 'OH bands'"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, ignoring all ground-truth signatures (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, strong 2LA(M) at ~260 cm\u207b\u00b9, absent B\u00b9\u2082g). Candidate A at least analyzed the relevant low-frequency lattice region, considered TMD alternatives like MoS\u2082, and correctly flagged high-wavenumber features as noise/artifacts. Candidate B misinterpreted the same high-wavenumber noise as OH stretches of ice, producing an entirely irrelevant analysis disconnected from 2D-material Raman physics.",
+    "elo_before": {
+      "b": 35.42,
+      "h": 49.65
+    },
+    "elo_after": {
+      "b": 43.75,
+      "h": 41.52
+    }
+  },
+  {
+    "game_id": 15,
+    "model_a": "b",
+    "model_b": "i",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Both models show identical core errors in material identification, total absence of WSe\u2082-specific Raman analysis, and equivalent reasoning quality. No meaningful difference exists across scientific correctness, chain-of-thought, or output completeness.",
+    "step1": {
+      "A": "Completely failed; no WSe\u2082 identification, no correct peak assignments or monolayer indicators",
+      "B": "Completely failed; no WSe\u2082 identification, no correct peak assignments or monolayer indicators"
+    },
+    "step2": {
+      "A": "Methodical for sulfur but irrelevant to WSe\u2082; ignores near-degeneracy, 2LA enhancement, B\u00b9\u2082g suppression and TMD confounds",
+      "B": "Methodical for sulfur but irrelevant to WSe\u2082; ignores near-degeneracy, 2LA enhancement, B\u00b9\u2082g suppression and TMD confounds"
+    },
+    "step3": {
+      "A": "Classification states wrong material (sulfur, bulk); omits all required WSe\u2082 evidence and monolayer markers",
+      "B": "Classification states wrong material (sulfur, bulk); omits all required WSe\u2082 evidence and monolayer markers"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, instead classifying it as crystalline orthorhombic sulfur (S\u2088) based on a dominant ~248 cm\u207b\u00b9 peak and secondary features at ~306/392/518 cm\u207b\u00b9. They made no mention of the merged E\u00b9\u2082g/A\u2081g mode near 250 cm\u207b\u00b9, the key enhanced 2LA(M) band at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence at ~308 cm\u207b\u00b9, or any monolayer diagnostics, showing zero engagement with WSe\u2082 Raman physics. Their reasoning is internally methodical for sulfur but entirely incorrect for the given spectrum, with comparable flaws in all evaluation dimensions.",
+    "elo_before": {
+      "b": 43.75,
+      "i": 49.66
+    },
+    "elo_after": {
+      "b": 43.89,
+      "i": 49.53
+    }
+  },
+  {
+    "game_id": 16,
+    "model_a": "c",
+    "model_b": "d",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.75,
+    "justification": "Both models are equally incorrect on material, monolayer indicators, and Raman physics for WSe\u2082; neither is closer to ground truth. B notes the Si peak correctly but this does not outweigh the total absence of TMD reasoning in either output.",
+    "step1": {
+      "A": "Failed - no WSe\u2082, wrong HgS assignment, missed all monolayer indicators",
+      "B": "Failed - no WSe\u2082, mislabeled as Si, ignored TMD signatures"
+    },
+    "step2": {
+      "A": "Poor, hallucinates irrelevant HgS modes and PL without TMD context",
+      "B": "Poor, focuses only on Si modes and anomalies without 2D-material analysis"
+    },
+    "step3": {
+      "A": "Structurally complete for wrong material; no WSe\u2082 evidence listed",
+      "B": "Structurally complete for wrong material; no WSe\u2082 evidence listed"
+    },
+    "thinking": "Both candidates completely failed Step 1 by not identifying WSe\u2082 at all (A chose cinnabar HgS for the ~248 cm\u207b\u00b9 peak; B chose silicon while calling the same peak anomalous). Neither referenced the merged E\u00b9\u2082g/A\u2081g, enhanced 2LA(M) at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence, or any monolayer TMD diagnostics, and both ignored the Si substrate peak's expected presence. Their chain-of-thought never engages WSe\u2082 physics or confounds, making reasoning quality equally poor and the classification results wholly incorrect.",
+    "elo_before": {
+      "c": 50.0,
+      "d": 57.82
+    },
+    "elo_after": {
+      "c": 50.18,
+      "d": 57.64
+    }
+  },
+  {
+    "game_id": 17,
+    "model_a": "c",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.85,
+    "justification": "B is substantially better overall as it correctly recognizes WSe\u2082, the dominant ~250 cm\u207b\u00b9 feature, and substrate Si peak using appropriate TMD Raman knowledge, while A misidentifies the material entirely as HgS. The layer-number error in B is notable but does not outweigh A's total failure on material identification and reasoning.",
+    "step1": {
+      "A": "completely incorrect (wrong material, no WSe\u2082 or monolayer features)",
+      "B": "partially correct (right material/modes but wrong layer number, missed 2LA(M))"
+    },
+    "step2": {
+      "A": "poor, not grounded in WSe\u2082 physics; major hallucinations",
+      "B": "mostly methodical and physics-based but misinterpreted B\u00b9\u2082g for layer count and missed key diagnostics"
+    },
+    "step3": {
+      "A": "inadequate (wrong classification, no relevant evidence)",
+      "B": "mostly complete but layer number and key monolayer indicators (2LA strength, B\u00b9\u2082g absence) are incorrect"
+    },
+    "thinking": "Candidate A completely failed by identifying the spectrum as cinnabar (HgS) rather than WSe\u2082, with reasoning built on incorrect peak assignments (~247 cm\u207b\u00b9 to Hg-S stretch) and no engagement with TMD physics or monolayer indicators. Candidate B correctly identified WSe\u2082 and the Si substrate, recognized the merged E\u00b2g/A\u2081g mode at ~247 cm\u207b\u00b9, but erred by labeling it few-layer based on the 306 cm\u207b\u00b9 peak (GT states B\u00b9\u2082g absence confirms monolayer) and omitted the critical 2LA(M) enhancement at ~260 cm\u207b\u00b9. B's chain-of-thought is grounded in relevant Raman modes while A's is entirely hallucinated for the wrong material.",
+    "elo_before": {
+      "c": 50.18,
+      "e": 65.28
+    },
+    "elo_after": {
+      "c": 42.53,
+      "e": 72.75
+    }
+  },
+  {
+    "game_id": 18,
+    "model_a": "c",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.88,
+    "justification": "A completely fails by assigning the spectrum to cinnabar instead of WSe\u2082 and ignores all 2D-material Raman signatures. B correctly identifies the material, correctly interprets the dominant ~250 cm\u207b\u00b9 band and Si substrate, and only errs on layer number; its chain-of-thought is solidly grounded in TMD spectroscopy and therefore superior on every evaluated dimension.",
+    "step1": {
+      "A": "wholly incorrect material (HgS) and no TMD/monolayer analysis",
+      "B": "correct WSe\u2082 material and mode positions; wrong layer (few-layer vs mono), misses 2LA(M)"
+    },
+    "step2": {
+      "A": "hallucinated cinnabar lattice modes and PL interpretation; no TMD physics",
+      "B": "methodical, uses Si for calibration and layer-sensitive B\u00b9\u2082g mode; misses degeneracy and 2LA(M) emphasis"
+    },
+    "step3": {
+      "A": "wrong material, phase, purity and no monolayer diagnostics",
+      "B": "clear WSe\u2082 statement, layer claim, confidence and peak evidence (though layer incorrect)"
+    },
+    "thinking": "Candidate A wholly misidentifies the spectrum as cinnabar (HgS) on the basis of the ~248 cm\u207b\u00b9 peak, treats the Si 518 cm\u207b\u00b9 line as a contaminant, and offers no TMD-relevant physics; this is a complete scientific failure. Candidate B correctly assigns the material as WSe\u2082, uses the Si peak for calibration correction, matches the ~250 cm\u207b\u00b9 feature to the E\u00b2g/A\u2081g manifold and the 306 cm\u207b\u00b9 peak to B\u00b9\u2082g, and only errs on layer assignment (few-layer instead of monolayer) and omission of the 2LA(M) indicator. Consequently B is vastly superior on correctness, reasoning grounded in TMD Raman selection rules, and completeness of the classification output.",
+    "elo_before": {
+      "c": 42.53,
+      "f": 64.93
+    },
+    "elo_after": {
+      "c": 35.04,
+      "f": 72.24
+    }
+  },
+  {
+    "game_id": 19,
+    "model_a": "c",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.75,
+    "justification": "A is better overall due to correctly noting the dominant 247 cm\u207b\u00b9 peak, acknowledging the complex mixed spectrum with PL, and using lower appropriate confidence. B is overconfident, internally inconsistent, and dismisses key low-wavenumber features. Both are scientifically incorrect on material and monolayer identification.",
+    "step1": {
+      "A": "Failed entirely: wrong material (HgS), no TMD peak assignments or monolayer indicators used",
+      "B": "Failed entirely: only identified substrate Si, ignored all WSe\u2082 features and other peaks"
+    },
+    "step2": {
+      "A": "Methodical but not grounded in WSe\u2082 physics; no mention of degeneracy, 2LA enhancement, or B\u00b9\u2082g; hallucinated cinnabar modes",
+      "B": "Extremely shallow, ignores multiple observed peaks below 500 cm\u207b\u00b9, no TMD knowledge or confound analysis"
+    },
+    "step3": {
+      "A": "Complete in format but states wrong material/phase/purity; no WSe\u2082 details or confidence justification tied to ground-truth indicators",
+      "B": "Incomplete and contradictory (claims no extra peaks while listing them); omits all required WSe\u2082 evidence"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, ignoring the merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9, strong 2LA(M) ~260 cm\u207b\u00b9, B\u00b9\u2082g absence, and Si substrate peak. Candidate A at least recognized 247 cm\u207b\u00b9 as the dominant feature (with higher prominence than the Si peak) and acknowledged spectral complexity/mixed character with PL background, but wrongly assigned it to cinnabar HgS. Candidate B fixated solely on the Si peak at ~517 cm\u207b\u00b9, claimed purity and absence of other peaks despite listing many, and gave inappropriately high confidence. A's reasoning is more detailed if still hallucinatory; B's is shallow and internally inconsistent.",
+    "elo_before": {
+      "c": 35.04,
+      "g": 41.32
+    },
+    "elo_after": {
+      "c": 43.19,
+      "g": 33.36
+    }
+  },
+  {
+    "game_id": 20,
+    "model_a": "c",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.85,
+    "justification": "Neither output is scientifically correct for WSe\u2082, but A is superior overall: it correctly flags the Si substrate peak at 518 cm\u207b\u00b9 and assigns the dominant low-wavenumber mode to a plausible (if wrong) inorganic phase, while B's ice interpretation is physically incompatible with the observed lattice peaks and the known 2D-material context. A's chain-of-thought is more rigorous and less hallucinatory.",
+    "step1": {
+      "A": "Completely failed; no WSe\u2082, wrong HgS assignment, no monolayer indicators",
+      "B": "Completely failed; no WSe\u2082, absurd ice assignment, ignored all TMD modes"
+    },
+    "step2": {
+      "A": "Methodical peak-matching but used incorrect material database; noted Si substrate but missed TMD confounds",
+      "B": "Non-methodical for TMDs; ignored low-frequency lattice modes and substrate, hallucinated OH-stretch network"
+    },
+    "step3": {
+      "A": "Clear but entirely incorrect output; lists peaks and confidence but misses all GT criteria",
+      "B": "Clear but irrelevant output; no mention of expected WSe\u2082 features or monolayer diagnostics"
+    },
+    "thinking": "Both candidates failed to identify the spectrum as monolayer WSe\u2082 per ground truth, ignoring all key TMD signatures (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, enhanced 2LA(M) ~260 cm\u207b\u00b9, absent B\u00b9\u2082g). Candidate A at least recognized the dominant 247.6 cm\u207b\u00b9 peak and the 518 cm\u207b\u00b9 Si substrate TO phonon (consistent with SiO\u2082/Si), but wrongly assigned it to cinnabar HgS and dismissed high-wavenumber features as PL. Candidate B ignored inorganic lattice peaks entirely and hallucinated a crystalline ice spectrum from what is clearly noise/PL in the >2000 cm\u207b\u00b9 region. A's reasoning is more methodical and grounded in low-frequency phonon analysis; B's is inconsistent and physically implausible for a 2D-material sample.",
+    "elo_before": {
+      "c": 43.19,
+      "h": 41.52
+    },
+    "elo_after": {
+      "c": 51.15,
+      "h": 33.74
+    }
+  },
+  {
+    "game_id": 21,
+    "model_a": "c",
+    "model_b": "i",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Neither candidate identified WSe\u2082 or used any of its Raman diagnostics; both are equally incorrect on every evaluation axis.",
+    "step1": {
+      "A": "Failed: misidentified as HgS+Si, ignored all WSe\u2082 signatures and monolayer indicators",
+      "B": "Failed: misidentified as orthorhombic S8, ignored all WSe\u2082 signatures and monolayer indicators"
+    },
+    "step2": {
+      "A": "Poor: no WSe\u2082 physics, no degeneracy or 2LA/B1g discussion, circular HgS matching with artifacts",
+      "B": "Poor: no WSe\u2082 physics, no degeneracy or 2LA/B1g discussion, sulfur mode hallucination"
+    },
+    "step3": {
+      "A": "Incomplete: wrong material/layer, no confidence in WSe\u2082 terms, lists irrelevant peaks",
+      "B": "Incomplete: wrong material/layer, no confidence in WSe\u2082 terms, lists irrelevant peaks"
+    },
+    "thinking": "Both A and B completely failed to recognize the spectrum as monolayer WSe\u2082, instead proposing cinnabar (HgS) + Si and crystalline sulfur (S8) respectively. They anchored on the ~248 cm\u207b\u00b9 and 518 cm\u207b\u00b9 (Si substrate) peaks but never referenced the merged E\u00b9\u2082g/A\u2081g, enhanced 2LA(M) at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence, or any WSe\u2082-specific monolayer diagnostics. Their reasoning is not grounded in TMD physics and contains material hallucinations; classification results omit all ground-truth criteria.",
+    "elo_before": {
+      "c": 51.15,
+      "i": 49.53
+    },
+    "elo_after": {
+      "c": 51.11,
+      "i": 49.56
+    }
+  },
+  {
+    "game_id": 22,
+    "model_a": "d",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "B is the clear winner because it correctly identifies the material as WSe\u2082 and assigns the primary ~250 cm\u207b\u00b9 feature, while A misses the TMD entirely and focuses only on the substrate. Although B incorrectly labels the sample few-layer and omits the 2LA(M) indicator, its reasoning is grounded in actual WSe\u2082 physics and is far closer to the ground-truth reference than A's silicon-only analysis.",
+    "step1": {
+      "A": "Completely incorrect: identifies as silicon, misses all WSe\u2082 signatures and key monolayer indicators",
+      "B": "Partially correct: identifies WSe\u2082 and merged ~248 cm\u207b\u00b9 mode but misses 2LA(M) enhancement, treats ~306 cm\u207b\u00b9 as few-layer marker (should be absent), no mention of FWHM or oxidation absence"
+    },
+    "step2": {
+      "A": "Poor: reasoning is Si-phonon focused, shows no knowledge of TMD Raman features or substrate effects, hallucinates silicon anomalies",
+      "B": "Better but flawed: methodical on WSe\u2082 modes and recognizes near-degeneracy, yet misuses B\u00b9\u2082g for layer count and ignores 2LA(M) as monolayer diagnostic"
+    },
+    "step3": {
+      "A": "Inadequate: wrong material, no WSe\u2082 evidence or confidence rationale tied to ground-truth features",
+      "B": "Mostly complete: states material/layer/confidence with mode evidence but lacks 2LA intensity ratio, B\u00b9\u2082g-absence argument, and FWHM details"
+    },
+    "thinking": "Candidate A fundamentally misidentifies the entire spectrum as crystalline silicon based on the substrate peak at 518 cm\u207b\u00b9, treating the strong 249 cm\u207b\u00b9 feature (the actual merged E\u00b9\u2082g/A\u2081g of WSe\u2082) as an unexplained anomaly and ignoring all TMD physics. Candidate B correctly recognizes the material as WSe\u2082, assigns the dominant ~248 cm\u207b\u00b9 peak to overlapping E\u00b2g/A\u2081g modes, and notes the Si substrate, but errs by classifying it as few-layer using the ~306 cm\u207b\u00b9 peak as B\u00b9\u2082g (which ground truth states should be absent in monolayer) and fails to mention the key strong 2LA(M) at ~260 cm\u207b\u00b9. Overall B is far closer to the ground truth on material identification and mode assignment even though its layer-number conclusion is incorrect.",
+    "elo_before": {
+      "d": 57.64,
+      "e": 72.75
+    },
+    "elo_after": {
+      "d": 49.99,
+      "e": 80.23
+    }
+  },
+  {
+    "game_id": 23,
+    "model_a": "d",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.82,
+    "justification": "B correctly identifies WSe\u2082, handles substrate/calibration, and uses appropriate mode assignments, while A entirely misses the material and treats the main WSe\u2082 peak as an anomaly. Although B errs on layer number, its overall scientific grounding and completeness far exceed A's total misclassification.",
+    "step1": {
+      "A": "Completely incorrect material (silicon); missed all WSe\u2082 peaks, 2LA(M), B\u00b9\u2082g absence, and monolayer indicators",
+      "B": "Correct material (WSe\u2082) and ~250 cm\u207b\u00b9 assignment but wrong layer (few-layer instead of monolayer); no mention of strong 2LA(M) or its intensity ratio"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; circular Si-focused reasoning that dismisses key TMD peak as anomaly, no confounds or TMD comparisons considered",
+      "B": "Methodical and physics-based (substrate correction, mode assignments, layer diagnostic via B\u00b9\u2082g); handles calibration but misses near-degeneracy nuance, 2LA(M) enhancement, and oxidation check"
+    },
+    "step3": {
+      "A": "States wrong material/layer/purity; no key evidence for WSe\u2082, no confidence in TMD context, lists irrelevant high-wavenumber peaks",
+      "B": "Clear on material, phase, and evidence (modes, calibration); states layer and confidence but incorrectly; omits 2LA(M), FWHM, and oxidation check"
+    },
+    "thinking": "Candidate A completely fails by identifying the spectrum as silicon based on the substrate peak at 518 cm\u207b\u00b9, treating the strong ~249 cm\u207b\u00b9 WSe\u2082 feature as an anomaly and ignoring all TMD signatures. Candidate B correctly recognizes the material as WSe\u2082, accounts for the Si substrate and calibration offset, assigns the merged ~250 cm\u207b\u00b9 peak to E\u00b9\u2082g/A\u2081g and notes other modes, but incorrectly classifies it as few-layer due to the ~308 cm\u207b\u00b9 peak (which GT states should be absent in monolayer). B's reasoning is grounded in TMD Raman physics while A's is not; B is therefore superior overall despite the layer-number error.",
+    "elo_before": {
+      "d": 49.99,
+      "f": 72.24
+    },
+    "elo_after": {
+      "d": 42.5,
+      "f": 79.56
+    }
+  },
+  {
+    "game_id": 24,
+    "model_a": "d",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.75,
+    "justification": "Both are scientifically wrong on material identification and ignore all ground-truth WSe\u2082 signatures. A is marginally better because its chain-of-thought explicitly acknowledges the strong 249 cm\u207b\u00b9 peak and spectral complexity (the actual WSe\u2082 features), whereas B is overconfident and factually inconsistent with its own peak list.",
+    "step1": {
+      "A": "Completely incorrect; misclassified as Si, ignored WSe\u2082 peaks and monolayer indicators",
+      "B": "Completely incorrect; misclassified as Si, ignored all TMD features"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; noted anomalies but offered no TMD analysis or monolayer checks",
+      "B": "Not grounded in WSe\u2082 physics; superficial, ignored contradictory peaks, no relevant diagnostics"
+    },
+    "step3": {
+      "A": "Incorrect material/layer output; noted anomalies but lacked required WSe\u2082 evidence or confidence rationale",
+      "B": "Incorrect material/layer output; overly terse, false claim of no unexpected peaks"
+    },
+    "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, instead defaulting to the Si substrate peak at ~518 cm\u207b\u00b9 as the dominant feature and labeling the sample as crystalline silicon. Candidate A at least flagged the intense 249 cm\u207b\u00b9 peak (the actual merged E\u00b9\u2082g/A\u2081g + 2LA(M) region) and high-wavenumber features as anomalous, showing partial observation of the true TMD signatures, while B dismissed all non-Si peaks and claimed high purity with no unexpected features. Neither engaged with WSe\u2082 physics, monolayer diagnostics (2LA enhancement, B\u00b9\u2082g absence), or substrate confounds.",
+    "elo_before": {
+      "d": 42.5,
+      "g": 33.36
+    },
+    "elo_after": {
+      "d": 50.29,
+      "g": 25.75
+    }
+  },
+  {
+    "game_id": 25,
+    "model_a": "d",
+    "model_b": "h",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.9,
+    "justification": "Both models are equally poor: zero overlap with ground-truth WSe\u2082 identification, monolayer diagnostics, or correct peak assignments. A at least recognizes the substrate Si peak, but this does not salvage the total misclassification; B is wholly delusional. Draw on every evaluation dimension.",
+    "step1": {
+      "A": "Completely incorrect; identified as Si, missed all WSe\u2082 bands and monolayer indicators",
+      "B": "Completely incorrect; identified as water ice, hallucinated OH bands, missed all WSe\u2082 features"
+    },
+    "step2": {
+      "A": "Methodical for Si but irrelevant; no TMD knowledge, treated key 249 cm\u207b\u00b9 as anomaly without considering substrate + 2D material",
+      "B": "Unsound and hallucinatory; invented ice lattice modes and H-bond networks with zero connection to TMD Raman or substrate effects"
+    },
+    "step3": {
+      "A": "Clear but wrong output; no mention of WSe\u2082, monolayer, or expected peaks/ratios",
+      "B": "Clear but entirely fabricated; wrong material, inapplicable layer/stacking, ignores all ground-truth indicators"
+    },
+    "thinking": "Both candidates completely failed to identify the spectrum as monolayer WSe\u2082 on SiO\u2082/Si. Candidate A correctly spotted the Si substrate peak at ~518 cm\u207b\u00b9 (common in such measurements) but dismissed the ~249 cm\u207b\u00b9 peak as an anomaly and ignored all TMD signatures. Candidate B hallucinated an OH-stretch ice spectrum from what are likely noise/artifacts in the high-wavenumber region, misinterpreting every feature. Neither referenced E\u00b9\u2082g/A\u2081g merger, 2LA(M) enhancement, B\u00b9\u2082g absence, or any WSe\u2082 physics.",
+    "elo_before": {
+      "d": 50.29,
+      "h": 33.74
+    },
+    "elo_after": {
+      "d": 49.91,
+      "h": 34.11
+    }
+  },
+  {
+    "game_id": 26,
+    "model_a": "d",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.75,
+    "justification": "A is better overall for correctly detecting the dominant Si substrate peak and flagging the 249 cm\u207b\u00b9 band as anomalous (actually the WSe\u2082 signature), while B's sulfur assignment is wholly erroneous and ignores the Si feature. Both miss the ground-truth WSe\u2082 monolayer classification.",
+    "step1": {
+      "A": "Failed: no WSe\u2082 identification; missed merged E\u00b9\u2082g/A\u2081g + 2LA(M) and monolayer indicators",
+      "B": "Failed: no WSe\u2082 identification; misassigned all peaks to sulfur, confused with TMDs but ruled them out"
+    },
+    "step2": {
+      "A": "Not grounded in WSe\u2082 physics; focused only on Si modes, noted anomaly but no TMD analysis or confounds",
+      "B": "Not grounded in WSe\u2082 physics; considered TMDs yet rejected them with incorrect S\u2088 assignment and artifact hand-waving"
+    },
+    "step3": {
+      "A": "Clear but wrong output; states silicon bulk with high confidence, lists peaks but omits all WSe\u2082/monolayer evidence",
+      "B": "Clear but wrong output; lower confidence, lists same peaks but attributes to sulfur with no WSe\u2082 or layer info"
+    },
+    "thinking": "Both models completely failed to identify the material as monolayer WSe\u2082. Candidate A correctly spotted the strong Si substrate peak at ~518 cm\u207b\u00b9 (expected for SiO\u2082/Si) but treated the ~249 cm\u207b\u00b9 band (the merged E\u00b9\u2082g/A\u2081g of WSe\u2082) as an unexplained anomaly without recognizing TMD features. Candidate B misidentified the spectrum as crystalline sulfur S\u2088, wrongly mapping the same low-wavenumber peaks and ignoring the unmistakable Si signature. Neither discussed 2LA(M) enhancement, B\u00b9\u2082g absence, or monolayer diagnostics.",
+    "elo_before": {
+      "d": 49.91,
+      "i": 49.56
+    },
+    "elo_after": {
+      "d": 57.9,
+      "i": 41.76
+    }
+  },
+  {
+    "game_id": 27,
+    "model_a": "e",
+    "model_b": "f",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.75,
+    "justification": "Candidates are essentially duplicates in classification (both incorrectly output few-layer WSe2), observed peaks, and reasoning, making identical core mistakes relative to GT monolayer expectations and 2LA(M)/B\u00b9\u2082g rules. Neither outperforms the other on correctness, reasoning quality, or completeness.",
+    "step1": {
+      "A": "Material correct but layer wrong (few-layer vs mono); misses 2LA(M), B absence, and key mono ratios",
+      "B": "Material correct but layer wrong (few-layer vs mono); misses 2LA(M), B absence, and key mono ratios"
+    },
+    "step2": {
+      "A": "Methodical on modes and substrate but ignores GT monolayer diagnostics, near-degeneracy details, and potential mis-ID confounds",
+      "B": "Methodical on modes/substrate/calibration but ignores GT monolayer diagnostics, near-degeneracy details, and potential mis-ID confounds"
+    },
+    "step3": {
+      "A": "States wrong layer number; omits 2LA(M), B absence, FWHM, oxidation check; confidence overstated",
+      "B": "States wrong layer number; omits 2LA(M), B absence, FWHM, oxidation check; confidence overstated"
+    },
+    "thinking": "Both candidates correctly ID WSe2 via the ~248 cm\u207b\u00b9 merged E2g/A1g peak and Si substrate at 518 cm\u207b\u00b9, plus minor modes like E1g. However both wrongly classify as few-layer based on a 306 cm\u207b\u00b9 peak they assign to B2g\u00b9 (which GT states should be absent for monolayer) and completely omit the key 2LA(M) ~260 cm\u207b\u00b9 monolayer indicator. Their CoT and outputs are nearly identical in structure, peaks list, confidence, and errors, with only minor differences in calibration discussion.",
+    "elo_before": {
+      "e": 80.23,
+      "f": 79.56
+    },
+    "elo_after": {
+      "e": 80.21,
+      "f": 79.58
+    }
+  },
+  {
+    "game_id": 28,
+    "model_a": "e",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "A is superior overall as it correctly detects WSe\u2082 and key ~248 cm\u207b\u00b9 mode plus substrate, aligning with ground truth on material; B fails fundamentally by calling it silicon. A's layer error and omission of 2LA(M) prevent full credit but it remains closer on scientific correctness and reasoning depth.",
+    "step1": {
+      "A": "Partially correct: right material and merged ~250 cm\u207b\u00b9 mode but wrong layer (few-layer instead of mono), missed 2LA(M) and B\u00b9\u2082g absence logic",
+      "B": "Incorrect: misidentified as silicon, ignored all WSe\u2082 signatures and TMD peak positions"
+    },
+    "step2": {
+      "A": "Methodical but flawed: correctly notes E2g/A1g overlap and substrate but misses 2LA(M) enhancement, near-degeneracy emphasis, and monolayer diagnostics; some hallucinated modes",
+      "B": "Poor and incomplete: only considers Si peak, no TMD physics, no confounds or alternative checks, circular silicon assumption"
+    },
+    "step3": {
+      "A": "Mostly complete for its (wrong) conclusion: states material/layer/confidence/evidence but lacks 2LA, FWHM, oxidation, and correct mono indicators",
+      "B": "Complete only for incorrect silicon result; no mention of expected WSe\u2082 features or uncertainty sources"
+    },
+    "thinking": "Candidate A correctly identifies the material as WSe\u2082 with the merged E\u00b9\u2082g/A\u2081g peak at 247.6 cm\u207b\u00b9 and Si substrate peak, but errs by classifying as few-layer based on a 306 cm\u207b\u00b9 peak (B\u00b9\u2082g) and completely omits the critical 2LA(M) ~260 cm\u207b\u00b9 enhancement and monolayer confirmation via B\u00b9\u2082g weakness. Candidate B entirely fails by interpreting the spectrum as pure crystalline silicon based solely on the ~517 cm\u207b\u00b9 peak while ignoring all TMD-related features around 248 cm\u207b\u00b9 and 305 cm\u207b\u00b9. A demonstrates far better Raman physics knowledge and handles substrate correctly, but both miss FWHM, oxidation checks, and full monolayer diagnostics.",
+    "elo_before": {
+      "e": 80.21,
+      "g": 25.75
+    },
+    "elo_after": {
+      "e": 86.97,
+      "g": 19.14
+    }
+  },
+  {
+    "game_id": 29,
+    "model_a": "e",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.9,
+    "justification": "A is far superior as it correctly recognizes WSe2 and key low-frequency modes with only a layer-count error, while B is a total failure misclassifying noise as ice. This aligns with ground truth on material even if A misses monolayer confirmation via absent B1 2g and strong 2LA.",
+    "step1": {
+      "A": "partially correct (right material/modes but wrong layer; missed 2LA)",
+      "B": "completely incorrect (not WSe2 at all)"
+    },
+    "step2": {
+      "A": "methodical TMD physics but flawed on B2g layer diagnostic and omitted 2LA enhancement",
+      "B": "irrelevant, hallucinatory reasoning about ice OH bands"
+    },
+    "step3": {
+      "A": "clear on material/peaks/confidence but incorrect layer and missing monolayer diagnostics",
+      "B": "concise but wholly erroneous and off-topic"
+    },
+    "thinking": "Candidate A correctly identifies the material as WSe2, assigns the dominant ~248 cm^-1 peak to the merged E2g/A1g modes, recognizes the Si substrate peak, and uses TMD-specific modes (including B2g^1) for layer analysis, but errs by calling it few-layer instead of monolayer and omits the key 2LA(M) indicator. Candidate B completely fails by interpreting the entire spectrum as crystalline water ice based on high-wavenumber noise spikes as OH stretches, showing zero understanding of 2D material Raman signatures. A demonstrates relevant domain knowledge and only partial errors, while B is entirely hallucinated and irrelevant.",
+    "elo_before": {
+      "e": 86.97,
+      "h": 34.11
+    },
+    "elo_after": {
+      "e": 93.76,
+      "h": 27.47
+    }
+  },
+  {
+    "game_id": 30,
+    "model_a": "e",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.88,
+    "justification": "A correctly identifies WSe\u2082 and its characteristic overlapping E\u2082g/A\u2081g mode plus substrate Si peak, using appropriate TMDC Raman knowledge; B's sulfur assignment is a complete misclassification unrelated to the ground-truth monolayer WSe\u2082. Although A errs on layer number, its overall accuracy, reasoning depth, and relevance vastly outperform B.",
+    "step1": {
+      "A": "Partially correct: right material & merged ~250 cm\u207b\u00b9 modes, but no 2LA(M) mention, treats 306 cm\u207b\u00b9 as few-layer indicator (should be absent for mono)",
+      "B": "Incorrect: wrong material (S8), no TMDC modes recognized, confuses 249/305/392 cm\u207b\u00b9 with sulfur bands"
+    },
+    "step2": {
+      "A": "Strong: methodical TMDC physics, handles E/A\u2081g degeneracy, uses B\u00b9\u2082g for layer deduction, considers substrate; only misses 2LA and oxidation check",
+      "B": "Poor: sulfur hallucination, no WSe\u2082/MoSe\u2082/WS\u2082 comparison, ignores layer-dependent TMDC signatures and substrate Si peak meaning"
+    },
+    "step3": {
+      "A": "Good: states WSe\u2082 + layer + key peaks + high confidence (0.95); omits 2LA, FWHM, oxidation, but concise and evidence-based",
+      "B": "Weak: complete for wrong material, lower confidence (0.62), attributes many peaks to artifacts but still claims S8"
+    },
+    "thinking": "Ground truth specifies monolayer WSe\u2082 with merged E\u00b9\u2082g/A\u2081g ~250 cm\u207b\u00b9, strong 2LA(M) ~260 cm\u207b\u00b9, and absent/weak B\u00b9\u2082g ~308 cm\u207b\u00b9. Candidate A correctly identifies material as WSe\u2082, recognizes the merged ~247.6 cm\u207b\u00b9 E\u2082g+A\u2081g peak and Si substrate, but wrongly interprets the 306 cm\u207b\u00b9 peak as B\u00b9\u2082g implying few-layer (missing 2LA enhancement). Candidate B completely misidentifies all peaks as crystalline S\u2088 modes, ignoring TMDC literature. A's TMDC-specific reasoning, mode assignments, and classification are far closer to ground truth despite the layer error.",
+    "elo_before": {
+      "e": 93.76,
+      "i": 41.76
+    },
+    "elo_after": {
+      "e": 100.0,
+      "i": 35.08
+    }
+  },
+  {
+    "game_id": 31,
+    "model_a": "f",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.85,
+    "justification": "A correctly identified WSe\u2082 and relevant modes plus calibration offset while B completely missed the material; although A erred on layer number, it is substantially closer to GT expectations than B's total misclassification.",
+    "step1": {
+      "A": "Partially correct (material right, layer wrong; missed 2LA and B\u00b9\u2082g-absence rule)",
+      "B": "Incorrect (identified as Si; ignored all TMD modes)"
+    },
+    "step2": {
+      "A": "Methodical but flawed (good mode assignment and calibration handling, yet missed monolayer diagnostics and 2LA enhancement)",
+      "B": "Poor (no WSe\u2082 physics, circular Si-only focus, ignored confounds)"
+    },
+    "step3": {
+      "A": "Good structure and confidence but incomplete (wrong layer, omitted 2LA, FWHM, oxidation)",
+      "B": "Inadequate (wrong material, minimal evidence)"
+    },
+    "thinking": "Candidate A correctly identified the material as WSe\u2082, recognized the ~250 cm\u207b\u00b9 peak as merged E\u00b9\u2082g/A\u2081g, applied Si-substrate calibration correction, and noted the ~308 cm\u207b\u00b9 feature, showing solid Raman physics knowledge. However it missed the key strong 2LA(M) at ~260 cm\u207b\u00b9, incorrectly used B\u00b9\u2082g presence to label the sample 'few-layer' (GT requires its absence for monolayer), and did not address FWHM or oxidation. Candidate B entirely ignored all TMD peaks and misclassified the spectrum as bulk crystalline silicon based only on the Si substrate line, demonstrating no engagement with the expected WSe\u2082 signatures.",
+    "elo_before": {
+      "f": 79.58,
+      "g": 19.14
+    },
+    "elo_after": {
+      "f": 86.2,
+      "g": 12.67
+    }
+  },
+  {
+    "game_id": 32,
+    "model_a": "f",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.92,
+    "justification": "A correctly recognizes WSe\u2082 and relevant low-frequency modes with proper calibration handling, while B produces an entirely hallucinatory ice assignment. Although A mislabels the layer count, it is the only output aligned with the ground-truth material and Raman signatures.",
+    "step1": {
+      "A": "Material correct (WSe\u2082); layer wrong (few-layer instead of mono); missed 2LA(M) and B\u00b9\u2082g diagnostic usage",
+      "B": "Completely incorrect; assigned to water ice with no recognition of any WSe\u2082 or TMD features"
+    },
+    "step2": {
+      "A": "Methodical TMD-focused reasoning using mode assignments and substrate correction; omits 2LA(M) enhancement and near-degeneracy discussion but stays grounded",
+      "B": "Irrelevant ice/hydrogen-bond reasoning; total hallucination with no connection to 2D-material Raman physics"
+    },
+    "step3": {
+      "A": "Clear WSe\u2082 classification, lists key modes and confidence; lacks explicit monolayer indicators (2LA strength, B\u00b9\u2082g absence, FWHM)",
+      "B": "Complete mismatch to GT; irrelevant ice classification with no useful WSe\u2082 information"
+    },
+    "thinking": "Candidate A correctly identifies the material as WSe\u2082, recognizes the Si substrate peak and calibration offset, assigns the ~250 cm\u207b\u00b9 feature to the characteristic E\u00b9\u2082g/A\u2081g modes, and uses the ~308 cm\u207b\u00b9 B\u00b9\u2082g mode for layer assignment; however it misses the key monolayer 2LA(M) enhancement at ~260 cm\u207b\u00b9 and incorrectly calls the sample few-layer. Candidate B completely fails, hallucinating a crystalline water-ice spectrum based on high-wavenumber noise as OH stretches and ignoring all TMD lattice modes. On correctness, reasoning grounded in TMD physics, and completeness, A is clearly superior even with its layer-number error.",
+    "elo_before": {
+      "f": 86.2,
+      "h": 27.47
+    },
+    "elo_after": {
+      "f": 92.86,
+      "h": 20.96
+    }
+  },
+  {
+    "game_id": 33,
+    "model_a": "f",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.82,
+    "justification": "A correctly identifies WSe\u2082 and handles the Si substrate/calibration, making it much closer to ground truth despite the layer-number error and missing 2LA(M). B's sulfur assignment is fundamentally wrong. Overall A is the superior output on correctness, reasoning, and relevance.",
+    "step1": {
+      "A": "Partially correct: right material and ~250 cm\u207b\u00b9 modes but wrong layer (few-layer), no 2LA(M) mention, and B\u00b9\u2082g presence contradicts monolayer GT",
+      "B": "Incorrect: misidentified as sulfur S8, no WSe\u2082 modes recognized"
+    },
+    "step2": {
+      "A": "Methodical with calibration handling and mode assignment but flawed monolayer diagnostics; misses near-degeneracy nuance and 2LA enhancement",
+      "B": "Internally consistent for sulfur but entirely off-topic for WSe\u2082 Raman physics and confounds"
+    },
+    "step3": {
+      "A": "Clear on WSe\u2082, layer (wrong), high confidence, and key modes; omits monolayer-specific evidence",
+      "B": "Clear but for wrong material, lower confidence, and irrelevant explanation"
+    },
+    "thinking": "Candidate A correctly identifies the material as WSe\u2082, recognizes the Si substrate peak with calibration offset, and assigns the ~250 cm\u207b\u00b9 feature to the characteristic E\u00b9\u2082g/A\u2081g modes, but errs by classifying it as few-layer based on a ~306 cm\u207b\u00b9 peak interpreted as B\u00b9\u2082g (which should be absent in monolayer) and fails to discuss the key 2LA(M) ~260 cm\u207b\u00b9 indicator. Candidate B completely misassigns the spectrum to crystalline sulfur S8 using similar low-wavenumber bands, ignoring TMDC physics and substrate Si peak. A is therefore far closer on material identification and peak assignment despite the layer-number mistake.",
+    "elo_before": {
+      "f": 92.86,
+      "i": 35.08
+    },
+    "elo_after": {
+      "f": 99.54,
+      "i": 28.55
+    }
+  },
+  {
+    "game_id": 34,
+    "model_a": "g",
+    "model_b": "h",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Both candidates are equally poor: zero scientific correctness on WSe\u2082 identification, no use of monolayer Raman markers, and conclusions unrelated to ground truth. A at least stayed in the proper spectral window but still missed the material; B is more bizarre. Clear draw on all evaluation dimensions.",
+    "step1": {
+      "A": "Completely incorrect; misidentified as bulk Si, ignored all WSe\u2082 signatures",
+      "B": "Completely incorrect; assigned to water ice with irrelevant high-wavenumber focus"
+    },
+    "step2": {
+      "A": "Methodical for Si but irrelevant to TMD physics; no handling of near-degenerate modes or monolayer indicators",
+      "B": "Unrelated to Raman of 2D materials; misinterprets artifacts as OH stretches, no TMD reasoning"
+    },
+    "step3": {
+      "A": "States wrong material/phase with high confidence; omits all key WSe\u2082 evidence",
+      "B": "Provides wrong classification with irrelevant details; no WSe\u2082, layer, or peak-ratio info"
+    },
+    "thinking": "Both A and B completely failed to identify the spectrum as monolayer WSe\u2082 on SiO\u2082/Si. A focused only on the ~517 cm\u207b\u00b9 Si substrate peak and concluded crystalline silicon, ignoring all TMD-relevant features around 245\u2013260 cm\u207b\u00b9. B hallucinated crystalline water ice from high-wavenumber noise/artifact bands, disregarding the low-frequency phonon region entirely. Neither mentioned E\u00b9\u2082g/A\u2081g merger, 2LA(M) enhancement, B\u00b9\u2082g absence, or any monolayer diagnostics, making both scientifically invalid.",
+    "elo_before": {
+      "g": 12.67,
+      "h": 20.96
+    },
+    "elo_after": {
+      "g": 12.86,
+      "h": 20.77
+    }
+  },
+  {
+    "game_id": 35,
+    "model_a": "g",
+    "model_b": "i",
+    "winner": "B",
+    "winner_name": "i",
+    "confidence": 0.75,
+    "justification": "B is better overall: its chain-of-thought is grounded in systematic comparison across material families (including TMDCs), correctly flags the dominant low-wavenumber band, and expresses appropriate uncertainty, while A ignores the actual material peaks entirely.",
+    "step1": {
+      "A": "wholly incorrect (Si instead of WSe\u2082; no TMD peaks or monolayer indicators used)",
+      "B": "wholly incorrect (S\u2088 instead of WSe\u2082; misassigned 249 cm\u207b\u00b9 but at least noted it)"
+    },
+    "step2": {
+      "A": "poor, no WSe\u2082 physics, near-degeneracy, 2LA enhancement or substrate confounds discussed",
+      "B": "superior but flawed; considered TMDCs, ruled out graphene/MoS\u2082/WS\u2082, addressed linewidth and artifacts"
+    },
+    "step3": {
+      "A": "incomplete and misleading; high-confidence Si classification omits all relevant evidence",
+      "B": "incomplete but clearer; lists observed peaks, acknowledges anomalies, lower confidence is more honest"
+    },
+    "thinking": "Both A and B completely failed to identify the material as monolayer WSe\u2082, ignoring all ground-truth signatures (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, strong 2LA(M) at ~260 cm\u207b\u00b9, absent B\u00b9\u2082g at ~308 cm\u207b\u00b9). A fixated exclusively on the Si substrate peak at ~517 cm\u207b\u00b9 and never considered TMDCs. B examined the ~249 cm\u207b\u00b9 band (which is actually the WSe\u2082 feature), explicitly considered TMDC families in its chain-of-thought, and reported lower confidence with artifact caveats, making its reasoning more methodical though still erroneous.",
+    "elo_before": {
+      "g": 12.86,
+      "i": 28.55
+    },
+    "elo_after": {
+      "g": 5.22,
+      "i": 36.02
+    }
+  },
+  {
+    "game_id": 36,
+    "model_a": "h",
+    "model_b": "i",
+    "winner": "B",
+    "winner_name": "i",
+    "confidence": 0.68,
+    "justification": "Both failed the core task of recognizing monolayer WSe\u2082, but B is clearly superior: it examined the physically relevant spectral region for TMDs, recognized possible artifacts, and considered a related TMD, while A was wholly distracted by noise into an unrelated molecular-ice assignment.",
+    "step1": {
+      "A": "completely incorrect; no WSe\u2082 identification or TMD peak analysis",
+      "B": "incorrect material (S\u2088); focused on relevant low-wavenumber peaks but assigned wrongly and missed monolayer indicators"
+    },
+    "step2": {
+      "A": "poor, not grounded in Raman of 2D materials; obsessed with irrelevant OH-stretch region and ignored substrate/TMD confounds",
+      "B": "methodical on low-frequency modes and artifact handling but confused S\u2088 with TMD signatures and omitted layer-specific diagnostics"
+    },
+    "step3": {
+      "A": "no statement of WSe\u2082, monolayer character, or GT evidence; high confidence in wrong conclusion",
+      "B": "wrong classification but notes uncertainty, artifacts, and alternative TMD candidate"
+    },
+    "thinking": "Neither candidate identified the spectrum as monolayer WSe\u2082 or referenced any of the ground-truth diagnostics (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, strong 2LA(M) at ~260 cm\u207b\u00b9, absent/weak B\u00b9\u2082g at ~308 cm\u207b\u00b9, Si substrate peak at ~520 cm\u207b\u00b9). Candidate A was entirely misled by high-wavenumber noise (likely artifacts) into an ice assignment with no TMD consideration. Candidate B correctly prioritized the low-wavenumber lattice region, noted 518 cm\u207b\u00b9 (actually Si), considered a TMD alternative (MoS\u2082), and flagged high-frequency peaks as probable artifacts, making its reasoning closer to appropriate 2D-material analysis despite the wrong material call.",
+    "elo_before": {
+      "h": 20.77,
+      "i": 36.02
+    },
+    "elo_after": {
+      "h": 13.12,
+      "i": 43.49
+    }
+  }
+]

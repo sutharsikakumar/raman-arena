@@ -1,0 +1,30 @@
+{
+  "game_id": 25,
+  "model_a": "d",
+  "model_b": "h",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.9,
+  "justification": "Both models are equally poor: zero overlap with ground-truth WSe\u2082 identification, monolayer diagnostics, or correct peak assignments. A at least recognizes the substrate Si peak, but this does not salvage the total misclassification; B is wholly delusional. Draw on every evaluation dimension.",
+  "step1": {
+    "A": "Completely incorrect; identified as Si, missed all WSe\u2082 bands and monolayer indicators",
+    "B": "Completely incorrect; identified as water ice, hallucinated OH bands, missed all WSe\u2082 features"
+  },
+  "step2": {
+    "A": "Methodical for Si but irrelevant; no TMD knowledge, treated key 249 cm\u207b\u00b9 as anomaly without considering substrate + 2D material",
+    "B": "Unsound and hallucinatory; invented ice lattice modes and H-bond networks with zero connection to TMD Raman or substrate effects"
+  },
+  "step3": {
+    "A": "Clear but wrong output; no mention of WSe\u2082, monolayer, or expected peaks/ratios",
+    "B": "Clear but entirely fabricated; wrong material, inapplicable layer/stacking, ignores all ground-truth indicators"
+  },
+  "thinking": "Both candidates completely failed to identify the spectrum as monolayer WSe\u2082 on SiO\u2082/Si. Candidate A correctly spotted the Si substrate peak at ~518 cm\u207b\u00b9 (common in such measurements) but dismissed the ~249 cm\u207b\u00b9 peak as an anomaly and ignored all TMD signatures. Candidate B hallucinated an OH-stretch ice spectrum from what are likely noise/artifacts in the high-wavenumber region, misinterpreting every feature. Neither referenced E\u00b9\u2082g/A\u2081g merger, 2LA(M) enhancement, B\u00b9\u2082g absence, or any WSe\u2082 physics.",
+  "elo_before": {
+    "d": 50.29,
+    "h": 33.74
+  },
+  "elo_after": {
+    "d": 49.91,
+    "h": 34.11
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game_id": 23,
+  "model_a": "d",
+  "model_b": "f",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.8,
+  "justification": "Both models commit the identical scientific error on layer number and peak positions relative to the provided GT, with nearly indistinguishable reasoning quality and completeness. Minor variations (extra peaks in A, FWHM mention in B) do not alter the overall equivalence.",
+  "step1": {
+    "A": "Material correct but layer wrong (bulk vs mono), peaks slightly shifted, \u0394 misused",
+    "B": "Material correct but layer wrong (bulk vs mono), peaks slightly shifted, \u0394 misused"
+  },
+  "step2": {
+    "A": "Logical steps but fails to match GT monolayer expectation; no confounds considered",
+    "B": "Logical steps but fails to match GT monolayer expectation; no confounds considered"
+  },
+  "step3": {
+    "A": "States material/layer/confidence but misses defect/oxidation checks and exact GT metrics",
+    "B": "States material/layer/confidence but misses defect/oxidation checks and exact GT metrics"
+  },
+  "thinking": "Both candidates correctly ID MoS2 and assign E\u00b9\u2082g/A\u2081g modes but report peaks at 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) and classify as bulk, directly contradicting GT monolayer values (E\u2248384, A\u2248403, \u0394=18-20 cm\u207b\u00b9). Reasoning in both is methodical and uses \u0394 as diagnostic yet reaches the wrong layer conclusion without addressing confounds or expected monolayer shifts. Completeness is comparable: high confidence stated but key GT elements (FWHM range, no oxidation, symmetric lineshape) omitted; minor differences in observed peaks and phase label do not meaningfully distinguish them.",
+  "elo_before": {
+    "d": 41.68,
+    "f": 43.06
+  },
+  "elo_after": {
+    "d": 41.71,
+    "f": 43.03
+  }
+}

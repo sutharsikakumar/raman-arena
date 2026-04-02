@@ -1,0 +1,30 @@
+{
+  "game_id": 27,
+  "model_a": "e",
+  "model_b": "f",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.75,
+  "justification": "Both models make identical core errors on layer number (monolayer vs GT bulk) and over-interpret the 3 cm^-1 shift; reasoning quality, graphene distinction, and output clarity are essentially equal, so neither is superior overall.",
+  "step1": {
+    "A": "Correct on h-BN and E2g; incorrect monolayer assignment and FWHM interpretation vs bulk GT",
+    "B": "Correct on h-BN and E2g; incorrect monolayer assignment vs bulk GT"
+  },
+  "step2": {
+    "A": "Methodical, distinguishes graphene well, but misapplies layer-shift not emphasized in GT",
+    "B": "Methodical, distinguishes graphene well, but misapplies layer-shift not emphasized in GT"
+  },
+  "step3": {
+    "A": "Clear on material/peak/evidence but states wrong layer and over-relies on shift",
+    "B": "Clear on material/peak/evidence but states wrong layer; omits FWHM detail"
+  },
+  "thinking": "Both candidates correctly identify h-BN and assign the dominant peak to the E2g mode near 1369 cm^-1 while ruling out graphene via absence of a G-band. However both erroneously conclude monolayer (citing blue-shift and, for A, FWHM=28 cm^-1) when GT explicitly labels the sample bulk h-BN with expected ~1366 cm^-1 (shiftable \u00b15 cm^-1 by strain/substrate) and narrower bulk FWHM. Their CoT is structured and physics-based but introduces layer-shift claims not present in GT; classification outputs are clear yet propagate the same layer-number error.",
+  "elo_before": {
+    "e": 49.67,
+    "f": 49.69
+  },
+  "elo_after": {
+    "e": 49.67,
+    "f": 49.69
+  }
+}

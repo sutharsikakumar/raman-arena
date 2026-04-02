@@ -1,0 +1,30 @@
+{
+  "game_id": 21,
+  "model_a": "c",
+  "model_b": "i",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.85,
+  "justification": "Neither candidate identified WSe\u2082 or used any of its Raman diagnostics; both are equally incorrect on every evaluation axis.",
+  "step1": {
+    "A": "Failed: misidentified as HgS+Si, ignored all WSe\u2082 signatures and monolayer indicators",
+    "B": "Failed: misidentified as orthorhombic S8, ignored all WSe\u2082 signatures and monolayer indicators"
+  },
+  "step2": {
+    "A": "Poor: no WSe\u2082 physics, no degeneracy or 2LA/B1g discussion, circular HgS matching with artifacts",
+    "B": "Poor: no WSe\u2082 physics, no degeneracy or 2LA/B1g discussion, sulfur mode hallucination"
+  },
+  "step3": {
+    "A": "Incomplete: wrong material/layer, no confidence in WSe\u2082 terms, lists irrelevant peaks",
+    "B": "Incomplete: wrong material/layer, no confidence in WSe\u2082 terms, lists irrelevant peaks"
+  },
+  "thinking": "Both A and B completely failed to recognize the spectrum as monolayer WSe\u2082, instead proposing cinnabar (HgS) + Si and crystalline sulfur (S8) respectively. They anchored on the ~248 cm\u207b\u00b9 and 518 cm\u207b\u00b9 (Si substrate) peaks but never referenced the merged E\u00b9\u2082g/A\u2081g, enhanced 2LA(M) at ~260 cm\u207b\u00b9, B\u00b9\u2082g absence, or any WSe\u2082-specific monolayer diagnostics. Their reasoning is not grounded in TMD physics and contains material hallucinations; classification results omit all ground-truth criteria.",
+  "elo_before": {
+    "c": 51.15,
+    "i": 49.53
+  },
+  "elo_after": {
+    "c": 51.11,
+    "i": 49.56
+  }
+}

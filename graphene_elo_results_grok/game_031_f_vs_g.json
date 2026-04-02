@@ -1,0 +1,30 @@
+{
+  "game_id": 31,
+  "model_a": "f",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "f",
+  "confidence": 0.92,
+  "justification": "A accurately extracts and interprets all graphene Raman signatures consistent with GT criteria (low D, clear G+2D, monolayer indicators) while B fails to recognize graphene at all. The substrate mismatch is minor compared to B's total omission of the carbon bands.",
+  "step1": {
+    "A": "Correct graphene monolayer ID, G/2D bands, no D; minor ratio/FWHM and substrate mismatch vs GT",
+    "B": "Completely incorrect; missed graphene entirely, wrong silicon-only classification"
+  },
+  "step2": {
+    "A": "Methodical, physics-grounded steps covering substrate, band assignment, defect check, ratio and FWHM",
+    "B": "Shallow, ignores key graphene peaks, circular silicon assumption with no Raman context for carbon bands"
+  },
+  "step3": {
+    "A": "Clear material/layer prediction, confidence, peak list, band evidence and top candidates",
+    "B": "Concise but wrong; omits graphene features and key quality metrics"
+  },
+  "thinking": "Candidate A correctly identifies the G band (~1580 cm\u207b\u00b9), 2D band (~2670 cm\u207b\u00b9), absent D band, and concludes monolayer graphene on Si substrate, with reasonable (if slightly low) 2D/G ratio and FWHM discussion; it matches GT Raman signatures despite substrate discrepancy. Candidate B ignores the graphene peaks entirely, misclassifying the spectrum as bulk crystalline silicon based solely on the ~522 cm\u207b\u00b9 peak, which is a major scientific error. A shows methodical Raman-specific reasoning while B is incomplete and non-physical for a graphene-on-Si spectrum; A is therefore superior on all evaluation dimensions.",
+  "elo_before": {
+    "f": 79.57,
+    "g": 11.99
+  },
+  "elo_after": {
+    "f": 86.04,
+    "g": 5.67
+  }
+}

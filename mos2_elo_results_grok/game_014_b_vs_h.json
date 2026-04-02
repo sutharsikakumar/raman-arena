@@ -1,0 +1,30 @@
+{
+  "game_id": 14,
+  "model_a": "b",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "b",
+  "confidence": 0.65,
+  "justification": "Both misclassify layer number relative to GT, but A demonstrates tighter alignment with literature values, explicit TMD exclusion, higher confidence, and comparable reasoning quality without extraneous elements. B's extra peaks add minor completeness but do not outweigh the shared core error.",
+  "step1": {
+    "A": "Material & modes correct but wrong layer (few-layer vs mono); \u0394=26 mismatches GT 18-20",
+    "B": "Material & modes correct but wrong layer (few-layer vs mono); \u0394=26 mismatches GT 18-20"
+  },
+  "step2": {
+    "A": "Methodical, correctly uses \u0394 as diagnostic and rules out WS2/MoSe2; no hallucination but ignores GT mono label",
+    "B": "Methodical and uses \u0394, notes secondary bands; slightly less explicit on alternatives or literature refs"
+  },
+  "step3": {
+    "A": "States material/phase/layer/confidence clearly but incorrect on monolayer; concise evidence summary",
+    "B": "States predictions clearly but incorrect on layer; more peaks listed yet lower confidence"
+  },
+  "thinking": "Both candidates correctly ID MoS2 and assign the observed peaks to E\u00b9\u2082g and A\u2081g modes with \u0394\u224826 cm\u207b\u00b9, but this directly contradicts GT expectations for a monolayer sample (\u0394\u224818-20 cm\u207b\u00b9, peaks ~383/402 cm\u207b\u00b9). Their layer-count conclusion is therefore incorrect per the reference standard, though the reasoning follows standard Raman literature for bulk/few-layer MoS2. A provides clearer literature comparisons, rules out other TMDs explicitly, and reports higher confidence; B detects more secondary peaks (some consistent with MoS2) but is otherwise similar. A is marginally superior overall.",
+  "elo_before": {
+    "b": 72.01,
+    "h": 57.85
+  },
+  "elo_after": {
+    "b": 79.68,
+    "h": 50.35
+  }
+}

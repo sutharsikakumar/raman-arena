@@ -1,0 +1,30 @@
+{
+  "game_id": 21,
+  "model_a": "c",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "c",
+  "confidence": 0.78,
+  "justification": "A correctly detects and assigns all graphene Raman features, uses standard I(2D)/I(G) and FWHM criteria, and reports appropriate confidence with evidence. B fails to recognize the graphene as the intended material. A is superior on correctness, reasoning, and completeness despite shared substrate mismatch with GT.",
+  "step1": {
+    "A": "Partially correct (identified G/2D, no D, but bilayer on Si not mono on Cu)",
+    "B": "Incorrect (main material Si, graphene only contamination; missed graphene classification)"
+  },
+  "step2": {
+    "A": "Methodical, logical Raman-mode assignments and ratio/FWHM use; coherent but substrate hallucination vs GT",
+    "B": "Structured but flawed: wrongly dismisses clear graphene signatures as contamination, circular on Si dominance"
+  },
+  "step3": {
+    "A": "Clear material/phase/layer output, confidence, peak list, ratio evidence; concise and thorough",
+    "B": "States classification and peaks but omits key graphene ratio/FWHM details and overstates contamination"
+  },
+  "thinking": "Ground truth specifies monolayer graphene on Cu with I(2D)/I(G)>2, low D, and no Si peaks. Spectrum shows dominant Si peak at ~518 cm\u207b\u00b9 plus G/2D, so both candidates mismatch substrate. A correctly assigns G (1579.9 cm\u207b\u00b9) and 2D (2670.2 cm\u207b\u00b9), notes absent D, computes ratio ~1.34 and FWHM ~40 cm\u207b\u00b9 for bilayer conclusion. B treats graphene bands as mere contamination and centers on bulk Si. A is scientifically closer on carbon-band identification and Raman physics despite layer/substrate errors; B is fundamentally wrong on material priority.",
+  "elo_before": {
+    "c": 71.38,
+    "i": 57.68
+  },
+  "elo_after": {
+    "c": 79.06,
+    "i": 50.17
+  }
+}

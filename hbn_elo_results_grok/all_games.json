@@ -1,0 +1,1082 @@
+[
+  {
+    "game_id": 1,
+    "model_a": "a",
+    "model_b": "b",
+    "winner": "B",
+    "winner_name": "b",
+    "confidence": 0.92,
+    "justification": "B is scientifically correct on material identification and provides accurate Raman reasoning for h-BN's E\u2082g mode while A completely mistakes it for graphite. B better matches ground truth on all key dimensions despite a small FWHM note.",
+    "step1": {
+      "A": "Incorrect: misclassified as graphite/D-band; confuses with carbon modes, ignores h-BN E\u2082g",
+      "B": "Mostly correct: right material (h-BN), E\u2082g assignment at 1369 cm\u207b\u00b9; minor FWHM/layer inconsistency"
+    },
+    "step2": {
+      "A": "Poor: flawed logic, circular carbon assumption, fails to distinguish from h-BN",
+      "B": "Strong: methodical comparison of modes, correctly rules out graphite, grounded in h-BN physics"
+    },
+    "step3": {
+      "A": "Incomplete/wrong: incorrect material and reasoning despite structured output",
+      "B": "Good: clear h-BN bulk classification, confidence, key evidence (peak, FWHM, absences)"
+    },
+    "thinking": "Candidate A fundamentally misidentifies the spectrum as graphite based on a 1369 cm\u207b\u00b9 peak as the D-band, ignoring the absence of a G-band and the known position of h-BN's E\u2082g mode; this is a clear scientific error. Candidate B correctly assigns the peak as h-BN's E\u2082g mode, distinguishes it from graphene/graphite features, and provides appropriate bulk/purity assessment despite a minor FWHM discrepancy with ground truth (28 cm\u207b\u00b9 is broader than ideal bulk but still supports crystalline h-BN). B's chain-of-thought is methodical and Raman-physics grounded while A's is hallucinated; B's classification output is also more complete and accurate.",
+    "elo_before": {
+      "a": 50.0,
+      "b": 50.0
+    },
+    "elo_after": {
+      "a": 42.0,
+      "b": 57.82
+    }
+  },
+  {
+    "game_id": 2,
+    "model_a": "a",
+    "model_b": "c",
+    "winner": "B",
+    "winner_name": "c",
+    "confidence": 0.78,
+    "justification": "B is better overall as it correctly references the E2g mode, distinguishes from graphene signatures, and ranks h-BN highest despite imperfect final label. A shows fundamental misunderstanding of h-BN Raman physics with no recovery.",
+    "step1": {
+      "A": "Incorrect: classifies as graphite, confuses E2g with D-band, no h-BN mention",
+      "B": "Partially correct: matches peak to h-BN E2g, lists it top but defaults to graphitic"
+    },
+    "step2": {
+      "A": "Poor: non-methodical, graphite-centric hallucinations, no distinction from h-BN",
+      "B": "Strong: logical steps comparing h-BN vs graphite, notes FWHM and missing G band"
+    },
+    "step3": {
+      "A": "Clear but wrong: states graphite bulk with metrics, high confidence on error",
+      "B": "Adequate: mentions h-BN in top candidates and evidence but main label inconsistent"
+    },
+    "thinking": "Candidate A completely fails scientific correctness by misassigning the 1369 cm\u207b\u00b9 peak as graphite D-band and never mentioning h-BN or its E2g mode, showing clear confusion with graphene-like materials. Candidate B correctly identifies the peak as matching h-BN E2g (~1366 cm\u207b\u00b9), notes the absence of G-band that would be expected for graphite, lists h-BN as the top candidate (0.5), and provides a methodical comparison, though its primary label wavers. B is superior in all three evaluation dimensions but neither output is perfect; B's chain-of-thought is grounded in actual Raman physics for h-BN.",
+    "elo_before": {
+      "a": 42.0,
+      "c": 50.0
+    },
+    "elo_after": {
+      "a": 34.18,
+      "c": 57.64
+    }
+  },
+  {
+    "game_id": 3,
+    "model_a": "a",
+    "model_b": "d",
+    "winner": "B",
+    "winner_name": "d",
+    "confidence": 0.92,
+    "justification": "B matches ground truth on material, peak assignment, and key diagnostics while properly excluding carbon; A is entirely erroneous on the core identification. B's chain-of-thought is logically sound and free of hallucinations.",
+    "step1": {
+      "A": "Incorrect: misassigned as graphite/D-band, wrong material and band interpretation",
+      "B": "Correct: identified h-BN E\u2082g at 1369 cm\u207b\u00b9, consistent position and assignment"
+    },
+    "step2": {
+      "A": "Poor: confused with graphene/carbon, illogical (absent G-band for graphite), circular",
+      "B": "Strong: methodical, correctly distinguishes h-BN from carbon, grounded in Raman fingerprints"
+    },
+    "step3": {
+      "A": "Structured but factually wrong; confidence overstated for incorrect class",
+      "B": "Clear h-BN classification, bulk layer, evidence (peak, FWHM, absences), well-quantified confidence"
+    },
+    "thinking": "Candidate A completely misidentifies the spectrum as crystalline graphite (D-band of sp\u00b2 carbon) and fabricates explanations around absent G/2D bands that are inconsistent with real graphite; this directly contradicts the ground-truth h-BN E\u2082g assignment at ~1366 cm\u207b\u00b9. Candidate B correctly recognizes the single intense peak at 1369 cm\u207b\u00b9 as h-BN's E\u2082g mode, explicitly rules out carbon by noting the missing G-band, and supplies appropriate FWHM and purity interpretations. B's reasoning is methodical and physics-grounded while A's is hallucinated; B's output is also clearer and better calibrated.",
+    "elo_before": {
+      "a": 34.18,
+      "d": 50.0
+    },
+    "elo_after": {
+      "a": 26.55,
+      "d": 57.46
+    }
+  },
+  {
+    "game_id": 4,
+    "model_a": "a",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "B correctly identifies the material as h-BN and the dominant peak as the E\u2082g mode, while A hallucinates a graphite D-band. Although B errs on monolayer vs bulk, this is minor compared with A's total misclassification. Overall B is far closer to the ground-truth reference.",
+    "step1": {
+      "A": "Incorrect material (graphite instead of h-BN); confuses D-band with E\u2082g",
+      "B": "Correct material (h-BN) and E\u2082g assignment; minor error on monolayer vs bulk"
+    },
+    "step2": {
+      "A": "Systematic but built on false carbon-based premises; fails to distinguish h-BN from graphene",
+      "B": "Methodical, physics-grounded chain of thought; correctly rules out carbon materials"
+    },
+    "step3": {
+      "A": "Clear but entirely wrong classification; inappropriate confidence for incorrect material",
+      "B": "States material, layer, confidence and key evidence; minor layer mismatch with GT"
+    },
+    "thinking": "Candidate A completely misidentifies the material as graphite, treating the 1369 cm\u207b\u00b9 peak as a D-band of sp\u00b2 carbon and invoking AB stacking; this is a fundamental error contradicting the ground-truth h-BN E\u2082g assignment. Candidate B correctly recognizes the single peak as the E\u2082g mode of h-BN, distinguishes it from graphene/carbon features, and uses position/FWHM arguments grounded in 2D-material Raman physics, though it incorrectly assigns monolayer instead of the GT-specified bulk. B is therefore superior on scientific correctness and reasoning quality despite the layer-number discrepancy; A fails the primary task of material identification.",
+    "elo_before": {
+      "a": 26.55,
+      "e": 50.0
+    },
+    "elo_after": {
+      "a": 19.09,
+      "e": 57.29
+    }
+  },
+  {
+    "game_id": 5,
+    "model_a": "a",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.85,
+    "justification": "B alone identifies the material as h-BN and correctly invokes the E\u2082g mode as the sole prominent feature, while A hallucinates a graphite D-band interpretation incompatible with the observed single-peak spectrum. Although B incorrectly labels the sample monolayer rather than bulk, this is a secondary error compared with A's total misclassification. B is therefore the clearly superior output on scientific correctness, reasoning quality, and overall fidelity to the ground-truth h-BN signature.",
+    "step1": {
+      "A": "Completely incorrect: misassigned as graphite D-band, no mention of h-BN or E\u2082g",
+      "B": "Mostly correct: right material and E\u2082g assignment; peak position acceptable but layer (monolayer) contradicts bulk ground truth"
+    },
+    "step2": {
+      "A": "Poor: circular carbon-centric logic, factual errors (D-band dominance in perfect graphite), fails to distinguish h-BN",
+      "B": "Strong: methodical elimination of carbon/diamond, grounded in h-BN phonon mode, correctly notes absence of G-band"
+    },
+    "step3": {
+      "A": "Complete but wrong: gives material/phase/layer but for incorrect material; confidence stated",
+      "B": "Good: states h-BN, phase, layer, confidence and key evidence (single E\u2082g peak); minor layer error"
+    },
+    "thinking": "Candidate A entirely misidentifies the spectrum as graphite's D-band (1369 cm\u207b\u00b9), ignoring that perfect graphite shows a strong G-band at ~1580 cm\u207b\u00b9 and that h-BN's sole dominant Raman mode is the E\u2082g near 1366 cm\u207b\u00b9; its reasoning is factually inverted. Candidate B correctly recognizes the single peak as h-BN's E\u2082g mode, rules out carbon and diamond on the basis of missing G-band, and references the documented position range, though it errs on calling the sample monolayer instead of bulk. B is therefore far superior on material identification, Raman physics, and distinction from graphene, despite the layer-number inaccuracy.",
+    "elo_before": {
+      "a": 19.09,
+      "f": 50.0
+    },
+    "elo_after": {
+      "a": 11.8,
+      "f": 57.12
+    }
+  },
+  {
+    "game_id": 6,
+    "model_a": "a",
+    "model_b": "g",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Neither candidate recognized the material as h-BN or the peak as the E\u2082g band; both exhibit fundamental scientific errors and lack any correct h-BN reasoning. The outputs are equally poor across all evaluated dimensions.",
+    "step1": {
+      "A": "Major failure: misclassified as graphite, called peak D-band of sp\u00b2 carbon, ignored E\u2082g",
+      "B": "Major failure: misclassified as graphene, called peak D mode, ignored E\u2082g"
+    },
+    "step2": {
+      "A": "Structured but flawed/hallucinated; confuses h-BN with defective graphite, circular logic",
+      "B": "Very shallow, no Raman physics or h-BN differentiation, pure hallucination"
+    },
+    "step3": {
+      "A": "Clear but wrong output; omits all h-BN indicators, inappropriate bulk/AB assignment",
+      "B": "Incomplete, no FWHM/quality metrics or h-BN evidence, wrong monolayer claim"
+    },
+    "thinking": "Both candidates failed Step 1 by not identifying h-BN at all, instead labeling the spectrum as graphite (A) or graphene (B) and misassigning the ~1369 cm\u207b\u00b9 peak to a carbon D-band rather than the E\u2082g mode. Their chain-of-thought shows no h-BN-specific physics, no mention of FWHM expectations (7-15 cm\u207b\u00b9 bulk), and no distinction from graphene signatures, violating Steps 2 and 3. A is more verbose yet internally inconsistent (claiming a dominant D-band for 'bulk graphite' without a G-band), while B is terse and hallucinates monolayer status; the errors are equally severe.",
+    "elo_before": {
+      "a": 11.8,
+      "g": 50.0
+    },
+    "elo_after": {
+      "a": 12.67,
+      "g": 49.14
+    }
+  },
+  {
+    "game_id": 7,
+    "model_a": "a",
+    "model_b": "h",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Both candidates completely failed to recognize the h-BN E\u2082g band at ~1366 cm\u207b\u00b9 and confused the spectrum with carbon materials. Their chains of thought lack any Raman physics specific to BN or 2D materials. The errors are fundamental and comparable, resulting in a draw.",
+    "step1": {
+      "A": "Failed: misidentified as graphite, called peak D-band, ignored E\u2082g",
+      "B": "Failed: misidentified as DLC/amorphous carbon, called peak D-band, ignored E\u2082g"
+    },
+    "step2": {
+      "A": "Poor: illogical (graphite without G-band), no h-BN knowledge, hallucinations about bulk graphite D-band dominance",
+      "B": "Marginally better: methodical on peak width and exclusions but still carbon-centric and misses h-BN signatures"
+    },
+    "step3": {
+      "A": "Complete structure but wrong material, overstated confidence (0.85), no FWHM or h-BN context",
+      "B": "Good structure with appropriate uncertainty (0.62), notes breadth but still incorrect classification"
+    },
+    "thinking": "Neither A nor B identified the material as h-BN, both misinterpreting the single peak at 1369 cm\u207b\u00b9 as a carbon D-band rather than the E\u2082g mode of hexagonal boron nitride. A incorrectly assigns it to crystalline graphite with AB stacking despite noting no G-band (a clear inconsistency with graphite Raman spectra). B is slightly more cautious with lower confidence and recognizes the peak breadth as indicating disorder but still fails to reference any BN physics or distinguish from graphene-like materials.",
+    "elo_before": {
+      "a": 12.67,
+      "h": 50.0
+    },
+    "elo_after": {
+      "a": 13.53,
+      "h": 49.16
+    }
+  },
+  {
+    "game_id": 8,
+    "model_a": "a",
+    "model_b": "i",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Neither model recognized the E\u2082g band of hexagonal boron nitride or applied appropriate 2D-materials Raman knowledge; both applied identical carbon misinterpretation. They are equally flawed across all evaluation dimensions.",
+    "step1": {
+      "A": "Failed: misclassified as graphite, assigned peak as D-band instead of E\u2082g, wrong FWHM interpretation",
+      "B": "Failed: misclassified as graphitic carbon, same D-band confusion and incorrect band assignments"
+    },
+    "step2": {
+      "A": "Poor: entirely carbon-centric, no h-BN physics, circular graphite assumptions",
+      "B": "Poor: similar carbon-focused logic, hallucinates spectral coverage issues, no h-BN distinction"
+    },
+    "step3": {
+      "A": "Incomplete: wrong material, no h-BN morphology or quality metrics, overconfident in error",
+      "B": "Incomplete: wrong material, vague purity, lower confidence but still misses all key h-BN evidence"
+    },
+    "thinking": "Both A and B fundamentally misidentified the h-BN spectrum as carbon/graphite, treating the 1369 cm\u207b\u00b9 peak as the disorder-activated D-band rather than the E\u2082g mode of h-BN. Their chain-of-thought and classifications ignore all h-BN-specific Raman physics (peak position, expected FWHM 7-15 cm\u207b\u00b9 for bulk, absence of IR-active modes, lack of strong overtones) and apply incorrect graphene/carbon heuristics. The errors in scientific correctness, reasoning grounding, and final output are essentially identical, with only minor differences in confidence scores and exact carbon terminology.",
+    "elo_before": {
+      "a": 13.53,
+      "i": 50.0
+    },
+    "elo_after": {
+      "a": 14.37,
+      "i": 49.18
+    }
+  },
+  {
+    "game_id": 9,
+    "model_a": "b",
+    "model_b": "c",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.88,
+    "justification": "A is scientifically correct on the core identification and produces a high-confidence, logically sound output aligned with ground truth. B fails to select h-BN as the answer, mixes it with graphene D-band confusion, and shows factual errors on phonon mode labels. Overall, A is clearly superior on correctness, reasoning quality, and completeness.",
+    "step1": {
+      "A": "Mostly correct: right material (hBN bulk), E2g assignment, peak position; minor FWHM/bulk vs mono inversion",
+      "B": "Incorrect: primary prediction is defective graphitic (D-band), confuses modes, only treats hBN as alternative"
+    },
+    "step2": {
+      "A": "Methodical, logically distinguishes hBN from graphene, grounded in peak position and absence of G-band; minor hallucination on FWHM",
+      "B": "Considers alternatives but reaches wrong conclusion, contains mode label error (A1g), circular on window limitations"
+    },
+    "step3": {
+      "A": "Clear final classification as hBN bulk, crystalline, pure, with confidence, key evidence, and top candidates",
+      "B": "Incomplete and unclear: wrong primary label, low confidence, hedging between materials without decisive evidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as bulk h-BN with the dominant E2g peak at 1369 cm\u207b\u00b9, properly rules out graphene due to missing G-band, and gives high confidence with clear evidence. Candidate B misclassifies the spectrum as primarily defective graphitic carbon (D-band), confuses E2g with A1g, shows internal contradictions (notes no G-band yet picks graphene), and only lists h-BN as a secondary candidate at lower confidence. A has minor inaccuracies on FWHM-layer number relation, but B has more severe factual and conclusion errors relative to ground truth.",
+    "elo_before": {
+      "b": 57.82,
+      "c": 57.64
+    },
+    "elo_after": {
+      "b": 65.81,
+      "c": 49.82
+    }
+  },
+  {
+    "game_id": 10,
+    "model_a": "b",
+    "model_b": "d",
+    "winner": "B",
+    "winner_name": "d",
+    "confidence": 0.78,
+    "justification": "B is better overall: it avoids A's explicit contradiction of GT FWHM guidelines for bulk vs monolayer and more accurately interprets the observed broad peak as non-ideal crystallinity. Both succeed on core h-BN identification and graphene exclusion, but A's hallucination on layer-number physics is a significant flaw.",
+    "step1": {
+      "A": "Material/mode correct but clear error on FWHM vs layer number",
+      "B": "Fully correct on material, mode, position, and broadening implications"
+    },
+    "step2": {
+      "A": "Methodical but penalized for hallucinated monolayer FWHM claim",
+      "B": "Logical, physics-grounded, no hallucinations or contradictions with GT"
+    },
+    "step3": {
+      "A": "States all required fields but includes inaccurate FWHM interpretation",
+      "B": "Clear, concise, quantifies evidence appropriately without errors"
+    },
+    "thinking": "Both candidates correctly identify the material as h-BN with the dominant E2g peak near 1369 cm\u207b\u00b9 and properly rule out graphene by noting the absent G-band. Candidate A makes a clear scientific error by claiming monolayer h-BN has narrower FWHM than bulk (opposite of GT's 15-30 cm\u207b\u00b9 for monolayer vs 7-15 for bulk) and mislabels the 28 cm\u207b\u00b9 width as typical for high-quality bulk. Candidate B correctly flags the ~30 cm\u207b\u00b9 FWHM as indicating polycrystalline/defective character rather than ideal single-crystal bulk, without introducing false facts.",
+    "elo_before": {
+      "b": 65.81,
+      "d": 57.46
+    },
+    "elo_after": {
+      "b": 57.62,
+      "d": 65.46
+    }
+  },
+  {
+    "game_id": 11,
+    "model_a": "b",
+    "model_b": "e",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.65,
+    "justification": "A is better overall because it matches the GT sample classification target of bulk h-BN, includes stacking order, and avoids the critical layer-number error of B. Although both have flaws (A on FWHM expectations, B on layer), A aligns closer to the provided ground truth reference.",
+    "step1": {
+      "A": "Correct material/E2g/bulk layer; minor errors on FWHM ranges vs GT",
+      "B": "Correct material/E2g; incorrect layer (monolayer vs GT bulk)"
+    },
+    "step2": {
+      "A": "Methodical, good graphene distinction; some hallucination on mono FWHM/width",
+      "B": "Logical and physics-grounded but reaches incorrect layer conclusion"
+    },
+    "step3": {
+      "A": "Clear bulk classification, stacking, purity, confidence, key evidence",
+      "B": "Clear but wrong monolayer label; good evidence but stacking N/A"
+    },
+    "thinking": "Both candidates correctly identify the material as h-BN and the dominant peak at 1369 cm\u207b\u00b9 as the E\u2082g mode, while properly ruling out graphene/graphite. GT specifies bulk h-BN for this sample (target: hbn_bulk_001) with expected ~1366 cm\u207b\u00b9 (\u00b15 cm\u207b\u00b9 shift allowed) and FWHM 7-15 cm\u207b\u00b9 (mono broader at 15-30). A matches the bulk classification but errs on FWHM ranges (claims 28 cm\u207b\u00b9 fits bulk and mono is narrower). B correctly interprets the 28 cm\u207b\u00b9 FWHM and ~3 cm\u207b\u00b9 blue-shift as mono-like per literature/GT numbers but wrongly labels the layer as monolayer instead of bulk.",
+    "elo_before": {
+      "b": 57.62,
+      "e": 57.29
+    },
+    "elo_after": {
+      "b": 65.61,
+      "e": 49.48
+    }
+  },
+  {
+    "game_id": 12,
+    "model_a": "b",
+    "model_b": "f",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.72,
+    "justification": "A is superior overall because it correctly identifies the bulk morphology matching the ground truth sample label, despite a secondary FWHM misconception. B's layer assignment error is more fundamental for this specific spectrum. Both show strong Raman reasoning and high confidence, but A's final classification aligns better with the provided GT.",
+    "step1": {
+      "A": "Correct material and bulk layer; minor error on FWHM-layer relationship",
+      "B": "Correct material but wrong monolayer assignment instead of bulk"
+    },
+    "step2": {
+      "A": "Methodical and well-structured distinction from carbon materials; one factual error on FWHM",
+      "B": "Logical steps and good carbon differentiation but flawed layer conclusion"
+    },
+    "step3": {
+      "A": "Complete with material, bulk layer, purity, FWHM, and high confidence",
+      "B": "Complete but omits FWHM and incorrectly labels monolayer"
+    },
+    "thinking": "Both candidates correctly identify the material as h-BN with the dominant E2g peak near 1369 cm\u207b\u00b9 and effectively rule out graphene/graphite by noting the absence of a G-band. Candidate A correctly assigns the sample as bulk (matching ground truth) but incorrectly states that monolayer hBN has a narrower FWHM, contradicting the GT's 15\u201330 cm\u207b\u00b9 for monolayer vs 7\u201315 cm\u207b\u00b9 for bulk. Candidate B correctly notes the typical bulk position (~1366 cm\u207b\u00b9) but wrongly classifies the spectrum as monolayer based on the minor upshift, despite the GT labeling it bulk and allowing \u00b15 cm\u207b\u00b9 shifts from strain.",
+    "elo_before": {
+      "b": 65.61,
+      "f": 57.12
+    },
+    "elo_after": {
+      "b": 73.42,
+      "f": 49.5
+    }
+  },
+  {
+    "game_id": 13,
+    "model_a": "b",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.88,
+    "justification": "A is scientifically far superior, correctly recognizing the hallmark single E\u2082g peak of h-BN and ruling out graphene, while B fundamentally mistakes the spectrum for graphene's D-band. The minor FWHM interpretation flaw in A does not outweigh B's complete misidentification. A provides complete, high-confidence output aligned with ground truth.",
+    "step1": {
+      "A": "Mostly correct (right material/mode/position; minor FWHM reversal error)",
+      "B": "Incorrect (assigns graphene D-band instead of h-BN E\u2082g)"
+    },
+    "step2": {
+      "A": "Strong: logical steps, distinguishes from graphene, cites E\u2082g correctly",
+      "B": "Poor: confuses with graphene D-peak, no h-BN physics, circular"
+    },
+    "step3": {
+      "A": "Good: clear h-BN/bulk/pure output, confidence, key evidence listed",
+      "B": "Inadequate: wrong classification, missing h-BN indicators"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN with the E\u2082g mode at 1369 cm\u207b\u00b9, rules out graphene due to missing G-band, assigns bulk phase and high purity, but incorrectly states FWHM=28 cm\u207b\u00b9 is typical for bulk (GT indicates bulk ~7-15 cm\u207b\u00b9, monolayer broader) and reverses the monolayer/bulk width trend. Candidate B entirely misassigns the peak as graphene's D-band, concludes monolayer graphene, and never mentions h-BN or E\u2082g, showing fundamental confusion between the two 2D materials. A is methodical and grounded in correct peak assignment and differentiation; B's reasoning is short, erroneous, and lacks Raman physics for h-BN.",
+    "elo_before": {
+      "b": 73.42,
+      "g": 49.14
+    },
+    "elo_after": {
+      "b": 80.86,
+      "g": 41.87
+    }
+  },
+  {
+    "game_id": 14,
+    "model_a": "b",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.95,
+    "justification": "A is scientifically accurate on every key point (material, peak assignment, ruling out graphene) and delivers a complete, high-confidence classification aligned with ground truth. B fails at the first step by misidentifying h-BN as disordered carbon. The large correctness gap makes A the clear winner.",
+    "step1": {
+      "A": "correct material (h-BN), E\u2082g assignment, minor FWHM note inconsistency",
+      "B": "incorrect (DLC/amorphous carbon), confuses with D-band, ignores h-BN"
+    },
+    "step2": {
+      "A": "methodical, distinguishes from graphene, grounded in h-BN modes",
+      "B": "flawed premise, hallucinates carbon disorder, misses h-BN literature"
+    },
+    "step3": {
+      "A": "clear h-BN/bulk/pure classification, quantified confidence, key evidence listed",
+      "B": "well-structured but for wrong material, appropriate uncertainty for its (incorrect) conclusion"
+    },
+    "thinking": "Candidate A correctly identifies the material as bulk h-BN with the dominant E\u2082g mode at 1369 cm\u207b\u00b9, properly rules out graphene by noting the absence of a G-band, and provides appropriate purity/layer assessments despite a minor FWHM inconsistency with the ground-truth range. Candidate B entirely misassigns the spectrum to amorphous diamond-like carbon, treating the peak as a disordered D-band and failing to consider h-BN Raman signatures at all. This fundamental material error in B outweighs its structured reasoning, making A superior on correctness, reasoning fidelity to h-BN physics, and completeness of the classification output.",
+    "elo_before": {
+      "b": 80.86,
+      "h": 49.16
+    },
+    "elo_after": {
+      "b": 88.13,
+      "h": 42.06
+    }
+  },
+  {
+    "game_id": 15,
+    "model_a": "b",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "b",
+    "confidence": 0.88,
+    "justification": "A is scientifically correct on material identification and provides logical Raman-specific reasoning that aligns with ground truth, despite one FWHM nuance error. B fails at the most basic step by confusing h-BN E\u2082g with carbon D-band. A is clearly superior overall.",
+    "step1": {
+      "A": "Mostly correct (h-BN E\u2082g identified; minor FWHM/bulk-vs-mono inconsistency)",
+      "B": "Incorrect (misidentified as graphitic carbon D-band, wrong material)"
+    },
+    "step2": {
+      "A": "Strong, methodical; correctly distinguishes h-BN from graphene via peak position and missing G-band",
+      "B": "Flawed; assumes carbon D-band without considering h-BN, circular and misses key Raman physics"
+    },
+    "step3": {
+      "A": "Clear, states h-BN/bulk/pure with confidence, key evidence and top candidates",
+      "B": "Complete in format but wrong material, low confidence, irrelevant candidates"
+    },
+    "thinking": "Candidate A correctly identifies the spectrum as bulk h-BN with the dominant E\u2082g mode at 1369 cm\u207b\u00b9, properly rules out graphene by noting the absence of a G-band and single-peak signature, and provides high-confidence classification matching the ground truth material. Candidate B entirely misassigns it to disordered graphitic carbon (D-band), showing fundamental confusion between h-BN and sp\u00b2-carbon Raman features. A has a minor error on FWHM interpretation for bulk vs monolayer (28 cm\u207b\u00b9 is actually more typical of monolayer per GT), but this does not undermine its core material assignment or logical distinction from graphene.",
+    "elo_before": {
+      "b": 88.13,
+      "i": 49.18
+    },
+    "elo_after": {
+      "b": 95.24,
+      "i": 42.24
+    }
+  },
+  {
+    "game_id": 16,
+    "model_a": "c",
+    "model_b": "d",
+    "winner": "B",
+    "winner_name": "d",
+    "confidence": 0.88,
+    "justification": "B is scientifically accurate on material and mode, shows better Raman-specific reasoning, and delivers a clear classification aligned with ground truth. A fails on primary identification and internal consistency despite partial credit for considering h-BN.",
+    "step1": {
+      "A": "Incorrect primary classification (graphitic D-band); confuses with graphene despite noting h-BN match",
+      "B": "Correct: identifies h-BN E\u2082g at 1369 cm\u207b\u00b9, distinguishes from carbon, notes polycrystalline broadening"
+    },
+    "step2": {
+      "A": "Methodical but flawed; circular on D-band vs E\u2082g, inconsistent conclusion, minor hallucinations on peak density",
+      "B": "Strong, logically structured; correctly applies h-BN Raman physics and exclusion of alternatives"
+    },
+    "step3": {
+      "A": "Incomplete and unclear; wrong primary label, low confidence, omits morphology/layer info",
+      "B": "Clear and complete: states h-BN bulk polycrystalline, FWHM evidence, high confidence, top candidates"
+    },
+    "thinking": "Candidate A correctly notes the ~1369 cm\u207b\u00b9 peak matches h-BN E\u2082g but ultimately classifies the material as graphitic carbon (D-band), showing internal inconsistency between its chain-of-thought and final prediction; it also misstates FWHM implications. Candidate B correctly identifies the spectrum as h-BN E\u2082g, rules out carbon via absence of G-band, assigns polycrystalline bulk character consistent with the single dominant peak and moderate broadening, and provides higher confidence with clearer evidence. B aligns far better with ground truth on material, mode assignment, and distinction from graphene-like spectra.",
+    "elo_before": {
+      "c": 49.82,
+      "d": 65.46
+    },
+    "elo_after": {
+      "c": 42.18,
+      "d": 72.93
+    }
+  },
+  {
+    "game_id": 17,
+    "model_a": "c",
+    "model_b": "e",
+    "winner": "B",
+    "winner_name": "e",
+    "confidence": 0.72,
+    "justification": "B correctly identifies the material as h-BN with focused Raman reasoning and high clarity, while A selects the wrong class despite noting h-BN as strong alternative. B's monolayer assignment deviates from GT bulk label but aligns better with observed FWHM=28 cm\u207b\u00b9 and literature; overall B is scientifically closer and higher quality.",
+    "step1": {
+      "A": "Incorrect primary material (graphitic), confuses with D-band; acknowledges h-BN but does not select it",
+      "B": "Correct material (h-BN E\u2082g); layer as monolayer conflicts with GT bulk but peak/FWHM consistent within \u00b15 cm\u207b\u00b9/strain"
+    },
+    "step2": {
+      "A": "Methodical but penalised for graphene confusion, circular D-band argument, and not ruling out graphitic firmly",
+      "B": "Logical, h-BN-specific (E\u2082g shift, FWHM broadening, absence of G-band); minor hallucination on exact monolayer shift but well-structured"
+    },
+    "step3": {
+      "A": "Unclear/wrong material choice, low confidence (0.55), top-candidates contradict main prediction; incomplete",
+      "B": "Clear h-BN classification, states layer/purity/confidence (0.95) and key evidence; concise and thorough"
+    },
+    "thinking": "Candidate A correctly notes the 1369 cm\u207b\u00b9 peak is close to h-BN E\u2082g but wrongly selects defective graphitic carbon as primary prediction despite no G-band and position mismatch; it shows good consideration of alternatives but low confidence and mixed output. Candidate B correctly identifies material as h-BN E\u2082g, distinguishes from graphene, and uses FWHM=28 cm\u207b\u00b9 appropriately for thin samples, though it overstates the 1369 cm\u207b\u00b9 shift as definitive monolayer signature while GT references bulk. B is superior in material correctness, reasoning focus on h-BN physics, and clear classification.",
+    "elo_before": {
+      "c": 42.18,
+      "e": 49.48
+    },
+    "elo_after": {
+      "c": 34.35,
+      "e": 57.13
+    }
+  },
+  {
+    "game_id": 18,
+    "model_a": "c",
+    "model_b": "f",
+    "winner": "B",
+    "winner_name": "f",
+    "confidence": 0.72,
+    "justification": "B is better overall: correctly identifies h-BN as primary material and properly distinguishes from graphene/carbon, aligning with GT on E2g dominance. A's primary graphitic prediction and internal contradictions outweigh its uncertainty acknowledgment. B's monolayer claim is a flaw but less severe than A's material error.",
+    "step1": {
+      "A": "Incorrect primary material (graphitic > h-BN); confuses D-band with E2g despite noting 1366 cm\u207b\u00b9 match",
+      "B": "Correct h-BN and E2g assignment; minor layer error (monolayer vs bulk) but position/FWHM consistent within \u00b15 cm\u207b\u00b9 strain tolerance"
+    },
+    "step2": {
+      "A": "Methodical but flawed; good alternative consideration yet inconsistent conclusion and circular D-band shift rationale",
+      "B": "Logical Raman physics (rules out carbon via absent G-band, identifies sole E2g mode); minor hallucination on exact mono vs bulk shift values"
+    },
+    "step3": {
+      "A": "Incomplete and unclear final output (low conf 0.55, material mismatches top-candidate ordering, vague on evidence)",
+      "B": "Clear statement of material/phase/purity with key evidence and appropriate high confidence; omits FWHM details"
+    },
+    "thinking": "Ground truth specifies bulk h-BN with dominant E2g at ~1366 cm\u207b\u00b9 (FWHM 7-15 cm\u207b\u00b9); observed 1369 cm\u207b\u00b9 / FWHM 28 cm\u207b\u00b9 is close but broader. A primarily predicts defective graphitic carbon (D-band confusion) despite CoT favoring h-BN and noting no G-band, showing internal inconsistency. B correctly identifies h-BN E2g, rules out carbon via missing G-band and single-peak nature, but errs on monolayer assignment (GT is bulk) and ignores FWHM. B superior on material correctness and Raman-specific reasoning.",
+    "elo_before": {
+      "c": 34.35,
+      "f": 49.5
+    },
+    "elo_after": {
+      "c": 26.7,
+      "f": 56.97
+    }
+  },
+  {
+    "game_id": 19,
+    "model_a": "c",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.82,
+    "justification": "A demonstrates substantive Raman knowledge of h-BN E2g, correctly flags distinguishing features and lists h-BN first, while B is confidently wrong on graphene. A is better overall despite imperfect final label.",
+    "step1": {
+      "A": "Partially correct: identifies E2g position and FWHM but defaults to graphitic D-band label",
+      "B": "Incorrect: confuses with graphene D-peak, monolayer, no E2g recognition"
+    },
+    "step2": {
+      "A": "Methodical, lists alternatives, distinguishes h-BN vs graphene, cites positions/FWHM/SNR",
+      "B": "Superficial, no Raman physics, circular graphene assumption, missing differentiation steps"
+    },
+    "step3": {
+      "A": "Incomplete: main prediction wrong, but top-candidates include h-BN with moderate confidence",
+      "B": "Clear format but wholly erroneous material, phase, and layer claims"
+    },
+    "thinking": "Candidate A correctly matches the 1369 cm\u207b\u00b9 peak to h-BN E2g (~1366 cm\u207b\u00b9), notes FWHM=28 cm\u207b\u00b9 implications, explicitly compares to graphene D-band and absence of G-band, and lists h-BN as top candidate despite a muddled final label. Candidate B confidently misassigns the peak to graphene D-mode, claims monolayer without basis, shows no h-BN knowledge or differentiation, and hallucinates crystalline/monolayer traits. A is superior on correctness, reasoning depth, and partial recognition of ground-truth features.",
+    "elo_before": {
+      "c": 26.7,
+      "g": 41.87
+    },
+    "elo_after": {
+      "c": 35.05,
+      "g": 33.71
+    }
+  },
+  {
+    "game_id": 20,
+    "model_a": "c",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.78,
+    "justification": "A correctly flags the E\u2082g mode and lists h-BN as the leading candidate with appropriate caveats, while B completely fails to recognize h-BN; neither output is perfect, but A is clearly superior across all evaluation dimensions.",
+    "step1": {
+      "A": "Partially correct: identifies E\u2082g at ~1366 cm\u207b\u00b9 and h-BN as top candidate but ultimately predicts graphitic D-band; FWHM noted appropriately",
+      "B": "Incorrect: misses h-BN entirely, confuses peak with DLC D-band, no mention of E\u2082g mode or BN physics"
+    },
+    "step2": {
+      "A": "Strong: methodical, distinguishes h-BN from graphene/D-band, grounded in peak position, FWHM and missing G-band",
+      "B": "Weak: assumes carbon disorder without considering BN, circular reasoning, lacks Raman-specific h-BN knowledge"
+    },
+    "step3": {
+      "A": "Incomplete: final prediction wrong, but top-candidates list h-BN and reasoning is thorough",
+      "B": "Poor: wrong material, no h-BN discussion, confidence overstated for a single-band assignment"
+    },
+    "thinking": "Candidate A correctly recognizes the 1369 cm\u207b\u00b9 peak as a close match to h-BN E\u2082g (~1366 cm\u207b\u00b9), explicitly compares it to the graphitic D-band, notes the absence of a G-band, and concludes h-BN is the best assignment in its chain-of-thought; however its final material_prediction incorrectly defaults to defective graphitic carbon. Candidate B never mentions h-BN or the E\u2082g mode, wrongly interprets the feature as a disordered-carbon D-band, and assigns amorphous diamond-like carbon, showing a fundamental misunderstanding of h-BN Raman signatures. A is therefore superior on scientific correctness and reasoning depth, while both lack a fully accurate final classification that matches the bulk h-BN ground truth.",
+    "elo_before": {
+      "c": 35.05,
+      "h": 42.06
+    },
+    "elo_after": {
+      "c": 43.21,
+      "h": 34.08
+    }
+  },
+  {
+    "game_id": 21,
+    "model_a": "c",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "c",
+    "confidence": 0.75,
+    "justification": "A demonstrates better scientific awareness of h-BN's E2g mode and properly contrasts it with carbon D-band in reasoning, despite contradictory final output. B completely misses the h-BN possibility and shows no Raman-specific differentiation. A is therefore superior overall on correctness and reasoning quality.",
+    "step1": {
+      "A": "Partially correct in CoT (identifies E2g ~1366, notes FWHM implications) but final prediction wrong (chose graphitic carbon)",
+      "B": "Incorrect; misassigned as D-band of carbon, no mention of h-BN or E2g mode, ignores key distinctions"
+    },
+    "step2": {
+      "A": "Methodical and grounded; systematically distinguishes h-BN from graphene/carbon, avoids major hallucinations",
+      "B": "Weak and incomplete; assumes carbon without comparing alternatives or citing h-BN Raman physics"
+    },
+    "step3": {
+      "A": "Inconsistent and unclear; CoT favors h-BN but final output does not, top-candidates list h-BN yet material_prediction does not",
+      "B": "Clear but entirely wrong; states carbon prediction with confidence but lacks h-BN discussion or key indicators"
+    },
+    "thinking": "Both candidates failed to correctly classify the spectrum as h-BN bulk, incorrectly favoring graphitic carbon's D-band at 1369 cm\u207b\u00b9 despite the ground-truth E\u2082g position at ~1366 cm\u207b\u00b9. Candidate A shows superior reasoning by explicitly comparing h-BN E2g vs D-band, noting absence of G-band as evidence against graphene, and concluding h-BN in its chain-of-thought (though its final output contradicts this). Candidate B ignores h-BN entirely, hallucinating a D-dominant carbon spectrum without considering Raman physics specific to h-BN. A's partial correctness on peak assignment and FWHM interpretation (28 cm\u207b\u00b9 broader than ideal bulk) makes it better overall, though neither output is fully accurate.",
+    "elo_before": {
+      "c": 43.21,
+      "i": 42.24
+    },
+    "elo_after": {
+      "c": 51.19,
+      "i": 34.44
+    }
+  },
+  {
+    "game_id": 22,
+    "model_a": "d",
+    "model_b": "e",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.75,
+    "justification": "A matches GT on bulk classification, avoids B's layer-number hallucination, and provides stronger alternative-material elimination. B's monolayer claim directly contradicts the supplied ground-truth sample type despite similar confidence.",
+    "step1": {
+      "A": "Correct material, E2g assignment, bulk label; minor FWHM broadening noted accurately",
+      "B": "Correct material/E2g but wrongly assigns monolayer from small shift; conflicts with GT bulk target"
+    },
+    "step2": {
+      "A": "Methodical, correctly rules out carbon/diamond, grounded in h-BN physics without unsupported claims",
+      "B": "Logical structure but hallucinates precise position-to-layer mapping not emphasized in GT"
+    },
+    "step3": {
+      "A": "Clear material/phase/layer/purity, confidence, key evidence (peak, FWHM, absences); concise",
+      "B": "Clear but propagates incorrect monolayer classification and less relevant stacking field"
+    },
+    "thinking": "Both models correctly identify h-BN and the dominant E2g mode near 1369 cm\u207b\u00b9 while ruling out carbon (no G-band). Candidate A aligns with GT on bulk layer_number and treats the ~30 cm\u207b\u00b9 FWHM as indicating polycrystallinity (consistent with GT's 7-15 cm\u207b\u00b9 for high-quality bulk), whereas B incorrectly asserts the 3 cm\u207b\u00b9 blue-shift and 28 cm\u207b\u00b9 FWHM prove monolayer h-BN, contradicting the GT sample label and its note that position is not a strong layer diagnostic. A's chain-of-thought is more methodical and avoids this hallucination.",
+    "elo_before": {
+      "d": 72.93,
+      "e": 57.13
+    },
+    "elo_after": {
+      "d": 80.57,
+      "e": 49.67
+    }
+  },
+  {
+    "game_id": 23,
+    "model_a": "d",
+    "model_b": "f",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.75,
+    "justification": "A is superior overall: accurate bulk assignment, no hallucinations on peak-shift layer dependence, and better alignment with GT's emphasis on FWHM and single E2g peak. B's monolayer error is a clear scientific mistake for the provided bulk h-BN reference spectrum.",
+    "step1": {
+      "A": "Mostly correct (h-BN bulk, E2g, rules out carbon; FWHM implies lower quality)",
+      "B": "Partially incorrect (h-BN ok but monolayer assignment and shift rationale contradict GT)"
+    },
+    "step2": {
+      "A": "Methodical, physics-based, correctly distinguishes from graphene/carbon",
+      "B": "Structured but hallucinates monolayer position shift not supported by GT"
+    },
+    "step3": {
+      "A": "Clear on material/bulk/purity/FWHM evidence, confidence well quantified",
+      "B": "Clear but propagates wrong monolayer conclusion and omits FWHM"
+    },
+    "thinking": "Both correctly ID h-BN and the dominant E2g mode at ~1369 cm\u207b\u00b9 (within GT \u00b15 cm\u207b\u00b9 tolerance) while properly ruling out carbon/diamond via absent G-band. A correctly assigns bulk layer number and uses FWHM=30 cm\u207b\u00b9 to infer polycrystallinity/defects (consistent with GT's 7-15 cm\u207b\u00b9 high-quality bulk range); B hallucinates a monolayer-specific 3 cm\u207b\u00b9 blue-shift (GT distinguishes by FWHM not position) and wrongly labels it monolayer. A's CoT is more grounded and avoids layer-count myths from graphene; B's is structured but contains this factual error.",
+    "elo_before": {
+      "d": 80.57,
+      "f": 56.97
+    },
+    "elo_after": {
+      "d": 88.02,
+      "f": 49.69
+    }
+  },
+  {
+    "game_id": 24,
+    "model_a": "d",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.92,
+    "justification": "A is scientifically accurate on all key points (material, mode, bulk assignment) with solid chain-of-thought that correctly differentiates from graphene; B is fundamentally wrong on material identification and band assignment. A provides clear, complete classification aligned with ground truth while B does not.",
+    "step1": {
+      "A": "Correct h-BN ID, E2g assignment, position consistent; minor FWHM/polycrystalline note acceptable for bulk",
+      "B": "Incorrect; confuses with graphene D-peak, wrong material and band assignment"
+    },
+    "step2": {
+      "A": "Methodical, distinguishes from graphene/carbon via missing G-band, logically rules out alternatives",
+      "B": "Poor; hallucinates graphene D-mode link, lacks h-BN-specific physics, circular and incorrect"
+    },
+    "step3": {
+      "A": "Complete: states h-BN/bulk/pure, cites E2g position/FWHM/absence of other peaks, appropriate confidence",
+      "B": "Incomplete and wrong: misstates material/layer, lacks correct evidence or h-BN indicators"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN with the dominant E2g peak at 1369 cm\u207b\u00b9 (close to the expected 1366 cm\u207b\u00b9), rules out carbon and diamond via absence of G-band and position mismatch, and assigns bulk/pure with reasonable (if slightly high) FWHM interpretation. Candidate B entirely misclassifies the spectrum as graphene monolayer based on confusing the peak with the D-band, ignoring h-BN's Raman signature and the lack of G/2D bands. A is methodical and grounded in correct Raman physics for h-BN while B shows fundamental confusion between 2D materials; A's classification is complete and accurate on material/layer/purity while B is not.",
+    "elo_before": {
+      "d": 88.02,
+      "g": 33.71
+    },
+    "elo_after": {
+      "d": 94.78,
+      "g": 27.11
+    }
+  },
+  {
+    "game_id": 25,
+    "model_a": "d",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.92,
+    "justification": "A accurately identifies the material, peak assignment, and quality indicators consistent with GT; B completely misclassifies the spectrum as disordered carbon. A demonstrates proper Raman knowledge for 2D materials while B does not.",
+    "step1": {
+      "A": "Correct h-BN + E\u2082g identification; FWHM noted appropriately",
+      "B": "Incorrect DLC assignment; confuses with carbon D-band"
+    },
+    "step2": {
+      "A": "Methodical, distinguishes from graphene/carbon, grounded in Raman physics",
+      "B": "Flawed logic, hallucinations about carbon modes, missing h-BN knowledge"
+    },
+    "step3": {
+      "A": "Clear h-BN/bulk classification, confidence, key evidence provided",
+      "B": "Wrong material and parameters; incomplete and misleading"
+    },
+    "thinking": "Candidate A correctly matches the dominant peak at 1369 cm\u207b\u00b9 to h-BN's E\u2082g mode (~1366 cm\u207b\u00b9), rules out carbon (no G-band) and diamond (wrong position), and notes the broader FWHM as indicating polycrystalline character, which aligns with GT expectations for h-BN while acknowledging minor deviations. Candidate B fails to recognize the h-BN fingerprint, incorrectly interprets the peak as a D-band of amorphous/diamond-like carbon, and shows confusion between sp\u00b2 carbon disorder and h-BN phonons. Overall, A is scientifically accurate, logically structured, and complete in classification; B is fundamentally wrong on material identification.",
+    "elo_before": {
+      "d": 94.78,
+      "h": 34.08
+    },
+    "elo_after": {
+      "d": 100.0,
+      "h": 27.58
+    }
+  },
+  {
+    "game_id": 26,
+    "model_a": "d",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "d",
+    "confidence": 0.92,
+    "justification": "A is clearly superior: it matches ground truth on material, peak assignment, and differentiation from carbon, while B fails at the most basic identification step. A's reasoning is grounded in h-BN Raman signatures and its confidence is appropriately high.",
+    "step1": {
+      "A": "Correct h-BN ID, E2g assignment, position, and carbon distinction; FWHM interpretation reasonable",
+      "B": "Incorrect; confuses E2g with carbon D-band, no h-BN consideration"
+    },
+    "step2": {
+      "A": "Methodical, logically rules out alternatives with proper Raman distinctions",
+      "B": "Flawed assumptions, no h-BN physics, circular carbon bias"
+    },
+    "step3": {
+      "A": "Clear h-BN/bulk classification, high confidence, key evidence well summarized",
+      "B": "Structured but wrong material and incomplete Raman context"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN with the dominant E2g peak at 1369 cm\u207b\u00b9 (close to the expected 1366), correctly rules out carbon due to missing G-band, and notes the broader FWHM=30 cm\u207b\u00b9 as indicating polycrystalline character, which is consistent with ground truth expectations for bulk h-BN. Candidate B entirely misclassifies the spectrum as graphitic carbon's D-band, fails to consider h-BN at all, and shows flawed Raman physics reasoning. A provides higher confidence, clearer h-BN-specific explanations, and a more complete classification aligned with the reference.",
+    "elo_before": {
+      "d": 100.0,
+      "i": 34.44
+    },
+    "elo_after": {
+      "d": 100.0,
+      "i": 27.93
+    }
+  },
+  {
+    "game_id": 27,
+    "model_a": "e",
+    "model_b": "f",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.75,
+    "justification": "Both models make identical core errors on layer number (monolayer vs GT bulk) and over-interpret the 3 cm^-1 shift; reasoning quality, graphene distinction, and output clarity are essentially equal, so neither is superior overall.",
+    "step1": {
+      "A": "Correct on h-BN and E2g; incorrect monolayer assignment and FWHM interpretation vs bulk GT",
+      "B": "Correct on h-BN and E2g; incorrect monolayer assignment vs bulk GT"
+    },
+    "step2": {
+      "A": "Methodical, distinguishes graphene well, but misapplies layer-shift not emphasized in GT",
+      "B": "Methodical, distinguishes graphene well, but misapplies layer-shift not emphasized in GT"
+    },
+    "step3": {
+      "A": "Clear on material/peak/evidence but states wrong layer and over-relies on shift",
+      "B": "Clear on material/peak/evidence but states wrong layer; omits FWHM detail"
+    },
+    "thinking": "Both candidates correctly identify h-BN and assign the dominant peak to the E2g mode near 1369 cm^-1 while ruling out graphene via absence of a G-band. However both erroneously conclude monolayer (citing blue-shift and, for A, FWHM=28 cm^-1) when GT explicitly labels the sample bulk h-BN with expected ~1366 cm^-1 (shiftable \u00b15 cm^-1 by strain/substrate) and narrower bulk FWHM. Their CoT is structured and physics-based but introduces layer-shift claims not present in GT; classification outputs are clear yet propagate the same layer-number error.",
+    "elo_before": {
+      "e": 49.67,
+      "f": 49.69
+    },
+    "elo_after": {
+      "e": 49.67,
+      "f": 49.69
+    }
+  },
+  {
+    "game_id": 28,
+    "model_a": "e",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.85,
+    "justification": "A accurately detects the h-BN E2g signature with supporting physics and rules out graphene, outweighing its layer-number discrepancy with GT. B's graphene misclassification is a critical scientific error. A is superior on all evaluation dimensions.",
+    "step1": {
+      "A": "Mostly correct (h-BN + E2g identified, minor layer/position error vs GT bulk)",
+      "B": "Incorrect (misidentified as graphene D peak, wrong material and mode)"
+    },
+    "step2": {
+      "A": "Strong: logical steps grounded in h-BN Raman physics, distinguishes from graphene",
+      "B": "Weak: flawed assignment, hallucinations, no h-BN-specific reasoning"
+    },
+    "step3": {
+      "A": "Good: states material/phase/layer, high confidence, cites E2g shift and purity",
+      "B": "Poor: wrong material, superficial and incorrect evidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN and assigns the dominant peak at 1369 cm^-1 to the E2g mode, referencing known position shifts and FWHM values for h-BN; however it errs by classifying as monolayer while ground truth specifies bulk (though 1369 cm^-1 and FWHM 28 cm^-1 are within plausible strain/substrate variation). Candidate B completely fails by misassigning the peak to graphene's D-band and ignoring h-BN characteristics, showing fundamental confusion between 2D materials. A's chain-of-thought is methodical and distinguishes from graphene (absent G-band), while B's is hallucinated and non-physical; A's classification output is also more complete and evidence-based.",
+    "elo_before": {
+      "e": 49.67,
+      "g": 27.11
+    },
+    "elo_after": {
+      "e": 57.15,
+      "g": 19.8
+    }
+  },
+  {
+    "game_id": 29,
+    "model_a": "e",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.88,
+    "justification": "A accurately recognizes the characteristic h-BN E2g peak and rules out graphene, aligning closely with ground truth on material and peak assignment. B's carbon misidentification is a critical error. The layer discrepancy in A is minor compared to B's complete failure on material identification.",
+    "step1": {
+      "A": "Mostly correct (h-BN + E2g identified; layer mislabeled as monolayer)",
+      "B": "Incorrect (confused with DLC/D-band; missed h-BN entirely)"
+    },
+    "step2": {
+      "A": "Strong, methodical h-BN-focused logic with proper distinctions",
+      "B": "Flawed premise and hallucinations about carbon modes"
+    },
+    "step3": {
+      "A": "Clear, concise, high-confidence output with key evidence",
+      "B": "Structured but irrelevant/wrong classification details"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN and the dominant peak as the E2g mode at 1369 cm^-1 with appropriate FWHM for thin h-BN, though it errs on calling it monolayer when ground truth specifies bulk. Candidate B entirely misassigns the spectrum to amorphous diamond-like carbon based on confusing the peak with a D-band, showing fundamental misunderstanding of h-BN Raman signatures. A demonstrates proper Raman physics knowledge for 2D materials and distinguishes from graphene, while B's chain-of-thought is logically structured but built on incorrect premises. Overall A is far superior on correctness, reasoning, and alignment with ground truth despite the layer-number mistake.",
+    "elo_before": {
+      "e": 57.15,
+      "h": 27.58
+    },
+    "elo_after": {
+      "e": 64.47,
+      "h": 20.43
+    }
+  },
+  {
+    "game_id": 30,
+    "model_a": "e",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "e",
+    "confidence": 0.82,
+    "justification": "A accurately recognizes the spectrum as h-BN via the E\u2082g peak at 1369 cm\u207b\u00b9 with appropriate FWHM and rules out carbon, aligning with the provided GT Raman signature for h-BN despite a monolayer vs bulk discrepancy. B completely misclassifies it as disordered carbon, which is inconsistent with h-BN physics and the absence of a G band. Overall A is the clearly superior output.",
+    "step1": {
+      "A": "Mostly correct (right material/E2g, minor layer-number mismatch with GT label)",
+      "B": "Incorrect (misidentified as graphitic carbon D-band, not h-BN)"
+    },
+    "step2": {
+      "A": "Strong, methodical, distinguishes from graphene, uses position/FWHM correctly",
+      "B": "Poor, hallucinates carbon assignment, ignores h-BN literature"
+    },
+    "step3": {
+      "A": "Clear, states material/phase/layer/confidence/evidence concisely",
+      "B": "Complete but based on wrong material, lower confidence"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN and assigns the dominant peak at 1369 cm\u207b\u00b9 to the E\u2082g mode, correctly notes the blue-shift and broader FWHM (28 cm\u207b\u00b9) as consistent with monolayer h-BN on a substrate, and explicitly rules out carbon by absence of a G-band. Candidate B misattributes the peak to the D-band of defective graphitic carbon, which is a fundamental error given the exact position, lack of G-band, and known h-BN Raman signature; this is a clear confusion between h-BN and graphene-like spectra. A is therefore superior on scientific correctness, reasoning grounded in 2D-material Raman physics, and completeness of the classification output, even though it lists 'monolayer' while the GT label is 'bulk'.",
+    "elo_before": {
+      "e": 64.47,
+      "i": 27.93
+    },
+    "elo_after": {
+      "e": 71.64,
+      "i": 20.94
+    }
+  },
+  {
+    "game_id": 31,
+    "model_a": "f",
+    "model_b": "g",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.82,
+    "justification": "A correctly classifies the material as hexagonal boron nitride, recognizes the E2g mode, and methodically excludes carbon alternatives, aligning closely with GT except for the layer assignment. B confuses the spectrum with graphene's defect band and shows no understanding of h-BN Raman signatures. Overall A is substantially more accurate and useful.",
+    "step1": {
+      "A": "Correct h-BN + E2g identification; minor error on monolayer vs bulk",
+      "B": "Completely incorrect (graphene D-band instead of h-BN E2g)"
+    },
+    "step2": {
+      "A": "Methodical, distinguishes h-BN from graphene/diamond, grounded in phonon modes",
+      "B": "Flawed, hallucinates graphene D-mode, circular and missing h-BN physics"
+    },
+    "step3": {
+      "A": "Clear h-BN classification, confidence, key evidence and peak info (layer wrong)",
+      "B": "Structured output but entirely wrong material and unsupported claims"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN with the dominant E2g mode at 1369 cm^-1, rules out diamond and defective graphene (noting absent G-band), and provides structured Raman-physics reasoning; however it errs by calling the sample monolayer based on the small upshift (GT specifies bulk with ~1366 cm^-1 and \u00b15 cm^-1 tolerance). Candidate B fundamentally mistakes the peak for graphene's D-band, shows no knowledge of h-BN, and lacks any distinction from carbon materials. A is superior on correctness, reasoning depth, and completeness despite the layer-number mistake; B is essentially inverted.",
+    "elo_before": {
+      "f": 49.69,
+      "g": 19.8
+    },
+    "elo_after": {
+      "f": 57.0,
+      "g": 12.65
+    }
+  },
+  {
+    "game_id": 32,
+    "model_a": "f",
+    "model_b": "h",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.82,
+    "justification": "A is superior overall by correctly recognizing h-BN and the E2g mode with sound Raman reasoning, while B fails at the most basic step of material identification. The layer-number discrepancy in A is minor compared to B's complete misclassification as amorphous carbon. This aligns with ground-truth expectations on material and primary peak.",
+    "step1": {
+      "A": "Mostly correct (h-BN + E2g identified; minor layer error)",
+      "B": "Incorrect (misidentified as DLC, wrong band assignment)"
+    },
+    "step2": {
+      "A": "Strong: logical exclusions, correct E2g physics, distinguishes from graphene",
+      "B": "Poor: confuses with carbon D-band, ignores h-BN literature, circular"
+    },
+    "step3": {
+      "A": "Good: clear h-BN classification, confidence, key evidence; layer mismatch",
+      "B": "Inadequate: wrong material, lower confidence, misses h-BN indicators"
+    },
+    "thinking": "Candidate A correctly identifies the material as h-BN and the dominant peak as the E2g mode at 1369 cm^-1, properly ruling out diamond and graphitic carbon (no G-band), though it incorrectly assigns monolayer instead of bulk. Candidate B entirely misassigns the spectrum to amorphous diamond-like carbon based on a D-band analogy, citing inappropriate breadth (29 cm^-1) and ignoring h-BN Raman physics. A's reasoning is methodical and grounded in 2D-material Raman signatures while B's contains clear material confusion and hallucinations relative to ground truth.",
+    "elo_before": {
+      "f": 57.0,
+      "h": 20.43
+    },
+    "elo_after": {
+      "f": 64.16,
+      "h": 13.43
+    }
+  },
+  {
+    "game_id": 33,
+    "model_a": "f",
+    "model_b": "i",
+    "winner": "A",
+    "winner_name": "f",
+    "confidence": 0.82,
+    "justification": "A accurately detects h-BN E2g signature, correctly excludes carbon, and provides solid Raman-based reasoning. B's carbon misclassification is a basic error for this spectrum. Although A wrongly assigns monolayer, it is far superior overall on all evaluation dimensions.",
+    "step1": {
+      "A": "Correct material/mode but monolayer instead of bulk; peak consistent within \u00b15 cm^-1 tolerance",
+      "B": "Incorrect material (carbon D-band); confuses with graphene, ignores h-BN E2g"
+    },
+    "step2": {
+      "A": "Methodical, distinguishes h-BN from graphene/carbon via missing G-band and peak position; grounded in physics",
+      "B": "Flawed: assumes D-band dominance without G, inconsistent with carbon Raman; no h-BN consideration"
+    },
+    "step3": {
+      "A": "Clear h-BN classification, high confidence, key evidence (E2g, no other modes); minor layer error",
+      "B": "Wrong material, lower confidence, incomplete/erroneous evidence"
+    },
+    "thinking": "A correctly identifies the material as h-BN with the E2g mode at 1369 cm^-1, rules out carbon by absence of G-band, and references literature shifts, though it errs on monolayer vs bulk. B fundamentally misassigns the peak to graphitic carbon D-band (despite noting missing G-band), showing poor Raman knowledge of h-BN. A is superior on correctness, reasoning, and classification completeness despite the layer-number mistake; B is incorrect on the core material.",
+    "elo_before": {
+      "f": 64.16,
+      "i": 20.94
+    },
+    "elo_after": {
+      "f": 71.17,
+      "i": 14.08
+    }
+  },
+  {
+    "game_id": 34,
+    "model_a": "g",
+    "model_b": "h",
+    "winner": "B",
+    "winner_name": "h",
+    "confidence": 0.75,
+    "justification": "Neither model identified h-BN, making both scientifically wrong. B is better overall due to more rigorous, less hallucinatory chain-of-thought that properly notes peak width and missing bands, plus appropriately lower confidence. A is overconfident in a classic h-BN/graphene confusion.",
+    "step1": {
+      "A": "Completely incorrect - misidentified as graphene, wrong band assignment (D peak), no h-BN mention",
+      "B": "Completely incorrect - misidentified as DLC/amorphous carbon, wrong phase, no h-BN mention"
+    },
+    "step2": {
+      "A": "Poor; jumps to graphene conclusion with circular logic and hallucinations, lacks h-BN-specific knowledge",
+      "B": "Superior; structured, considers FWHM, compares to other materials, avoids graphene pitfall"
+    },
+    "step3": {
+      "A": "Incomplete and misleading; high confidence in wrong material, omits key h-BN indicators",
+      "B": "More complete in analysis but still wrong on classification and purity assessment"
+    },
+    "thinking": "Both candidates completely failed to identify the material as h-BN and did not recognize the 1369 cm\u207b\u00b9 peak as the E\u2082g mode. Candidate A made a direct, high-confidence error by labeling it graphene's D peak and monolayer, ignoring that pristine graphene shows G and 2D bands and that h-BN has a single dominant peak at this position. Candidate B offered more methodical reasoning that considered peak width, absence of G-band, and ruled out several crystalline materials, although it still wrongly assigned the spectrum to amorphous/diamond-like carbon.",
+    "elo_before": {
+      "g": 12.65,
+      "h": 13.43
+    },
+    "elo_after": {
+      "g": 4.67,
+      "h": 21.23
+    }
+  },
+  {
+    "game_id": 35,
+    "model_a": "g",
+    "model_b": "i",
+    "winner": "B",
+    "winner_name": "i",
+    "confidence": 0.75,
+    "justification": "Neither identified h-BN or the E\u2082g mode, so both fail scientifically. B is superior overall due to more detailed, logically structured reasoning, explicit consideration of peak width and absent companion bands, and appropriately lower confidence. A\u2019s output is shallow and internally inconsistent.",
+    "step1": {
+      "A": "Completely incorrect; wrong material, wrong band assignment (D vs E\u2082g), hallucinates monolayer from D peak",
+      "B": "Completely incorrect; wrong material (graphitic carbon), confuses E\u2082g with D-band, though notes missing G peak"
+    },
+    "step2": {
+      "A": "Poor; short, non-methodical, confuses h-BN with graphene D without distinguishing features or alternatives",
+      "B": "Better but still flawed; methodical steps, acknowledges inconsistencies (no G band, FWHM), yet never considers h-BN"
+    },
+    "step3": {
+      "A": "Clear but wholly wrong; overconfident (0.9) on incorrect graphene monolayer conclusion",
+      "B": "More complete with FWHM and missing-peak discussion; lower confidence (0.62) is more appropriate"
+    },
+    "thinking": "Both A and B completely failed to recognize the spectrum as h-BN, instead misidentifying the ~1369 cm\u207b\u00b9 peak as a carbon D-band. This is a fundamental error: the dominant E\u2082g mode of h-BN sits at ~1366 cm\u207b\u00b9 and is the only strong first-order Raman feature, whereas graphene shows G (~1580) + 2D (~2700) and a defect-activated D only when disordered. Candidate A\u2019s monolayer-graphene-D-peak assignment is internally inconsistent and shows minimal Raman physics knowledge; B offers more structured analysis (FWHM, missing G band, phase implications) but still never considers h-BN or 2-D material alternatives.",
+    "elo_before": {
+      "g": 4.67,
+      "i": 14.08
+    },
+    "elo_after": {
+      "g": 0.0,
+      "i": 21.76
+    }
+  },
+  {
+    "game_id": 36,
+    "model_a": "h",
+    "model_b": "i",
+    "winner": "DRAW",
+    "winner_name": "draw",
+    "confidence": 0.85,
+    "justification": "Both models made the identical core mistake of mistaking h-BN's E\u2082g phonon for a carbon D-band, showing equivalent lack of domain knowledge. No meaningful difference in reasoning quality or completeness exists; both are equally poor.",
+    "step1": {
+      "A": "Completely incorrect: misassigned as DLC/amorphous carbon, ignored E\u2082g",
+      "B": "Completely incorrect: misassigned as graphitic carbon, ignored E\u2082g"
+    },
+    "step2": {
+      "A": "Methodical but grounded in wrong material (carbon D-band logic); no h-BN knowledge",
+      "B": "Similar carbon-centric reasoning; confuses with graphene D-band, no h-BN distinction"
+    },
+    "step3": {
+      "A": "Clear output structure but wrong material, inappropriate purity/layer labels",
+      "B": "Clear but wrong; confidence and peaks reported but evidence is misapplied"
+    },
+    "thinking": "Both A and B completely failed to identify the material as h-BN, instead assigning the ~1369 cm\u207b\u00b9 peak to carbon D-band/DLC features and looking for missing G-bands. This is a fundamental error since h-BN's dominant E\u2082g mode is known to sit at ~1366 cm\u207b\u00b9 with no G-band equivalent. Their chains of thought never reference h-BN physics, FWHM expectations (7-15 cm\u207b\u00b9 bulk), or the absence of defect bands, making both equally unscientific on correctness and reasoning. Classification outputs are clear in format but wrong in substance, so the models tie.",
+    "elo_before": {
+      "h": 21.23,
+      "i": 21.76
+    },
+    "elo_after": {
+      "h": 21.24,
+      "i": 21.75
+    }
+  }
+]

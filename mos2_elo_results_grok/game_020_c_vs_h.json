@@ -1,0 +1,30 @@
+{
+  "game_id": 20,
+  "model_a": "c",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "c",
+  "confidence": 0.68,
+  "justification": "Both wrongly call few-layer instead of monolayer per GT, but A is superior overall: more detailed CoT with explicit database cross-references, alternative exclusion, FWHM/intensity analysis, and quality assessment. B is comparable yet less comprehensive on reasoning steps and confounds.",
+  "step1": {
+    "A": "MoS2 and modes correct but wrong positions, \u0394=26, and layer (few-layer vs mono)",
+    "B": "Same errors on positions/\u0394/layer; extra peaks partly align with GT but still misclassifies"
+  },
+  "step2": {
+    "A": "Methodical, uses \u0394 correctly, rules out WS2/MoSe2/1T with literature values, no major hallucinations",
+    "B": "Solid but briefer, fewer explicit confounds or alternative checks, slightly less grounded"
+  },
+  "step3": {
+    "A": "Clear on evidence and confidence but omits monolayer, oxidation check, and full GT metrics",
+    "B": "Similar gaps; lists more peaks but still misses key GT expectations (mono, FWHM, no MoO3)"
+  },
+  "thinking": "Both candidates correctly ID MoS2, assign 2H phase, note the E2g (~380) and A1g (~406) modes, and use \u0394=26 cm\u207b\u00b9 as layer diagnostic, but both conclude few-layer instead of the GT monolayer (expected \u0394 18-20 cm\u207b\u00b9 with peaks ~383-385 / 402-404). Their peak positions deviate from GT, indicating either peak-finding error or mismatch with the mono reference. A provides more explicit cross-referencing, alternative-material exclusion (WS2/MoSe2), FWHM, and intensity-ratio details; B detects more secondary peaks (including ~452 2LA) but is less thorough on confounds.",
+  "elo_before": {
+    "c": 87.19,
+    "h": 50.35
+  },
+  "elo_after": {
+    "c": 94.34,
+    "h": 43.36
+  }
+}

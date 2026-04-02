@@ -1,0 +1,30 @@
+{
+  "game_id": 17,
+  "model_a": "c",
+  "model_b": "e",
+  "winner": "A",
+  "winner_name": "c",
+  "confidence": 0.68,
+  "justification": "A outperforms on reasoning quality and completeness with thorough analysis, alternative exclusion, and FWHM mention aligned to GT indicators. Both err on layer number, but A's balanced confidence and methodical approach make it superior overall; B is overly simplistic and confident in bulk assignment.",
+  "step1": {
+    "A": "Material/peaks ID correct but layer wrong (few-layer, \u0394=26 vs GT 18-20); positions slightly mismatched",
+    "B": "Material/peaks ID correct but layer wrong (bulk, \u0394=26); same position mismatch, no FWHM check"
+  },
+  "step2": {
+    "A": "Strong: methodical steps, uses \u0394 as diagnostic, rules out confounds/alternatives, cites FWHM/quality",
+    "B": "Adequate but shallow: minimal steps, no alternatives or quality discussion, misses potential confounds"
+  },
+  "step3": {
+    "A": "Good detail on modes/\u0394/quality/FWHM but omits monolayer call and exact GT peak matches; confidence reasonable",
+    "B": "Concise but incomplete: no FWHM, quality, or alternatives; overconfident on wrong layer"
+  },
+  "thinking": "Both A and B correctly ID MoS2 material, 2H phase, and peaks as E2g/A1g but report 380/406 cm\u207b\u00b9 (\u0394=26 cm\u207b\u00b9) inconsistent with GT monolayer expectations (383\u2013385/402\u2013404 cm\u207b\u00b9, \u0394\u224818\u201320 cm\u207b\u00b9); both wrongly assign few-layer/bulk instead of monolayer. A is more methodical (rules out WS2/MoSe2/1T phase, cites FWHM=8 cm\u207b\u00b9 matching GT, intensity ratio, quality), while B is terse and overconfident (0.98). A better on reasoning depth and completeness despite shared layer-count error.",
+  "elo_before": {
+    "c": 65.46,
+    "e": 34.38
+  },
+  "elo_after": {
+    "c": 72.74,
+    "e": 27.26
+  }
+}

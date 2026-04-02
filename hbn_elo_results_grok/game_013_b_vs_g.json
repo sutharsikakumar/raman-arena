@@ -1,0 +1,30 @@
+{
+  "game_id": 13,
+  "model_a": "b",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "b",
+  "confidence": 0.88,
+  "justification": "A is scientifically far superior, correctly recognizing the hallmark single E\u2082g peak of h-BN and ruling out graphene, while B fundamentally mistakes the spectrum for graphene's D-band. The minor FWHM interpretation flaw in A does not outweigh B's complete misidentification. A provides complete, high-confidence output aligned with ground truth.",
+  "step1": {
+    "A": "Mostly correct (right material/mode/position; minor FWHM reversal error)",
+    "B": "Incorrect (assigns graphene D-band instead of h-BN E\u2082g)"
+  },
+  "step2": {
+    "A": "Strong: logical steps, distinguishes from graphene, cites E\u2082g correctly",
+    "B": "Poor: confuses with graphene D-peak, no h-BN physics, circular"
+  },
+  "step3": {
+    "A": "Good: clear h-BN/bulk/pure output, confidence, key evidence listed",
+    "B": "Inadequate: wrong classification, missing h-BN indicators"
+  },
+  "thinking": "Candidate A correctly identifies the material as h-BN with the E\u2082g mode at 1369 cm\u207b\u00b9, rules out graphene due to missing G-band, assigns bulk phase and high purity, but incorrectly states FWHM=28 cm\u207b\u00b9 is typical for bulk (GT indicates bulk ~7-15 cm\u207b\u00b9, monolayer broader) and reverses the monolayer/bulk width trend. Candidate B entirely misassigns the peak as graphene's D-band, concludes monolayer graphene, and never mentions h-BN or E\u2082g, showing fundamental confusion between the two 2D materials. A is methodical and grounded in correct peak assignment and differentiation; B's reasoning is short, erroneous, and lacks Raman physics for h-BN.",
+  "elo_before": {
+    "b": 73.42,
+    "g": 49.14
+  },
+  "elo_after": {
+    "b": 80.86,
+    "g": 41.87
+  }
+}

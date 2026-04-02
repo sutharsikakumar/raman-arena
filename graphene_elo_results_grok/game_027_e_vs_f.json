@@ -1,0 +1,30 @@
+{
+  "game_id": 27,
+  "model_a": "e",
+  "model_b": "f",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.85,
+  "justification": "A and B are essentially identical in classification accuracy, confidence, peak lists and overall reasoning quality. Both deviate equally from GT on substrate and exact I(2D)/I(G) >2 criterion, making them tied.",
+  "step1": {
+    "A": "Mostly correct on graphene ID/bands/absent D but wrong substrate (Si vs Cu) and I(2D)/I(G) threshold",
+    "B": "Mostly correct on graphene ID/bands/absent D but wrong substrate (Si vs Cu) and I(2D)/I(G) threshold"
+  },
+  "step2": {
+    "A": "Methodical, logical steps grounded in Raman modes and instrumental broadening; minor substrate hallucination relative to GT",
+    "B": "Methodical, logical steps grounded in Raman modes and instrumental broadening; minor substrate hallucination relative to GT"
+  },
+  "step3": {
+    "A": "Clear material/layer/confidence output with key evidence; concise yet covers main indicators",
+    "B": "Clear material/layer/confidence output with key evidence; concise yet covers main indicators"
+  },
+  "thinking": "Both candidates correctly identified the material as high-quality monolayer graphene with absent D band, proper G (~1580) and 2D (~2670) assignments, and used FWHM plus I(2D)/I(G) for layer determination. However both incorrectly stated substrate as silicon (spectrum shows clear Si peaks but GT specifies Cu foil) and reported I(2D)/I(G) >1 or ~1.56 rather than the canonical >2; their CoT is methodical, physics-grounded and leads correctly to the classification. Completeness is high and nearly identical in both.",
+  "elo_before": {
+    "e": 80.23,
+    "f": 79.56
+  },
+  "elo_after": {
+    "e": 80.21,
+    "f": 79.57
+  }
+}

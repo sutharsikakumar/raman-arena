@@ -1,0 +1,30 @@
+{
+  "game_id": 25,
+  "model_a": "d",
+  "model_b": "h",
+  "winner": "B",
+  "winner_name": "h",
+  "confidence": 0.65,
+  "justification": "Both fail on the critical monolayer classification and \u0394 diagnostic relative to GT, but B is superior overall: more nuanced layer assignment, lower/non-overconfident score, crystalline (vs polycrystalline) label, and richer CoT covering crystallinity and secondary bands. A is overconfident on an incorrect bulk call.",
+  "step1": {
+    "A": "Incorrect: right material/modes but wrong positions, \u0394=26 (bulk), layer=b_bulk, polycrystalline phase",
+    "B": "Incorrect: right material/modes but wrong positions, \u0394=26, layer=few-layer (still wrong for monolayer GT)"
+  },
+  "step2": {
+    "A": "Methodical and uses \u0394 correctly in principle, but flawed by bad peak IDs; no confounds considered",
+    "B": "Stronger: more steps on FWHM/crystallinity/purity/stacking, conservative layer call, still misses confounds"
+  },
+  "step3": {
+    "A": "States material/layer/confidence/peaks but omits FWHM, oxidation check, and gives wrong monolayer answer",
+    "B": "Similar but lower appropriate confidence, slightly more thorough on secondary modes and phase"
+  },
+  "thinking": "Both A and B correctly ID MoS\u2082 and assign E\u00b9\u2082g/A\u2081g modes but report wrong peak positions (380/406 cm\u207b\u00b9, \u0394=26 cm\u207b\u00b9) versus GT monolayer values (~384/403 cm\u207b\u00b9, \u0394\u224819 cm\u207b\u00b9), leading to incorrect layer calls (bulk/few-layer instead of monolayer). Their CoT is methodical and correctly emphasizes \u0394 as the key diagnostic, yet both start from erroneous peaks and omit substrate/doping/oxidation checks. Completeness is similar but neither outputs the GT monolayer label or correct \u0394; A is overconfident (0.98) on the wrong layer while B is more conservative.",
+  "elo_before": {
+    "d": 49.39,
+    "h": 43.36
+  },
+  "elo_after": {
+    "d": 41.25,
+    "h": 51.31
+  }
+}

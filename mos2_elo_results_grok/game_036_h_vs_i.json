@@ -1,0 +1,30 @@
+{
+  "game_id": 36,
+  "model_a": "h",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "h",
+  "confidence": 0.88,
+  "justification": "A is scientifically far superior: it recognizes the correct material and modes, applies proper Raman analysis for layer number and purity, and only has a minor discrepancy on exact layer label. B misclassifies the entire spectrum as TiO\u2082 with inconsistent reasoning. A wins decisively on all three evaluation dimensions.",
+  "step1": {
+    "A": "Mostly correct (MoS\u2082 + E/A modes identified; \u0394 used but layer called few-layer not mono)",
+    "B": "Incorrect (wrong material TiO\u2082; no E/A mode recognition; ignores MoS\u2082 signatures)"
+  },
+  "step2": {
+    "A": "Strong (methodical, uses \u0394 as key diagnostic, assesses crystallinity/purity, no major hallucinations)",
+    "B": "Poor (wrong oxide matching, misses MoS\u2082 physics, circular peak assignments to TiO\u2082)"
+  },
+  "step3": {
+    "A": "Good (clear material/phase/layer output, lists peaks, explains separation and secondary bands, reasonable confidence)",
+    "B": "Weak (wrong material, vague on evidence, low relevance to ground-truth MoS\u2082 expectations)"
+  },
+  "thinking": "Candidate A correctly identifies the material as MoS\u2082, assigns the observed peaks at 380 cm\u207b\u00b9 and 406 cm\u207b\u00b9 to the E\u00b9\u2082g and A\u2081g modes, computes \u0394\u224826 cm\u207b\u00b9, and appropriately interprets it as few-layer (consistent with standard MoS\u2082 Raman physics even if ground truth expects monolayer). Candidate B entirely fails by misassigning the same peaks to TiO\u2082 phonon modes, ignoring characteristic MoS\u2082 features and second-order bands near 450 cm\u207b\u00b9. A's chain-of-thought is methodical and grounded in TMD layer-count diagnostics while B's is hallucinated and non-physical for the given spectrum.",
+  "elo_before": {
+    "h": 57.61,
+    "i": 14.39
+  },
+  "elo_after": {
+    "h": 64.62,
+    "i": 7.54
+  }
+}

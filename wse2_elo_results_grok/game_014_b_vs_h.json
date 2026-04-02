@@ -1,0 +1,30 @@
+{
+  "game_id": 14,
+  "model_a": "b",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "b",
+  "confidence": 0.85,
+  "justification": "Neither output is scientifically correct for WSe\u2082, but A is clearly superior: it examines the correct spectral window, dismisses noise properly, and considers related materials. B's ice assignment is wholly disconnected from the problem domain and ground truth.",
+  "step1": {
+    "A": "Failed; misidentified as sulfur, no recognition of WSe\u2082 modes or monolayer indicators",
+    "B": "Failed; misidentified as water ice, ignored TMD region entirely"
+  },
+  "step2": {
+    "A": "Methodical but wrong material; low-freq focus and artifact flagging are partial strengths, yet no WSe\u2082 physics",
+    "B": "Very poor; hallucinates ice from noise, no TMD reasoning or confound handling"
+  },
+  "step3": {
+    "A": "Structured output but irrelevant; lists peaks and confidence without any WSe\u2082 evidence",
+    "B": "Structured but irrelevant; focuses on inapplicable high-wavenumber 'OH bands'"
+  },
+  "thinking": "Both candidates completely failed to identify the material as monolayer WSe\u2082, ignoring all ground-truth signatures (merged ~250 cm\u207b\u00b9 E\u00b9\u2082g/A\u2081g, strong 2LA(M) at ~260 cm\u207b\u00b9, absent B\u00b9\u2082g). Candidate A at least analyzed the relevant low-frequency lattice region, considered TMD alternatives like MoS\u2082, and correctly flagged high-wavenumber features as noise/artifacts. Candidate B misinterpreted the same high-wavenumber noise as OH stretches of ice, producing an entirely irrelevant analysis disconnected from 2D-material Raman physics.",
+  "elo_before": {
+    "b": 35.42,
+    "h": 49.65
+  },
+  "elo_after": {
+    "b": 43.75,
+    "h": 41.52
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game_id": 22,
+  "model_a": "d",
+  "model_b": "e",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.75,
+  "justification": "A and B commit identical core errors on layer count and peak values versus GT, with nearly identical reasoning quality and completeness gaps. Minor differences (A's extra peaks vs B's crystalline label) do not outweigh the shared scientific inaccuracies.",
+  "step1": {
+    "A": "Material correct but peak positions, \u0394, and layer (bulk) all mismatch GT monolayer",
+    "B": "Material correct but peak positions, \u0394, and layer (bulk) all mismatch GT monolayer"
+  },
+  "step2": {
+    "A": "Methodical, uses \u0394 properly as diagnostic; no hallucinations but ignores substrate/doping",
+    "B": "Methodical, uses \u0394 properly as diagnostic; slightly briefer but same strengths/weaknesses"
+  },
+  "step3": {
+    "A": "States material/layer/confidence but omits FWHM, defect checks, correct \u0394; extra peaks listed",
+    "B": "States material/layer/confidence but omits FWHM, defect checks, correct \u0394; too few peaks listed"
+  },
+  "thinking": "Both A and B correctly ID MoS\u2082 and assign E\u00b9\u2082g/A\u2081g modes but use wrong peak positions (380/406 cm\u207b\u00b9) and \u0394=26 cm\u207b\u00b9 to call bulk instead of the GT monolayer (expected ~383/402 cm\u207b\u00b9, \u0394\u224819 cm\u207b\u00b9). Their chain-of-thought is methodical and correctly treats \u0394 as the key diagnostic, yet both apply it to erroneous inputs without addressing confounds or GT-expected features (FWHM, no MoO\u2083, symmetric lineshapes). Classification outputs are similar in confidence and omissions, making them equally flawed overall.",
+  "elo_before": {
+    "d": 42.02,
+    "e": 27.26
+  },
+  "elo_after": {
+    "d": 41.68,
+    "e": 27.59
+  }
+}

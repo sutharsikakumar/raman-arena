@@ -1,0 +1,30 @@
+{
+  "game_id": 25,
+  "model_a": "d",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "d",
+  "confidence": 0.92,
+  "justification": "A accurately identifies the material, peak assignment, and quality indicators consistent with GT; B completely misclassifies the spectrum as disordered carbon. A demonstrates proper Raman knowledge for 2D materials while B does not.",
+  "step1": {
+    "A": "Correct h-BN + E\u2082g identification; FWHM noted appropriately",
+    "B": "Incorrect DLC assignment; confuses with carbon D-band"
+  },
+  "step2": {
+    "A": "Methodical, distinguishes from graphene/carbon, grounded in Raman physics",
+    "B": "Flawed logic, hallucinations about carbon modes, missing h-BN knowledge"
+  },
+  "step3": {
+    "A": "Clear h-BN/bulk classification, confidence, key evidence provided",
+    "B": "Wrong material and parameters; incomplete and misleading"
+  },
+  "thinking": "Candidate A correctly matches the dominant peak at 1369 cm\u207b\u00b9 to h-BN's E\u2082g mode (~1366 cm\u207b\u00b9), rules out carbon (no G-band) and diamond (wrong position), and notes the broader FWHM as indicating polycrystalline character, which aligns with GT expectations for h-BN while acknowledging minor deviations. Candidate B fails to recognize the h-BN fingerprint, incorrectly interprets the peak as a D-band of amorphous/diamond-like carbon, and shows confusion between sp\u00b2 carbon disorder and h-BN phonons. Overall, A is scientifically accurate, logically structured, and complete in classification; B is fundamentally wrong on material identification.",
+  "elo_before": {
+    "d": 94.78,
+    "h": 34.08
+  },
+  "elo_after": {
+    "d": 100.0,
+    "h": 27.58
+  }
+}

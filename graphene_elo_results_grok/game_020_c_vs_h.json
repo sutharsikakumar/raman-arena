@@ -1,0 +1,30 @@
+{
+  "game_id": 20,
+  "model_a": "c",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "c",
+  "confidence": 0.88,
+  "justification": "A correctly recognizes both the Si substrate and the graphene G/2D bands with proper assignments and quality metrics, despite layer and substrate mismatch with GT. B fails to detect graphene at all. On scientific correctness, reasoning quality and completeness A is clearly superior.",
+  "step1": {
+    "A": "Partially correct: right G/2D/no-D but bilayer instead of monolayer and Si instead of Cu substrate",
+    "B": "Incorrect: missed graphene entirely, no band assignments match GT"
+  },
+  "step2": {
+    "A": "Strong: methodical peak-by-peak assignment grounded in Raman selection rules and literature values",
+    "B": "Weak: contains clear hallucination that 1580/2670 cm\u207b\u00b9 are Si overtones; reasoning does not cohere with known Si phonon dispersion"
+  },
+  "step3": {
+    "A": "Good: reports material, layer, purity, confidence, key ratios, observed peaks and clear evidence",
+    "B": "Adequate structure but undermined by factual errors and omitted graphene indicators"
+  },
+  "thinking": "GT specifies monolayer graphene on Cu with I(2D)/I(G)>2, absent D, and no Si peaks, yet the provided spectrum contains a dominant ~517 cm\u207b\u00b9 Si phonon plus G/2D bands. Candidate A correctly assigns the Si substrate peak, the graphene G (~1580 cm\u207b\u00b9) and 2D (~2670 cm\u207b\u00b9) bands, notes absent D, but errs on bilayer (ratio ~1.34) instead of monolayer and on substrate. Candidate B entirely misses the graphene signature, wrongly attributing G/2D positions to Si multi-phonon bands (physically inaccurate). A is therefore scientifically closer, with superior reasoning and completeness.",
+  "elo_before": {
+    "c": 64.06,
+    "h": 34.22
+  },
+  "elo_after": {
+    "c": 71.38,
+    "h": 27.08
+  }
+}

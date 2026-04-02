@@ -1,0 +1,30 @@
+{
+  "game_id": 12,
+  "model_a": "b",
+  "model_b": "f",
+  "winner": "B",
+  "winner_name": "f",
+  "confidence": 0.82,
+  "justification": "B correctly classifies the spectrum as monolayer graphene (the GT target) while treating Si as substrate, whereas A misidentifies the primary material as silicon with only contamination. B's chain-of-thought applies standard Raman metrics (absent D, 2D shape, 2D/G ratio) more appropriately for 2D-material analysis.",
+  "step1": {
+    "A": "Incorrect primary material (silicon instead of graphene); bands identified but layer number and role wrong",
+    "B": "Correctly identifies monolayer graphene on Si substrate; G/2D bands and low defects match GT"
+  },
+  "step2": {
+    "A": "Methodical peak assignment but flawed conclusion for a graphene sample; treats graphene as incidental",
+    "B": "Logical, physics-grounded steps; coherently links ratios/FWHM to monolayer conclusion"
+  },
+  "step3": {
+    "A": "Detailed but misclassified material and purity; confidence reasonable but wrong focus",
+    "B": "Clear material/layer/purity output, well-quantified confidence, concise evidence"
+  },
+  "thinking": "Ground truth requires monolayer graphene classification with dominant 2D band (I(2D)/I(G)>2), low D, and proper G/2D assignment. Candidate A correctly spots all peaks but wrongly designates bulk silicon as primary material and calls the carbon 'contamination' with few-layer inference from 2D/G~1.3. Candidate B correctly treats Si peaks as substrate, assigns G/2D bands to high-quality monolayer graphene, notes absent D, and uses FWHM/ratio evidence appropriately despite the ratio being slightly below ideal >2.",
+  "elo_before": {
+    "b": 49.63,
+    "f": 57.47
+  },
+  "elo_after": {
+    "b": 41.81,
+    "f": 65.11
+  }
+}

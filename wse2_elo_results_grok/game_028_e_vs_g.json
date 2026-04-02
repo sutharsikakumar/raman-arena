@@ -1,0 +1,30 @@
+{
+  "game_id": 28,
+  "model_a": "e",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "e",
+  "confidence": 0.82,
+  "justification": "A is superior overall as it correctly detects WSe\u2082 and key ~248 cm\u207b\u00b9 mode plus substrate, aligning with ground truth on material; B fails fundamentally by calling it silicon. A's layer error and omission of 2LA(M) prevent full credit but it remains closer on scientific correctness and reasoning depth.",
+  "step1": {
+    "A": "Partially correct: right material and merged ~250 cm\u207b\u00b9 mode but wrong layer (few-layer instead of mono), missed 2LA(M) and B\u00b9\u2082g absence logic",
+    "B": "Incorrect: misidentified as silicon, ignored all WSe\u2082 signatures and TMD peak positions"
+  },
+  "step2": {
+    "A": "Methodical but flawed: correctly notes E2g/A1g overlap and substrate but misses 2LA(M) enhancement, near-degeneracy emphasis, and monolayer diagnostics; some hallucinated modes",
+    "B": "Poor and incomplete: only considers Si peak, no TMD physics, no confounds or alternative checks, circular silicon assumption"
+  },
+  "step3": {
+    "A": "Mostly complete for its (wrong) conclusion: states material/layer/confidence/evidence but lacks 2LA, FWHM, oxidation, and correct mono indicators",
+    "B": "Complete only for incorrect silicon result; no mention of expected WSe\u2082 features or uncertainty sources"
+  },
+  "thinking": "Candidate A correctly identifies the material as WSe\u2082 with the merged E\u00b9\u2082g/A\u2081g peak at 247.6 cm\u207b\u00b9 and Si substrate peak, but errs by classifying as few-layer based on a 306 cm\u207b\u00b9 peak (B\u00b9\u2082g) and completely omits the critical 2LA(M) ~260 cm\u207b\u00b9 enhancement and monolayer confirmation via B\u00b9\u2082g weakness. Candidate B entirely fails by interpreting the spectrum as pure crystalline silicon based solely on the ~517 cm\u207b\u00b9 peak while ignoring all TMD-related features around 248 cm\u207b\u00b9 and 305 cm\u207b\u00b9. A demonstrates far better Raman physics knowledge and handles substrate correctly, but both miss FWHM, oxidation checks, and full monolayer diagnostics.",
+  "elo_before": {
+    "e": 80.21,
+    "g": 25.75
+  },
+  "elo_after": {
+    "e": 86.97,
+    "g": 19.14
+  }
+}

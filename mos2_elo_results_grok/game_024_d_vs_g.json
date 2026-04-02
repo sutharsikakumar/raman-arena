@@ -1,0 +1,30 @@
+{
+  "game_id": 24,
+  "model_a": "d",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "d",
+  "confidence": 0.92,
+  "justification": "A correctly recognizes the MoS\u2082 Raman signature, assigns the right vibrational modes, and employs the standard \u0394 diagnostic even though it reaches the wrong layer conclusion. B shows fundamental misunderstanding of both the spectrum and Raman physics of 2-D materials. A is therefore superior on every evaluation axis.",
+  "step1": {
+    "A": "Mostly correct material & mode assignment; wrong layer count (bulk instead of monolayer)",
+    "B": "Completely incorrect; misidentified as silicon with no 520 cm\u207b\u00b9 peak"
+  },
+  "step2": {
+    "A": "Methodical, correctly applies \u0394 as layer-count diagnostic and considers second-order modes",
+    "B": "Poor; hallucinates silicon features, ignores MoS\u2082 signatures, circular and non-physical"
+  },
+  "step3": {
+    "A": "Clear material/mode/\u0394 statement and high confidence; omits explicit monolayer call and defect checks",
+    "B": "Inadequate; wrong material, fabricated peak, no relevant evidence or uncertainty quantification"
+  },
+  "thinking": "Ground truth specifies monolayer MoS\u2082 with E\u00b9\u2082g \u2248383\u2013385 cm\u207b\u00b9, A\u2081g \u2248402\u2013404 cm\u207b\u00b9 and \u0394\u224818\u201320 cm\u207b\u00b9. Candidate A correctly identifies MoS\u2082, assigns the two main peaks to E\u00b9\u2082g and A\u2081g modes, and uses the \u0394=26 cm\u207b\u00b9 diagnostic, but errs by calling the sample bulk. Candidate B entirely misclassifies the spectrum as silicon, fabricates a 520 cm\u207b\u00b9 peak that is absent, and shows no engagement with MoS\u2082 physics or the observed 380/406 cm\u207b\u00b9 doublet.",
+  "elo_before": {
+    "d": 41.71,
+    "g": 27.92
+  },
+  "elo_after": {
+    "d": 49.39,
+    "g": 20.42
+  }
+}

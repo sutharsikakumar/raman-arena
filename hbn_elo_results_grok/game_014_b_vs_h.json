@@ -1,0 +1,30 @@
+{
+  "game_id": 14,
+  "model_a": "b",
+  "model_b": "h",
+  "winner": "A",
+  "winner_name": "b",
+  "confidence": 0.95,
+  "justification": "A is scientifically accurate on every key point (material, peak assignment, ruling out graphene) and delivers a complete, high-confidence classification aligned with ground truth. B fails at the first step by misidentifying h-BN as disordered carbon. The large correctness gap makes A the clear winner.",
+  "step1": {
+    "A": "correct material (h-BN), E\u2082g assignment, minor FWHM note inconsistency",
+    "B": "incorrect (DLC/amorphous carbon), confuses with D-band, ignores h-BN"
+  },
+  "step2": {
+    "A": "methodical, distinguishes from graphene, grounded in h-BN modes",
+    "B": "flawed premise, hallucinates carbon disorder, misses h-BN literature"
+  },
+  "step3": {
+    "A": "clear h-BN/bulk/pure classification, quantified confidence, key evidence listed",
+    "B": "well-structured but for wrong material, appropriate uncertainty for its (incorrect) conclusion"
+  },
+  "thinking": "Candidate A correctly identifies the material as bulk h-BN with the dominant E\u2082g mode at 1369 cm\u207b\u00b9, properly rules out graphene by noting the absence of a G-band, and provides appropriate purity/layer assessments despite a minor FWHM inconsistency with the ground-truth range. Candidate B entirely misassigns the spectrum to amorphous diamond-like carbon, treating the peak as a disordered D-band and failing to consider h-BN Raman signatures at all. This fundamental material error in B outweighs its structured reasoning, making A superior on correctness, reasoning fidelity to h-BN physics, and completeness of the classification output.",
+  "elo_before": {
+    "b": 80.86,
+    "h": 49.16
+  },
+  "elo_after": {
+    "b": 88.13,
+    "h": 42.06
+  }
+}

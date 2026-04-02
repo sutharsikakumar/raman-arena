@@ -1,0 +1,30 @@
+{
+  "game_id": 6,
+  "model_a": "a",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "a",
+  "confidence": 0.92,
+  "justification": "A is the only candidate that recognizes the MoS2 Raman signature and applies correct diagnostic criteria even if the final layer label is off; B's silicon assignment is a total failure with invented spectral features.",
+  "step1": {
+    "A": "Mostly correct material & peaks but wrong layer (few-layer vs mono) and \u0394 interpretation",
+    "B": "Completely incorrect; misidentified as silicon, ignored MoS2 modes"
+  },
+  "step2": {
+    "A": "Methodical, physics-grounded, uses \u0394 for layer count and considers confounds/other TMDs",
+    "B": "Flawed, hallucinatory, ignores MoS2 Raman physics entirely"
+  },
+  "step3": {
+    "A": "Clear on material, peaks, confidence and evidence; layer call mismatches GT",
+    "B": "Missing all required MoS2 evidence, states wrong material and fabricated peak"
+  },
+  "thinking": "Candidate A correctly identifies the material as MoS2, locates the E12g and A1g modes, computes their separation as a layer diagnostic, rules out other TMDs, and assesses crystallinity/purity, though it errs on layer count (few-layer instead of monolayer) and quotes inaccurate bulk \u0394 values. Candidate B completely fails by classifying the spectrum as silicon, hallucinating a 520 cm\u207b\u00b9 peak that is absent from the data, and ignoring all MoS2 signatures. On reasoning quality and completeness A is strong but imperfect; B is fundamentally wrong on every dimension.",
+  "elo_before": {
+    "a": 43.43,
+    "g": 50.0
+  },
+  "elo_after": {
+    "a": 51.58,
+    "g": 42.04
+  }
+}

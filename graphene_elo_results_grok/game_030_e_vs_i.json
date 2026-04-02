@@ -1,0 +1,30 @@
+{
+  "game_id": 30,
+  "model_a": "e",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "e",
+  "confidence": 0.92,
+  "justification": "A correctly recognizes the graphene monolayer signature and reaches the ground-truth material classification; B misclassifies the entire sample as contaminated silicon. A's chain-of-thought is Raman-physics grounded while B's is not.",
+  "step1": {
+    "A": "mostly correct (right material/bands, minor ratio/substrate errors)",
+    "B": "incorrect (wrong material, dismisses graphene as contamination)"
+  },
+  "step2": {
+    "A": "methodical and logically structured, flows to correct conclusion",
+    "B": "flawed; circularly prioritizes Si while ignoring graphene signatures"
+  },
+  "step3": {
+    "A": "clear, states material/phase/confidence with key peak evidence",
+    "B": "well-structured but based on wrong premise"
+  },
+  "thinking": "Ground truth specifies monolayer graphene (no D band, I(2D)/I(G)>2, G~1580, 2D~2700). Candidate A correctly identifies the G and 2D bands, notes absence of D, assigns monolayer graphene with high confidence, but reports I(2D)/I(G)>1 (slightly understating the threshold) and misidentifies substrate as Si. Candidate B correctly spots Si substrate peaks but wrongly dismisses clear G/2D features as contamination and classifies the sample as bulk Si, which directly contradicts the graphene ground truth.",
+  "elo_before": {
+    "e": 93.44,
+    "i": 57.35
+  },
+  "elo_after": {
+    "e": 100.0,
+    "i": 50.33
+  }
+}

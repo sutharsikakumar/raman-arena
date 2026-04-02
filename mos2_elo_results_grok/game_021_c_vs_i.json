@@ -1,0 +1,30 @@
+{
+  "game_id": 21,
+  "model_a": "c",
+  "model_b": "i",
+  "winner": "A",
+  "winner_name": "c",
+  "confidence": 0.92,
+  "justification": "A demonstrates expert-level TMD Raman knowledge and correctly extracts the primary MoS2 signatures, outweighing its layer-number error. B fails at the most basic step of material identification. A is clearly the better overall output.",
+  "step1": {
+    "A": "Material and modes correct but layer count wrong (few-layer vs monolayer); peak positions slightly offset",
+    "B": "Completely incorrect material (TiO2 instead of MoS2); ignores TMD modes"
+  },
+  "step2": {
+    "A": "Methodical, grounded in MoS2 physics, correctly uses \u0394 diagnostic and rules out confounds/alternatives",
+    "B": "Poor; applies irrelevant oxide phonon logic, hallucinates TiO2 matches, no TMD consideration"
+  },
+  "step3": {
+    "A": "Clear on material/phase/peaks/confidence; omits exact monolayer \u0394 and defect checks",
+    "B": "Inadequate; wrong material, low confidence, irrelevant evidence"
+  },
+  "thinking": "Candidate A correctly identifies the material as 2H-MoS2 using the characteristic E2g (~380 cm\u207b\u00b9) and A1g (~406 cm\u207b\u00b9) modes, applies the \u0394 separation as a layer diagnostic, and rules out WS2/MoSe2 alternatives with appropriate Raman physics. However, it errs by reporting \u0394=26 cm\u207b\u00b9 as few-layer/bulk (ground truth requires monolayer with \u0394\u224818\u201320 cm\u207b\u00b9 and peaks near 383\u2013385/402\u2013404 cm\u207b\u00b9). Candidate B entirely misidentifies the spectrum as TiO2 (citing unrelated oxide modes near 592/454 cm\u207b\u00b9), showing no grasp of TMD signatures. A is therefore superior on correctness, reasoning, and completeness despite the layer-count mistake.",
+  "elo_before": {
+    "c": 94.34,
+    "i": 35.06
+  },
+  "elo_after": {
+    "c": 100.0,
+    "i": 28.54
+  }
+}

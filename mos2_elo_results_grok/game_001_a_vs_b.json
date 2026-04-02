@@ -1,0 +1,30 @@
+{
+  "game_id": 1,
+  "model_a": "a",
+  "model_b": "b",
+  "winner": "B",
+  "winner_name": "b",
+  "confidence": 0.82,
+  "justification": "B matches ground-truth \u0394 values and quality indicators exactly while A introduces a clear error on bulk separation (>32 cm\u207b\u00b9). Although both classified as few-layer instead of the GT monolayer target, B's chain-of-thought is more accurate, methodical, and free of hallucinations, making it superior overall.",
+  "step1": {
+    "A": "Material/modes correct but wrong bulk \u0394 (>32), wrong layer call, positions slightly offset from GT mono values",
+    "B": "Material/modes correct, exact GT \u0394 values used (18-20/25-26), layer call consistent with observed \u0394=26, good TMD exclusion"
+  },
+  "step2": {
+    "A": "Methodical but flawed by incorrect bulk reference value and circular peak assignments; misses some confounds",
+    "B": "Strong, grounded in GT Raman physics; correctly prioritizes \u0394 for layer count, considers FWHM/purity, no hallucinations"
+  },
+  "step3": {
+    "A": "States material/phase/layer/purity but lower confidence (0.78), includes erroneous bulk value, less concise",
+    "B": "Clear statement of MoS\u2082, few-layer, 2H, purity; cites key evidence (\u0394, FWHM, no contaminants); confidence (0.92) reasonable"
+  },
+  "thinking": "Both models correctly identified MoS\u2082 and assigned the observed peaks to E\u00b9\u2082g (~380 cm\u207b\u00b9) and A\u2081g (~406 cm\u207b\u00b9) with \u0394=26 cm\u207b\u00b9. Candidate A erroneously stated bulk \u0394 >32 cm\u207b\u00b9 (GT reference is 25\u201326 cm\u207b\u00b9) and listed extra peaks, while B used the exact GT layer-dependent \u0394 values (mono 18\u201320, bulk 25\u201326), correctly ruled out WS\u2082/MoSe\u2082, and reported FWHM=8 cm\u207b\u00b9 matching GT quality metrics. Both missed the GT monolayer target but B's physics, use of \u0394 as primary diagnostic, and absence of hallucinations are superior.",
+  "elo_before": {
+    "a": 50.0,
+    "b": 50.0
+  },
+  "elo_after": {
+    "a": 42.0,
+    "b": 57.82
+  }
+}

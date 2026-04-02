@@ -1,0 +1,30 @@
+{
+  "game_id": 31,
+  "model_a": "f",
+  "model_b": "g",
+  "winner": "A",
+  "winner_name": "f",
+  "confidence": 0.82,
+  "justification": "A correctly classifies the material as hexagonal boron nitride, recognizes the E2g mode, and methodically excludes carbon alternatives, aligning closely with GT except for the layer assignment. B confuses the spectrum with graphene's defect band and shows no understanding of h-BN Raman signatures. Overall A is substantially more accurate and useful.",
+  "step1": {
+    "A": "Correct h-BN + E2g identification; minor error on monolayer vs bulk",
+    "B": "Completely incorrect (graphene D-band instead of h-BN E2g)"
+  },
+  "step2": {
+    "A": "Methodical, distinguishes h-BN from graphene/diamond, grounded in phonon modes",
+    "B": "Flawed, hallucinates graphene D-mode, circular and missing h-BN physics"
+  },
+  "step3": {
+    "A": "Clear h-BN classification, confidence, key evidence and peak info (layer wrong)",
+    "B": "Structured output but entirely wrong material and unsupported claims"
+  },
+  "thinking": "Candidate A correctly identifies the material as h-BN with the dominant E2g mode at 1369 cm^-1, rules out diamond and defective graphene (noting absent G-band), and provides structured Raman-physics reasoning; however it errs by calling the sample monolayer based on the small upshift (GT specifies bulk with ~1366 cm^-1 and \u00b15 cm^-1 tolerance). Candidate B fundamentally mistakes the peak for graphene's D-band, shows no knowledge of h-BN, and lacks any distinction from carbon materials. A is superior on correctness, reasoning depth, and completeness despite the layer-number mistake; B is essentially inverted.",
+  "elo_before": {
+    "f": 49.69,
+    "g": 19.8
+  },
+  "elo_after": {
+    "f": 57.0,
+    "g": 12.65
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "game_id": 36,
+  "model_a": "h",
+  "model_b": "i",
+  "winner": "DRAW",
+  "winner_name": "draw",
+  "confidence": 0.85,
+  "justification": "Both models made the identical core mistake of mistaking h-BN's E\u2082g phonon for a carbon D-band, showing equivalent lack of domain knowledge. No meaningful difference in reasoning quality or completeness exists; both are equally poor.",
+  "step1": {
+    "A": "Completely incorrect: misassigned as DLC/amorphous carbon, ignored E\u2082g",
+    "B": "Completely incorrect: misassigned as graphitic carbon, ignored E\u2082g"
+  },
+  "step2": {
+    "A": "Methodical but grounded in wrong material (carbon D-band logic); no h-BN knowledge",
+    "B": "Similar carbon-centric reasoning; confuses with graphene D-band, no h-BN distinction"
+  },
+  "step3": {
+    "A": "Clear output structure but wrong material, inappropriate purity/layer labels",
+    "B": "Clear but wrong; confidence and peaks reported but evidence is misapplied"
+  },
+  "thinking": "Both A and B completely failed to identify the material as h-BN, instead assigning the ~1369 cm\u207b\u00b9 peak to carbon D-band/DLC features and looking for missing G-bands. This is a fundamental error since h-BN's dominant E\u2082g mode is known to sit at ~1366 cm\u207b\u00b9 with no G-band equivalent. Their chains of thought never reference h-BN physics, FWHM expectations (7-15 cm\u207b\u00b9 bulk), or the absence of defect bands, making both equally unscientific on correctness and reasoning. Classification outputs are clear in format but wrong in substance, so the models tie.",
+  "elo_before": {
+    "h": 21.23,
+    "i": 21.76
+  },
+  "elo_after": {
+    "h": 21.24,
+    "i": 21.75
+  }
+}

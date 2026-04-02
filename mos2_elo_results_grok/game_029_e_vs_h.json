@@ -1,0 +1,30 @@
+{
+  "game_id": 29,
+  "model_a": "e",
+  "model_b": "h",
+  "winner": "B",
+  "winner_name": "h",
+  "confidence": 0.72,
+  "justification": "Both err on layer count vs monolayer GT, but B is superior overall due to higher completeness, more detailed chain-of-thought incorporating secondary modes and purity, and appropriately lower confidence. A is overly brief and confidently wrong on bulk assignment.",
+  "step1": {
+    "A": "Material correct but wrong layer (bulk vs mono), peaks/\u0394 mismatch GT expected positions",
+    "B": "Material correct but wrong layer (few-layer vs mono), better peak list including second-order modes"
+  },
+  "step2": {
+    "A": "Uses \u0394 correctly as diagnostic but short, no confounds or extra features addressed",
+    "B": "More grounded in physics, methodical steps on modes/separation/crystallinity, considers secondary bands"
+  },
+  "step3": {
+    "A": "States key peaks/\u0394/reasoning but omits FWHM, defects, oxidation check, intensity ratio",
+    "B": "More thorough with extra peaks, SNR/crystallinity notes, explains consistency with MoS2"
+  },
+  "thinking": "Both A and B correctly ID MoS2 and assign E2g/A1g modes but report peaks at 380/406 cm^-1 (\u0394=26 cm^-1), leading to wrong layer calls (bulk/few-layer vs GT monolayer with expected \u0394 18-20 cm^-1 and peaks ~383-385/402-404). A is concise but overconfident with minimal steps; B is more complete, notes secondary bands consistent with MoS2 (e.g. ~452 cm^-1), assesses crystallinity/purity, and uses lower confidence. Neither considers substrate/doping/oxidation explicitly.",
+  "elo_before": {
+    "e": 35.78,
+    "h": 51.31
+  },
+  "elo_after": {
+    "e": 28.13,
+    "h": 58.78
+  }
+}
